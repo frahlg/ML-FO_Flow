@@ -1,0 +1,59 @@
+\documentclass[11pt]{article}
+
+\begin{document}
+
+\title{Predicting Ship Fuel Flow using Auto Machine Learning}
+\author{Fredrik Ahlgren, Ulrik Larsen, Marcus Thern}
+\date{\today}
+\maketitle
+
+
+\abstract{
+
+A common approach for reducing the fuel consumption on board ships is by installing mass flow meters to monitor the fuel consumption accurately and dynamically. Mass flow meters are generally more precise than regular volume flow meters, but it might imply additional installation costs. We have studied data from a cruise ship equipped with both legacy volume flow meters and newly installed mass flow meters, as well as an extensive set of logged time series data from the machinery logging system. A machine learning algorithm has been developed which predicts the dynamic fuel oil consumption based on limited sensor data from the engines. 
+
+The main challenges for the development of precise machine learning algorithms is the selection of a model that predicts the data appropriately. This task, called supervised machine learning, requires great experience and knowledge of machine learning. We have used a tree based optimisation pipeline optimisation tool (Olson et al. 2016), which automates the supervised machine learning by optimising different combinations of pipeline models using generic programming.
+The data was exported from the machinery logging system in a legacy Microsoft Excel-format, and pre-processed and merged into a consolidated database. All tools used are open source tools (Pedregosa et al. 2012; McKinney 2011; Olson et al. 2016) which can be replicated and applied on board.
+The results show that an unsupervised self-learning model can predict the fuel consumption within an accuracy within 0.3\% of the mean squared error. As the models automatically adapt to noisy sensor data and therefore functions as a watermark of the machinery system, these algorithms show a potential in predicting ship energy efficiency without installation of additional mass flow meters.}
+
+\newpage
+\section{Introduction}
+
+* Ship energy efficiency measures.
+* Data on climate change
+* What needs to be done
+* Common approaches for reducing fuel consumption
+* What you dont know, it is hard to reduce
+* Dynamic FO consumption
+* Installation of energy management systems
+* Mass flow meters
+* Dynamic readings
+
+* Machine Learning, broad description
+* Training models. Optimising machine learning. AutoML.
+
+* Find references ..
+
+
+\section{Method}
+
+* Data gathered from MS Birka.
+* Time period. Sailing distance.
+* Type of ship. Characteristics etc etc...
+* What measurements are available on board.. 
+
+* Data method. Pandas Dataframe, Python, etc
+* Choosing features
+
+
+\section{Results}
+
+\section{Analysis}
+
+\section{Discussion}
+
+\section{Conclusion}
+
+
+
+\end{document}
