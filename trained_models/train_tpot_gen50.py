@@ -65,7 +65,7 @@ t1 = time.time()
 #  modeling with tpot
 # Number of generations, should be boosted if we want better results. 3 gens take ~ 30min on my macbook...
 gen = 50
-cores=1 # use all of them
+cores=-1 # use all of them
 
 X_train_13, X_test_13, y_train_13, y_test_13 = train_test_split(X_13, y_13, train_size=0.75, test_size=0.25)
 tpot_13 = TPOTRegressor(generations=gen, population_size=50, verbosity=2, n_jobs=cores)
