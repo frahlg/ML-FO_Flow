@@ -7,13 +7,13 @@ import numpy as np
 from tpot import TPOTRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.externals import joblib
-
+#%%
 
 t1 = time.time()
 print('Loading database ...')
-df = pd.read_hdf('../database/all_data_comp.h5','table')
+df = pd.read_hdf('database/all_data_comp.h5','table')
 print('Time to load database:', time.time()-t1)
-
+#%%
 
 # Features and target for Eng 1/3
 
@@ -58,18 +58,58 @@ X_24 = np.array(df_2_4.drop(labels='FO BOOST 2 CONSUMPT:6166:m3/h:Average:900',a
 y_24 = np.array(df_2_4['FO BOOST 2 CONSUMPT:6166:m3/h:Average:900'])
 
 
+#%%
 print('Training with TPOT engine pair 1....')
+t1 = time.time()
 
 #  modeling with tpot
 # Number of generations, should be boosted if we want better results. 3 gens take ~ 30min on my macbook...
 gen = 1
-cores=-1 # use all of them
+cores=1 # use all of them
 
 X_train_13, X_test_13, y_train_13, y_test_13 = train_test_split(X_13, y_13, train_size=0.75, test_size=0.25)
-tpot = TPOTRegressor(generations=gen, population_size=50, verbosity=2, n_jobs=cores)
-tpot.fit(X_train_13, y_train_13.reshape(-1,))
+tpot_13 = TPOTRegressor(generations=gen, population_size=50, verbosity=2, n_jobs=cores)
+tpot_13.fit(X_train_13, y_train_13.reshape(-1,))
 
-print(tpot.score(X_test_13,y_test_13))
+print(tpot_13.score(X_test_13,y_test_13))
+t2 = time.time()
+delta_time = t2-t1
+print('Time to train...:', delta_time)
 
-tpot.export('train_tpot_1_3.py')
-joblib.dump(tpot,'train_tpot_1_3.pk1')
+#%%
+
+print('Saving the model ...')
+
+tpot_13.export('train_tpot_13.py')
+joblib.dump(tpot_13.fitted_pipeline_,'train_tpot_13.pk1')
+
+print('Model saved ... ')
+
+
+#%%
+
+print('Training with TPOT engine pair 2....')
+t1 = time.time()
+
+#  modeling with tpot
+# Number of generations, should be boosted if we want better results. 3 gens take ~ 30min on my macbook...
+gen = 1
+cores=1 # use all of them
+
+X_train_24, X_test_24, y_train_24, y_test_24 = train_test_split(X_24, y_24, train_size=0.75, test_size=0.25)
+tpot_24 = TPOTRegressor(generations=gen, population_size=50, verbosity=2, n_jobs=cores)
+tpot_24.fit(X_train_24, y_train_24.reshape(-1,))
+
+print(tpot_24.score(X_test_24,y_test_24))
+t2 = time.time()
+delta_time = t2-t1
+print('Time to train...:', delta_time)
+
+#%%
+
+print('Saving the model ...')
+
+tpot_24.export('train_tpot_24.py')
+joblib.dump(tpot_24.fitted_pipeline_,'train_tpot_24.pk1')
+
+print('Model saved ... ')
