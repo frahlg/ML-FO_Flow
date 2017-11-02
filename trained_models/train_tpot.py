@@ -11,7 +11,7 @@ from sklearn.externals import joblib
 
 t1 = time.time()
 print('Loading database ...')
-df = pd.read_hdf('database/all_data_comp.h5','table')
+df = pd.read_hdf('../database/all_data_comp.h5','table')
 print('Time to load database:', time.time()-t1)
 #%%
 
@@ -64,7 +64,7 @@ t1 = time.time()
 
 #  modeling with tpot
 # Number of generations, should be boosted if we want better results. 3 gens take ~ 30min on my macbook...
-gen = 1
+gen = 50
 cores=1 # use all of them
 
 X_train_13, X_test_13, y_train_13, y_test_13 = train_test_split(X_13, y_13, train_size=0.75, test_size=0.25)
@@ -80,8 +80,8 @@ print('Time to train...:', delta_time)
 
 print('Saving the model ...')
 
-tpot_13.export('train_tpot_13.py')
-joblib.dump(tpot_13.fitted_pipeline_,'train_tpot_13.pk1')
+tpot_13.export('train_tpot_13_gen50.py')
+joblib.dump(tpot_13.fitted_pipeline_,'train_tpot_13_gen50.pk1')
 
 print('Model saved ... ')
 
@@ -93,8 +93,6 @@ t1 = time.time()
 
 #  modeling with tpot
 # Number of generations, should be boosted if we want better results. 3 gens take ~ 30min on my macbook...
-gen = 1
-cores=1 # use all of them
 
 X_train_24, X_test_24, y_train_24, y_test_24 = train_test_split(X_24, y_24, train_size=0.75, test_size=0.25)
 tpot_24 = TPOTRegressor(generations=gen, population_size=50, verbosity=2, n_jobs=cores)
@@ -109,7 +107,7 @@ print('Time to train...:', delta_time)
 
 print('Saving the model ...')
 
-tpot_24.export('train_tpot_24.py')
-joblib.dump(tpot_24.fitted_pipeline_,'train_tpot_24.pk1')
+tpot_24.export('train_tpot_24_gen50.py')
+joblib.dump(tpot_24.fitted_pipeline_,'train_tpot_24_gen50.pk1')
 
 print('Model saved ... ')
