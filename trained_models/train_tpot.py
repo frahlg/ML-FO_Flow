@@ -4,6 +4,10 @@ import pandas as pd
 import sklearn
 import time
 import numpy as np
+from tpot import TPOTRegressor
+from sklearn.model_selection import train_test_split
+from sklearn.externals import joblib
+
 
 t1 = time.time()
 print('Loading database ...')
@@ -67,6 +71,5 @@ tpot.fit(X_train_13, y_train_13.reshape(-1,))
 
 print(tpot.score(X_test_13,y_test_13))
 
-from sklearn.externals import joblib
 tpot.export('train_tpot_1_3.py')
 joblib.dump(tpot,'train_tpot_1_3.pk1')
