@@ -96,7 +96,7 @@ print('Time to train...:', delta_time)
 #%%
 
 print('Saving the model ...')
-tpot.export('trained_models/eng13_' + test_name + '.py'))
+tpot.export('trained_models/eng13_' + test_name + '.py')
 joblib.dump(tpot.fitted_pipeline_,'trained_models/eng13_' + test_name + '.pk1')
 print(test_name, ' saved ... ')
 
