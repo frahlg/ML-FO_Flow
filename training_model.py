@@ -19,6 +19,9 @@ print('Time to load database:', time.time()-t1)
 import var_names
 d = var_names.dict_
 
+
+# Check if variables exist in the dictonary..
+
 for names in d:
     if d[names] in list(df):
         #print(var_names[names])
@@ -26,7 +29,6 @@ for names in d:
     else:
         print('*** VAR MISSING *** ', var_names[names], ' *** VAR MISSING ***')
 
-#%%
 
 # Features and target for Eng 1/3
 
@@ -81,6 +83,34 @@ eng_24 = [d['ae2_frp'],
           d['me4_rpm'],
           d['fo_booster_24']
           ]
+
+
+
+#%%
+
+# Feature selection
+
+print('Which variables..')
+gen = int(float(input('How many generations?')))
+cores = int(float(input('How many cores? (-1 all cores')))
+
+#%%
+
+# If we want an interactive list to choose variables from.
+#
+#
+# import inquirer
+# questions = [
+#     inquirer.Checkbox('Variables engine 1/3',
+#                     message='Choose variables for training',
+#                     choices=eng_13)
+#             ]
+# answ = inquirer.prompt(questions)
+# print(answ)
+
+
+#%%
+
 
 
 print('Features and predictions for training 1', labels_1_3, labels_2_4)

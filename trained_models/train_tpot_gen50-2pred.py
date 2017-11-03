@@ -11,80 +11,37 @@ from sklearn.externals import joblib
 
 t1 = time.time()
 print('Loading database ...')
-df = pd.read_hdf('database/all_data_comp.h5','table')
+df = pd.read_hdf('../database/all_data_comp.h5','table')
 print('Time to load database:', time.time()-t1)
-#%%
-
-# Variable names.
-import var_names
-d = var_names.dict_
-
-for names in d:
-    if d[names] in list(df):
-        #print(var_names[names])
-        pass
-    else:
-        print('*** VAR MISSING *** ', var_names[names], ' *** VAR MISSING ***')
-
 #%%
 
 # Features and target for Eng 1/3
 
-eng_13 = [d['ae1_frp'],
-          d['ae3_frp'],
-          d['ae1_cac_P'],
-          d['ae3_cac_P'],
-          d['ae1_cac_ca'],
-          d['ae3_cac_ca'],
-          d['ae1_exh'],
-          d['ae3_exh'],
-          d['ae1_fo_P'],
-          d['ae3_fo_P'],
-          d['ae1_rpm'],
-          d['ae3_rpm'],
-          d['me1_frp'],
-          d['me3_frp'],
-          d['me1_ca_T'],
-          d['me3_ca_T'],
-          d['me1_cac_T'],
-          d['me3_cac_T'],
-          d['me1_exh_T'],
-          d['me3_exh_T'],
-          d['me1_rpm'],
-          d['me3_rpm'],
-          d['fo_booster_13']
-          ]
+labels_1_3 = ['AE1 FUEL RACK POSIT:1742:mm:Average:900',
+                'AE3 FUEL RACK POSIT:3742:mm:Average:900',
+                'AE1 ENG SPEED:1745:RPM:Average:900',
+                'AE3 ENG SPEED:3745:RPM:Average:900',
+                'ME1 FUEL RACK POSIT:10005:%:Average:900',
+                'ME3 FUEL RACK POSIT:30005:%:Average:900',
+                'ME1 ENGINE SPEED:1364:rpm:Average:900',
+                'ME3 ENGINE SPEED:3364:rpm:Average:900',
+                'FO BOOST 1 CONSUMPT:6165:m3/h:Average:900']
 
 # Features and target for Eng 2/4
 
-eng_24 = [d['ae2_frp'],
-          d['ae4_frp'],
-          d['ae2_cac_P'],
-          d['ae4_cac_P'],
-          d['ae2_cac_ca'],
-          d['ae4_cac_ca'],
-          d['ae2_exh'],
-          d['ae4_exh'],
-          d['ae2_fo_P'],
-          d['ae4_fo_P'],
-          d['ae2_rpm'],
-          d['ae4_rpm'],
-          d['me2_frp'],
-          d['me4_frp'],
-          d['me2_ca_T'],
-          d['me4_ca_T'],
-          d['me2_cac_T'],
-          d['me4_cac_T'],
-          d['me2_exh_T'],
-          d['me4_exh_T'],
-          d['me2_rpm'],
-          d['me4_rpm'],
-          d['fo_booster_24']
-          ]
+labels_2_4 = ['AE2 FUEL RACK POSIT:2742:mm:Average:900',
+                'AE4 FUEL RACK POSIT:4742:mm:Average:900',
+                'AE2 ENG SPEED:2745:RPM:Average:900',
+                'AE4 ENG SPEED:4745:RPM:Average:900',
+                'ME2 FUEL RACK POSIT:20005:%:Average:900',
+                'ME4 FUEL RACK POSIT:40005:%:Average:900',
+                'ME2 ENGINE SPEED:2364:rpm:Average:900',
+                'ME4 ENGINE SPEED:4364:rpm:Average:900',
+             'FO BOOST 2 CONSUMPT:6166:m3/h:Average:900']
 
 
 print('Features and predictions for training 1', labels_1_3, labels_2_4)
-#%%
+
 # Drop Nan from the DataFrame.
 
 df_1_3 = df[labels_1_3].dropna()
