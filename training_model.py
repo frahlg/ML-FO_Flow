@@ -34,7 +34,7 @@ d = var_names.d
 
 #%%
 
-gen = 50
+gen = 1
 cores=-1 # use all of them
 
 
@@ -98,8 +98,8 @@ print('Time to train...:', delta_time)
 #%%
 
 print('Saving the model ...')
-tpot_13.export(test_name +,'.py')
-joblib.dump(tpot_13.fitted_pipeline_,test_name +,'.pk1')
+tpot_13.export(str(test_name + '.py'))
+joblib.dump(tpot_13.fitted_pipeline_,test_name + '.pk1')
 print(test_name, ' saved ... ')
 
 #%%
@@ -124,6 +124,6 @@ print('Time to train...:', delta_time)
 #%%
 
 print('Saving the model ...')
-tpot_13.export(test_name +,'.py')
-joblib.dump(tpot_13.fitted_pipeline_,test_name +,'.pk1')
+tpot_13.export(test_name + '.py')
+joblib.dump(tpot_13.fitted_pipeline_,test_name + '.pk1')
 print(test_name, ' saved ... ')
