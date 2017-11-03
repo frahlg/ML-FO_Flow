@@ -34,7 +34,7 @@ d = var_names.d
 
 #%%
 
-gen = 1
+gen = 50
 cores=-1 # use all of them
 
 
@@ -85,10 +85,10 @@ print('Training with TPOT engine pair 1....', test_name)
 t1 = time.time()
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.75, test_size=0.25)
-tpot_13 = TPOTRegressor(generations=gen, population_size=50, verbosity=2, n_jobs=cores)
-tpot_13.fit(X_train, y_train.reshape(-1,))
+tpot = TPOTRegressor(generations=gen, population_size=50, verbosity=2, n_jobs=cores)
+tpot.fit(X_train, y_train.reshape(-1,))
 
-print(tpot_13.score(X_test,y_test))
+print(tpot.score(X_test,y_test))
 t2 = time.time()
 delta_time = t2-t1
 print('Time to train...:', delta_time)
@@ -96,8 +96,8 @@ print('Time to train...:', delta_time)
 #%%
 
 print('Saving the model ...')
-tpot_13.export(str(test_name + '.py'))
-joblib.dump(tpot_13.fitted_pipeline_,test_name + '.pk1')
+tpot.export('trained_models/eng13_' + test_name + '.py'))
+joblib.dump(tpot.fitted_pipeline_,'trained_models/eng13_' + test_name + '.pk1')
 print(test_name, ' saved ... ')
 
 #%%
@@ -112,10 +112,10 @@ print('Training with TPOT engine pair 2....', test_name)
 t1 = time.time()
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.75, test_size=0.25)
-tpot_13 = TPOTRegressor(generations=gen, population_size=50, verbosity=2, n_jobs=cores)
-tpot_13.fit(X_train, y_train.reshape(-1,))
+tpot = TPOTRegressor(generations=gen, population_size=50, verbosity=2, n_jobs=cores)
+tpot.fit(X_train, y_train.reshape(-1,))
 
-print(tpot_13.score(X_test,y_test))
+print(tpot.score(X_test,y_test))
 t2 = time.time()
 delta_time = t2-t1
 print('Time to train...:', delta_time)
@@ -123,6 +123,6 @@ print('Time to train...:', delta_time)
 #%%
 
 print('Saving the model ...')
-tpot_13.export(test_name + '.py')
-joblib.dump(tpot_13.fitted_pipeline_,test_name + '.pk1')
+tpot.export('trained_models/eng24_' + test_name + '.py')
+joblib.dump(tpot.fitted_pipeline_,'trained_models/eng24_' + test_name + '.pk1')
 print(test_name, ' saved ... ')
