@@ -74,13 +74,11 @@ print('Time: ',time.strftime('%H:%M:%S'))
 #%%
 # Drop Nan from the DataFrame.
 
-df_1_3 = df[eng_13].dropna()
-df_2_4 = df[eng_24].dropna()
-
 # Create training arrays, X_13 is the features for engine pair 1 and 3
 
-X_13 = np.array(df_1_3.drop(labels='fo_booster_13',axis=1))
-y_13 = np.array(df_1_3['fo_booster_13'])
+df_1_3 = df[eng_13].dropna()
+X = np.array(df_1_3.drop(labels=d['fo_booster_13'],axis=1))
+y = np.array(df_1_3[d['fo_booster_13']])
 
 
 print('Training with TPOT engine pair 1....', test_name)
@@ -106,8 +104,9 @@ print(test_name, ' saved ... ')
 
 # X_24 features for engine 2, 4
 
-X = np.array(df_2_4.drop(labels='fo_booster_24',axis=1))
-y = np.array(df_2_4['fo_booster_24'])
+df_2_4 = df[eng_24].dropna()
+X = np.array(df_2_4.drop(labels=d['fo_booster_24'],axis=1))
+y = np.array(df_2_4[d['fo_booster_24']])
 
 print('Training with TPOT engine pair 2....', test_name)
 t1 = time.time()
