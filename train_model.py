@@ -8,7 +8,6 @@ from sklearn.externals import joblib
 
 def train_tpot(name,X,y,gen,cores):
 
-
     test_name = str('gen_' + str(gen) + name + '_' + time.strftime('%y%m%d'))
 
     print('Training with TPOT .... ', test_name)
