@@ -11,3 +11,5 @@ contained in the database. It needs to be manually edited in Excel.
 The training is called within a shell under a GNU SCREEN-session.
 
 'python training_1-predictor.py | tee trained_models/training_log.log'
+
+.
