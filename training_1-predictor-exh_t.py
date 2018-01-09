@@ -47,7 +47,7 @@ import train_model as tm
 # Features and target for Eng 1/3
 
 
-test_name = str('gen_' + str(gen) + 'eng_13_exh_T_predictor_'+time.strftime('%y%m%d'))
+test_name = str('eng_13_exh_T_predictor_'+time.strftime('%y%m%d'))
 features = [d['ae1_exh_T'],
           d['ae3_exh_T'],
           d['me1_exh_T'],
@@ -80,7 +80,7 @@ tm.train_tpot(test_name,X,y,gen,cores)
 # X_24 features for engine 2, 4
 
 
-test_name = str('gen_' + str(gen) + 'eng24_exh_T_predictor_'+time.strftime('%y%m%d'))
+test_name = str('eng24_exh_T_predictor_'+time.strftime('%y%m%d'))
 features = [d['ae2_exh_T'],
           d['ae4_exh_T'],
           d['me2_exh_T'],
