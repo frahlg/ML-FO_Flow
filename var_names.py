@@ -2,7 +2,7 @@ import os
 import pandas as pd
 
 project_path = os.path.realpath('')
-headers = pd.read_excel(project_path + os.sep + 'headers_dict.xlsx')
+headers = pd.read_excel(project_path + os.sep + 'var_names.xlsx')
 # Load the data from the Excel-file with headers. Please not the project_path
 
 #%%
