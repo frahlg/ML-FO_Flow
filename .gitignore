@@ -5,3 +5,4 @@ __pycache__
 .ipynb_checkpoints
 trained_models
 database
+.DS_Store
