@@ -2,5 +2,6 @@
 original
 csv
 __pycache__
+.ipynb_checkpoints
 trained_models
 database
