@@ -2,3 +2,5 @@
 original
 csv
 __pycache__
+trained_models
+database
