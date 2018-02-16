@@ -1,0 +1,1806 @@
+Test run 0 
+
+Test number, auto-sklearn model:  0 
+
+[WARNING] [2018-02-12 09:29:13,398:AutoMLSMBO(1)::111574717985833862671a74d03608cd] Could not find meta-data directory /home/fredde/anaconda3/lib/python3.6/site-packages/autosklearn/metalearning/files/r2_regression_dense
+MSE:  0.00420068306825
+MSE %:  0.00155075409837
+R2 score: 0.971679205101
+[(0.300000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:random_forest:bootstrap': 'True', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 1.0, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 1, 'regressor:random_forest:min_samples_split': 2, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.01},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.300000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'feature_agglomeration', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'quantile_transformer', 'preprocessor:feature_agglomeration:affinity': 'euclidean', 'preprocessor:feature_agglomeration:linkage': 'average', 'preprocessor:feature_agglomeration:n_clusters': 304, 'preprocessor:feature_agglomeration:pooling_func': 'median', 'regressor:random_forest:bootstrap': 'False', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 0.6621830950014135, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 10, 'regressor:random_forest:min_samples_split': 8, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'rescaling:quantile_transformer:n_quantiles': 19807, 'rescaling:quantile_transformer:output_distribution': 'normal'},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.120000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'feature_agglomeration', 'regressor:__choice__': 'gradient_boosting', 'rescaling:__choice__': 'standardize', 'preprocessor:feature_agglomeration:affinity': 'cosine', 'preprocessor:feature_agglomeration:linkage': 'average', 'preprocessor:feature_agglomeration:n_clusters': 370, 'preprocessor:feature_agglomeration:pooling_func': 'mean', 'regressor:gradient_boosting:learning_rate': 0.05658171372781252, 'regressor:gradient_boosting:loss': 'huber', 'regressor:gradient_boosting:max_depth': 2, 'regressor:gradient_boosting:max_features': 0.9834523977371825, 'regressor:gradient_boosting:max_leaf_nodes': 'None', 'regressor:gradient_boosting:min_impurity_decrease': 0.0, 'regressor:gradient_boosting:min_samples_leaf': 20, 'regressor:gradient_boosting:min_samples_split': 7, 'regressor:gradient_boosting:min_weight_fraction_leaf': 0.0, 'regressor:gradient_boosting:n_estimators': 219, 'regressor:gradient_boosting:subsample': 0.6050926363318441, 'regressor:gradient_boosting:alpha': 0.8570454625042723},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.080000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'pca', 'regressor:__choice__': 'k_nearest_neighbors', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'preprocessor:pca:keep_variance': 0.9292653292196587, 'preprocessor:pca:whiten': 'True', 'regressor:k_nearest_neighbors:n_neighbors': 41, 'regressor:k_nearest_neighbors:p': 1, 'regressor:k_nearest_neighbors:weights': 'uniform', 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.0010987934020984817},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.060000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'gradient_boosting', 'rescaling:__choice__': 'none', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:gradient_boosting:learning_rate': 0.06684704391104165, 'regressor:gradient_boosting:loss': 'lad', 'regressor:gradient_boosting:max_depth': 4, 'regressor:gradient_boosting:max_features': 0.2902072147543602, 'regressor:gradient_boosting:max_leaf_nodes': 'None', 'regressor:gradient_boosting:min_impurity_decrease': 0.0, 'regressor:gradient_boosting:min_samples_leaf': 10, 'regressor:gradient_boosting:min_samples_split': 10, 'regressor:gradient_boosting:min_weight_fraction_leaf': 0.0, 'regressor:gradient_boosting:n_estimators': 163, 'regressor:gradient_boosting:subsample': 0.9736534486114433, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.0032270306944820644},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.040000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'random_trees_embedding', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'standardize', 'preprocessor:random_trees_embedding:bootstrap': 'True', 'preprocessor:random_trees_embedding:max_depth': 9, 'preprocessor:random_trees_embedding:max_leaf_nodes': 'None', 'preprocessor:random_trees_embedding:min_samples_leaf': 2, 'preprocessor:random_trees_embedding:min_samples_split': 7, 'preprocessor:random_trees_embedding:min_weight_fraction_leaf': 1.0, 'preprocessor:random_trees_embedding:n_estimators': 18, 'regressor:random_forest:bootstrap': 'False', 'regressor:random_forest:criterion': 'friedman_mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 0.5583859395512994, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 10, 'regressor:random_forest:min_samples_split': 15, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.040000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'pca', 'regressor:__choice__': 'gradient_boosting', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'preprocessor:pca:keep_variance': 0.7836228737653408, 'preprocessor:pca:whiten': 'False', 'regressor:gradient_boosting:learning_rate': 0.4745018373100144, 'regressor:gradient_boosting:loss': 'huber', 'regressor:gradient_boosting:max_depth': 4, 'regressor:gradient_boosting:max_features': 0.9177335854315527, 'regressor:gradient_boosting:max_leaf_nodes': 'None', 'regressor:gradient_boosting:min_impurity_decrease': 0.0, 'regressor:gradient_boosting:min_samples_leaf': 3, 'regressor:gradient_boosting:min_samples_split': 17, 'regressor:gradient_boosting:min_weight_fraction_leaf': 0.0, 'regressor:gradient_boosting:n_estimators': 244, 'regressor:gradient_boosting:subsample': 0.3733207030684548, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.004300581220129954, 'regressor:gradient_boosting:alpha': 0.9707268851507502},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.040000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'most_frequent', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'gradient_boosting', 'rescaling:__choice__': 'quantile_transformer', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'regressor:gradient_boosting:learning_rate': 0.06173675162691205, 'regressor:gradient_boosting:loss': 'quantile', 'regressor:gradient_boosting:max_depth': 9, 'regressor:gradient_boosting:max_features': 0.32828501808199145, 'regressor:gradient_boosting:max_leaf_nodes': 'None', 'regressor:gradient_boosting:min_impurity_decrease': 0.0, 'regressor:gradient_boosting:min_samples_leaf': 10, 'regressor:gradient_boosting:min_samples_split': 19, 'regressor:gradient_boosting:min_weight_fraction_leaf': 0.0, 'regressor:gradient_boosting:n_estimators': 418, 'regressor:gradient_boosting:subsample': 0.1391495491974387, 'rescaling:quantile_transformer:n_quantiles': 90086, 'rescaling:quantile_transformer:output_distribution': 'uniform', 'regressor:gradient_boosting:alpha': 0.9123244134336939},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'extra_trees_preproc_for_regression', 'regressor:__choice__': 'k_nearest_neighbors', 'rescaling:__choice__': 'standardize', 'preprocessor:extra_trees_preproc_for_regression:bootstrap': 'True', 'preprocessor:extra_trees_preproc_for_regression:criterion': 'friedman_mse', 'preprocessor:extra_trees_preproc_for_regression:max_depth': 'None', 'preprocessor:extra_trees_preproc_for_regression:max_features': 0.8264197710991382, 'preprocessor:extra_trees_preproc_for_regression:max_leaf_nodes': 'None', 'preprocessor:extra_trees_preproc_for_regression:min_samples_leaf': 1, 'preprocessor:extra_trees_preproc_for_regression:min_samples_split': 18, 'preprocessor:extra_trees_preproc_for_regression:min_weight_fraction_leaf': 0.0, 'preprocessor:extra_trees_preproc_for_regression:n_estimators': 100, 'regressor:k_nearest_neighbors:n_neighbors': 11, 'regressor:k_nearest_neighbors:p': 2, 'regressor:k_nearest_neighbors:weights': 'distance'},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+]
+Training time:  305.5264081954956
+Test run 1 
+
+Test number, auto-sklearn model:  1 
+
+[WARNING] [2018-02-12 09:34:18,965:AutoMLSMBO(1)::1ebea8d3d7d44c4b071af7c2fda58778] Could not find meta-data directory /home/fredde/anaconda3/lib/python3.6/site-packages/autosklearn/metalearning/files/r2_regression_dense
+MSE:  0.00208590022873
+MSE %:  0.000770045793967
+R2 score: 0.98615377302
+[(0.440000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:random_forest:bootstrap': 'True', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 1.0, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 1, 'regressor:random_forest:min_samples_split': 2, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.01},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.220000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'fast_ica', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'minmax', 'preprocessor:fast_ica:algorithm': 'deflation', 'preprocessor:fast_ica:fun': 'cube', 'preprocessor:fast_ica:whiten': 'False', 'regressor:random_forest:bootstrap': 'False', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 0.7218818845010244, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 10, 'regressor:random_forest:min_samples_split': 20, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.200000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'feature_agglomeration', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'quantile_transformer', 'preprocessor:feature_agglomeration:affinity': 'euclidean', 'preprocessor:feature_agglomeration:linkage': 'average', 'preprocessor:feature_agglomeration:n_clusters': 304, 'preprocessor:feature_agglomeration:pooling_func': 'median', 'regressor:random_forest:bootstrap': 'False', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 0.6621830950014135, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 10, 'regressor:random_forest:min_samples_split': 8, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'rescaling:quantile_transformer:n_quantiles': 19807, 'rescaling:quantile_transformer:output_distribution': 'normal'},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.080000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'gradient_boosting', 'rescaling:__choice__': 'none', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:gradient_boosting:learning_rate': 0.06684704391104165, 'regressor:gradient_boosting:loss': 'lad', 'regressor:gradient_boosting:max_depth': 4, 'regressor:gradient_boosting:max_features': 0.2902072147543602, 'regressor:gradient_boosting:max_leaf_nodes': 'None', 'regressor:gradient_boosting:min_impurity_decrease': 0.0, 'regressor:gradient_boosting:min_samples_leaf': 10, 'regressor:gradient_boosting:min_samples_split': 10, 'regressor:gradient_boosting:min_weight_fraction_leaf': 0.0, 'regressor:gradient_boosting:n_estimators': 163, 'regressor:gradient_boosting:subsample': 0.9736534486114433, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.0032270306944820644},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.040000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'fast_ica', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'quantile_transformer', 'preprocessor:fast_ica:algorithm': 'deflation', 'preprocessor:fast_ica:fun': 'logcosh', 'preprocessor:fast_ica:whiten': 'True', 'regressor:random_forest:bootstrap': 'False', 'regressor:random_forest:criterion': 'friedman_mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 0.8215898543151225, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 15, 'regressor:random_forest:min_samples_split': 7, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'rescaling:quantile_transformer:n_quantiles': 72003, 'rescaling:quantile_transformer:output_distribution': 'normal', 'preprocessor:fast_ica:n_components': 1416},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'pca', 'regressor:__choice__': 'adaboost', 'rescaling:__choice__': 'none', 'preprocessor:pca:keep_variance': 0.6058535913431333, 'preprocessor:pca:whiten': 'False', 'regressor:adaboost:learning_rate': 0.02652709184191886, 'regressor:adaboost:loss': 'exponential', 'regressor:adaboost:max_depth': 10, 'regressor:adaboost:n_estimators': 147},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+]
+Training time:  302.66890716552734
+Test run 2 
+
+Test number, auto-sklearn model:  2 
+
+[WARNING] [2018-02-12 09:39:21,602:AutoMLSMBO(1)::3fe596c549a39a586f7f183b9e8ea3a9] Could not find meta-data directory /home/fredde/anaconda3/lib/python3.6/site-packages/autosklearn/metalearning/files/r2_regression_dense
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+MSE:  0.00557223611112
+MSE %:  0.00205708639429
+R2 score: 0.962365916075
+[(0.840000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:random_forest:bootstrap': 'True', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 1.0, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 1, 'regressor:random_forest:min_samples_split': 2, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.01},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.100000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'pca', 'regressor:__choice__': 'adaboost', 'rescaling:__choice__': 'none', 'preprocessor:pca:keep_variance': 0.6058535913431333, 'preprocessor:pca:whiten': 'False', 'regressor:adaboost:learning_rate': 0.02652709184191886, 'regressor:adaboost:loss': 'exponential', 'regressor:adaboost:max_depth': 10, 'regressor:adaboost:n_estimators': 147},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.040000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'fast_ica', 'regressor:__choice__': 'extra_trees', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'preprocessor:fast_ica:algorithm': 'parallel', 'preprocessor:fast_ica:fun': 'exp', 'preprocessor:fast_ica:whiten': 'False', 'regressor:extra_trees:bootstrap': 'True', 'regressor:extra_trees:criterion': 'friedman_mse', 'regressor:extra_trees:max_depth': 'None', 'regressor:extra_trees:max_features': 0.5766922941701957, 'regressor:extra_trees:max_leaf_nodes': 'None', 'regressor:extra_trees:min_impurity_decrease': 0.0, 'regressor:extra_trees:min_samples_leaf': 9, 'regressor:extra_trees:min_samples_split': 20, 'regressor:extra_trees:n_estimators': 100},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'feature_agglomeration', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'quantile_transformer', 'preprocessor:feature_agglomeration:affinity': 'euclidean', 'preprocessor:feature_agglomeration:linkage': 'average', 'preprocessor:feature_agglomeration:n_clusters': 304, 'preprocessor:feature_agglomeration:pooling_func': 'median', 'regressor:random_forest:bootstrap': 'False', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 0.6621830950014135, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 10, 'regressor:random_forest:min_samples_split': 8, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'rescaling:quantile_transformer:n_quantiles': 19807, 'rescaling:quantile_transformer:output_distribution': 'normal'},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+]
+Training time:  303.6943504810333
+Test run 3 
+
+Test number, auto-sklearn model:  3 
+
+[WARNING] [2018-02-12 09:44:25,290:AutoMLSMBO(1)::5b1a6b7f984c7afa1b9c934c46b5abe8] Could not find meta-data directory /home/fredde/anaconda3/lib/python3.6/site-packages/autosklearn/metalearning/files/r2_regression_dense
+MSE:  0.00188904581038
+MSE %:  0.000697373613972
+R2 score: 0.987466762616
+[(0.420000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'polynomial', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'minmax', 'preprocessor:polynomial:degree': 2, 'preprocessor:polynomial:include_bias': 'False', 'preprocessor:polynomial:interaction_only': 'True', 'regressor:random_forest:bootstrap': 'True', 'regressor:random_forest:criterion': 'friedman_mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 0.8796372151588479, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 5, 'regressor:random_forest:min_samples_split': 2, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.220000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'polynomial', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'preprocessor:polynomial:degree': 2, 'preprocessor:polynomial:include_bias': 'False', 'preprocessor:polynomial:interaction_only': 'False', 'regressor:random_forest:bootstrap': 'False', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 0.7398468217093249, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 5, 'regressor:random_forest:min_samples_split': 17, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.002342379436438063},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.180000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:random_forest:bootstrap': 'True', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 1.0, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 1, 'regressor:random_forest:min_samples_split': 2, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.01},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.060000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'most_frequent', 'preprocessor:__choice__': 'polynomial', 'regressor:__choice__': 'sgd', 'rescaling:__choice__': 'standardize', 'preprocessor:polynomial:degree': 2, 'preprocessor:polynomial:include_bias': 'True', 'preprocessor:polynomial:interaction_only': 'False', 'regressor:sgd:alpha': 1.5025776551036395e-06, 'regressor:sgd:average': 'True', 'regressor:sgd:eta0': 0.022630446984875433, 'regressor:sgd:fit_intercept': 'True', 'regressor:sgd:learning_rate': 'optimal', 'regressor:sgd:loss': 'epsilon_insensitive', 'regressor:sgd:penalty': 'l1', 'regressor:sgd:tol': 0.007934174887458428, 'regressor:sgd:epsilon': 9.983381963419018e-05},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.040000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'pca', 'regressor:__choice__': 'adaboost', 'rescaling:__choice__': 'none', 'preprocessor:pca:keep_variance': 0.6058535913431333, 'preprocessor:pca:whiten': 'False', 'regressor:adaboost:learning_rate': 0.02652709184191886, 'regressor:adaboost:loss': 'exponential', 'regressor:adaboost:max_depth': 10, 'regressor:adaboost:n_estimators': 147},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.040000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'polynomial', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'quantile_transformer', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'preprocessor:polynomial:degree': 2, 'preprocessor:polynomial:include_bias': 'False', 'preprocessor:polynomial:interaction_only': 'True', 'regressor:random_forest:bootstrap': 'False', 'regressor:random_forest:criterion': 'friedman_mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 0.6884754940726763, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 17, 'regressor:random_forest:min_samples_split': 5, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'rescaling:quantile_transformer:n_quantiles': 27927, 'rescaling:quantile_transformer:output_distribution': 'normal'},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'feature_agglomeration', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'quantile_transformer', 'preprocessor:feature_agglomeration:affinity': 'euclidean', 'preprocessor:feature_agglomeration:linkage': 'average', 'preprocessor:feature_agglomeration:n_clusters': 304, 'preprocessor:feature_agglomeration:pooling_func': 'median', 'regressor:random_forest:bootstrap': 'False', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 0.6621830950014135, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 10, 'regressor:random_forest:min_samples_split': 8, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'rescaling:quantile_transformer:n_quantiles': 19807, 'rescaling:quantile_transformer:output_distribution': 'normal'},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'gradient_boosting', 'rescaling:__choice__': 'none', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:gradient_boosting:learning_rate': 0.06684704391104165, 'regressor:gradient_boosting:loss': 'lad', 'regressor:gradient_boosting:max_depth': 4, 'regressor:gradient_boosting:max_features': 0.2902072147543602, 'regressor:gradient_boosting:max_leaf_nodes': 'None', 'regressor:gradient_boosting:min_impurity_decrease': 0.0, 'regressor:gradient_boosting:min_samples_leaf': 10, 'regressor:gradient_boosting:min_samples_split': 10, 'regressor:gradient_boosting:min_weight_fraction_leaf': 0.0, 'regressor:gradient_boosting:n_estimators': 163, 'regressor:gradient_boosting:subsample': 0.9736534486114433, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.0032270306944820644},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+]
+Training time:  304.4856414794922
+Test run 4 
+
+Test number, auto-sklearn model:  4 
+
+[WARNING] [2018-02-12 09:49:29,799:AutoMLSMBO(1)::363ec92a3a1a4e1f0698430f17e0898a] Could not find meta-data directory /home/fredde/anaconda3/lib/python3.6/site-packages/autosklearn/metalearning/files/r2_regression_dense
+MSE:  0.00141359437471
+MSE %:  0.000521852573594
+R2 score: 0.99071733001
+[(0.740000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:random_forest:bootstrap': 'True', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 1.0, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 1, 'regressor:random_forest:min_samples_split': 2, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.01},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.140000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'polynomial', 'regressor:__choice__': 'ridge_regression', 'rescaling:__choice__': 'standardize', 'preprocessor:polynomial:degree': 3, 'preprocessor:polynomial:include_bias': 'False', 'preprocessor:polynomial:interaction_only': 'False', 'regressor:ridge_regression:alpha': 0.004088089014529873, 'regressor:ridge_regression:fit_intercept': 'True', 'regressor:ridge_regression:tol': 1.0345514157277865e-05},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.060000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'k_nearest_neighbors', 'rescaling:__choice__': 'normalize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'regressor:k_nearest_neighbors:n_neighbors': 1, 'regressor:k_nearest_neighbors:p': 2, 'regressor:k_nearest_neighbors:weights': 'distance'},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.060000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'polynomial', 'regressor:__choice__': 'sgd', 'rescaling:__choice__': 'minmax', 'preprocessor:polynomial:degree': 2, 'preprocessor:polynomial:include_bias': 'True', 'preprocessor:polynomial:interaction_only': 'False', 'regressor:sgd:alpha': 2.772013274485669e-07, 'regressor:sgd:average': 'False', 'regressor:sgd:eta0': 0.05333728521199005, 'regressor:sgd:fit_intercept': 'True', 'regressor:sgd:learning_rate': 'constant', 'regressor:sgd:loss': 'squared_loss', 'regressor:sgd:penalty': 'elasticnet', 'regressor:sgd:tol': 0.006622946392542355, 'regressor:sgd:l1_ratio': 0.0018794247748098363},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+]
+Training time:  300.4899232387543
+Test run 5 
+
+Test number, auto-sklearn model:  5 
+
+[WARNING] [2018-02-12 09:54:30,278:AutoMLSMBO(1)::9bd8c6a0eae84d5dd086760cca475cc8] Could not find meta-data directory /home/fredde/anaconda3/lib/python3.6/site-packages/autosklearn/metalearning/files/r2_regression_dense
+MSE:  0.00107530266254
+MSE %:  0.000396966394235
+R2 score: 0.992906675859
+[(0.580000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:random_forest:bootstrap': 'True', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 1.0, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 1, 'regressor:random_forest:min_samples_split': 2, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.01},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.220000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'gradient_boosting', 'rescaling:__choice__': 'quantile_transformer', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:gradient_boosting:learning_rate': 0.1981917541280589, 'regressor:gradient_boosting:loss': 'ls', 'regressor:gradient_boosting:max_depth': 3, 'regressor:gradient_boosting:max_features': 0.7149316059199384, 'regressor:gradient_boosting:max_leaf_nodes': 'None', 'regressor:gradient_boosting:min_impurity_decrease': 0.0, 'regressor:gradient_boosting:min_samples_leaf': 6, 'regressor:gradient_boosting:min_samples_split': 17, 'regressor:gradient_boosting:min_weight_fraction_leaf': 0.0, 'regressor:gradient_boosting:n_estimators': 229, 'regressor:gradient_boosting:subsample': 0.9411910341852838, 'rescaling:quantile_transformer:n_quantiles': 23740, 'rescaling:quantile_transformer:output_distribution': 'normal', 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.0009117625575388258},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.080000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'polynomial', 'regressor:__choice__': 'k_nearest_neighbors', 'rescaling:__choice__': 'normalize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'preprocessor:polynomial:degree': 2, 'preprocessor:polynomial:include_bias': 'False', 'preprocessor:polynomial:interaction_only': 'False', 'regressor:k_nearest_neighbors:n_neighbors': 2, 'regressor:k_nearest_neighbors:p': 2, 'regressor:k_nearest_neighbors:weights': 'distance', 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.0019293410384999422},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.060000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'pca', 'regressor:__choice__': 'k_nearest_neighbors', 'rescaling:__choice__': 'standardize', 'preprocessor:pca:keep_variance': 0.9092676681882573, 'preprocessor:pca:whiten': 'False', 'regressor:k_nearest_neighbors:n_neighbors': 5, 'regressor:k_nearest_neighbors:p': 1, 'regressor:k_nearest_neighbors:weights': 'distance'},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.040000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'feature_agglomeration', 'regressor:__choice__': 'k_nearest_neighbors', 'rescaling:__choice__': 'quantile_transformer', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'preprocessor:feature_agglomeration:affinity': 'euclidean', 'preprocessor:feature_agglomeration:linkage': 'complete', 'preprocessor:feature_agglomeration:n_clusters': 284, 'preprocessor:feature_agglomeration:pooling_func': 'max', 'regressor:k_nearest_neighbors:n_neighbors': 10, 'regressor:k_nearest_neighbors:p': 1, 'regressor:k_nearest_neighbors:weights': 'distance', 'rescaling:quantile_transformer:n_quantiles': 64863, 'rescaling:quantile_transformer:output_distribution': 'normal'},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'pca', 'regressor:__choice__': 'libsvm_svr', 'rescaling:__choice__': 'none', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'preprocessor:pca:keep_variance': 0.9999, 'preprocessor:pca:whiten': 'False', 'regressor:libsvm_svr:C': 1.0, 'regressor:libsvm_svr:epsilon': 0.10000000000000006, 'regressor:libsvm_svr:kernel': 'rbf', 'regressor:libsvm_svr:max_iter': -1, 'regressor:libsvm_svr:shrinking': 'True', 'regressor:libsvm_svr:tol': 0.0010000000000000002, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.010000000000000004, 'regressor:libsvm_svr:degree': 3, 'regressor:libsvm_svr:gamma': 0.10000000000000006},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+]
+Training time:  316.59295678138733
+Test run 6 
+
+Test number, auto-sklearn model:  6 
+
+[WARNING] [2018-02-12 09:59:46,878:AutoMLSMBO(1)::0977a0af61dc081b8f7429987a136a8f] Could not find meta-data directory /home/fredde/anaconda3/lib/python3.6/site-packages/autosklearn/metalearning/files/r2_regression_dense
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+MSE:  0.00146854416313
+MSE %:  0.000542138229096
+R2 score: 0.990321015113
+[(0.640000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:random_forest:bootstrap': 'True', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 1.0, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 1, 'regressor:random_forest:min_samples_split': 2, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.01},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.160000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'polynomial', 'regressor:__choice__': 'ridge_regression', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'preprocessor:polynomial:degree': 3, 'preprocessor:polynomial:include_bias': 'False', 'preprocessor:polynomial:interaction_only': 'True', 'regressor:ridge_regression:alpha': 0.001474590072653207, 'regressor:ridge_regression:fit_intercept': 'True', 'regressor:ridge_regression:tol': 0.0001345473686901852, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.0036454634772114685},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.080000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'polynomial', 'regressor:__choice__': 'k_nearest_neighbors', 'rescaling:__choice__': 'minmax', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'preprocessor:polynomial:degree': 3, 'preprocessor:polynomial:include_bias': 'False', 'preprocessor:polynomial:interaction_only': 'True', 'regressor:k_nearest_neighbors:n_neighbors': 3, 'regressor:k_nearest_neighbors:p': 2, 'regressor:k_nearest_neighbors:weights': 'distance', 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.0003132061308481564},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.060000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'most_frequent', 'preprocessor:__choice__': 'random_trees_embedding', 'regressor:__choice__': 'decision_tree', 'rescaling:__choice__': 'robust_scaler', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'preprocessor:random_trees_embedding:bootstrap': 'False', 'preprocessor:random_trees_embedding:max_depth': 10, 'preprocessor:random_trees_embedding:max_leaf_nodes': 'None', 'preprocessor:random_trees_embedding:min_samples_leaf': 7, 'preprocessor:random_trees_embedding:min_samples_split': 12, 'preprocessor:random_trees_embedding:min_weight_fraction_leaf': 1.0, 'preprocessor:random_trees_embedding:n_estimators': 65, 'regressor:decision_tree:criterion': 'mse', 'regressor:decision_tree:max_depth': 1.618400869593251, 'regressor:decision_tree:max_features': 1.0, 'regressor:decision_tree:max_leaf_nodes': 'None', 'regressor:decision_tree:min_impurity_decrease': 0.0, 'regressor:decision_tree:min_samples_leaf': 10, 'regressor:decision_tree:min_samples_split': 11, 'regressor:decision_tree:min_weight_fraction_leaf': 0.0, 'rescaling:robust_scaler:q_max': 0.9151128969224731, 'rescaling:robust_scaler:q_min': 0.00124344527564706},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'most_frequent', 'preprocessor:__choice__': 'polynomial', 'regressor:__choice__': 'sgd', 'rescaling:__choice__': 'standardize', 'preprocessor:polynomial:degree': 2, 'preprocessor:polynomial:include_bias': 'True', 'preprocessor:polynomial:interaction_only': 'False', 'regressor:sgd:alpha': 1.5025776551036395e-06, 'regressor:sgd:average': 'True', 'regressor:sgd:eta0': 0.022630446984875433, 'regressor:sgd:fit_intercept': 'True', 'regressor:sgd:learning_rate': 'optimal', 'regressor:sgd:loss': 'epsilon_insensitive', 'regressor:sgd:penalty': 'l1', 'regressor:sgd:tol': 0.007934174887458428, 'regressor:sgd:epsilon': 9.983381963419018e-05},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'feature_agglomeration', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'quantile_transformer', 'preprocessor:feature_agglomeration:affinity': 'euclidean', 'preprocessor:feature_agglomeration:linkage': 'average', 'preprocessor:feature_agglomeration:n_clusters': 304, 'preprocessor:feature_agglomeration:pooling_func': 'median', 'regressor:random_forest:bootstrap': 'False', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 0.6621830950014135, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 10, 'regressor:random_forest:min_samples_split': 8, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'rescaling:quantile_transformer:n_quantiles': 19807, 'rescaling:quantile_transformer:output_distribution': 'normal'},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'most_frequent', 'preprocessor:__choice__': 'polynomial', 'regressor:__choice__': 'ridge_regression', 'rescaling:__choice__': 'quantile_transformer', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'preprocessor:polynomial:degree': 2, 'preprocessor:polynomial:include_bias': 'False', 'preprocessor:polynomial:interaction_only': 'True', 'regressor:ridge_regression:alpha': 3.465242408103979e-05, 'regressor:ridge_regression:fit_intercept': 'True', 'regressor:ridge_regression:tol': 0.000248034891481208, 'rescaling:quantile_transformer:n_quantiles': 82850, 'rescaling:quantile_transformer:output_distribution': 'normal', 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.03185610055265116},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+]
+Training time:  306.7251603603363
+Test run 7 
+
+Test number, auto-sklearn model:  7 
+
+[WARNING] [2018-02-12 10:04:53,611:AutoMLSMBO(1)::811db5f88ce2163efe0736d1d9dcd58b] Could not find meta-data directory /home/fredde/anaconda3/lib/python3.6/site-packages/autosklearn/metalearning/files/r2_regression_dense
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+MSE:  0.000774570628207
+MSE %:  0.000285946013221
+R2 score: 0.994947627435
+[(0.780000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:random_forest:bootstrap': 'True', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 1.0, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 1, 'regressor:random_forest:min_samples_split': 2, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.01},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.200000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'random_trees_embedding', 'regressor:__choice__': 'sgd', 'rescaling:__choice__': 'minmax', 'preprocessor:random_trees_embedding:bootstrap': 'False', 'preprocessor:random_trees_embedding:max_depth': 5, 'preprocessor:random_trees_embedding:max_leaf_nodes': 'None', 'preprocessor:random_trees_embedding:min_samples_leaf': 14, 'preprocessor:random_trees_embedding:min_samples_split': 15, 'preprocessor:random_trees_embedding:min_weight_fraction_leaf': 1.0, 'preprocessor:random_trees_embedding:n_estimators': 99, 'regressor:sgd:alpha': 0.00026115277346298025, 'regressor:sgd:average': 'False', 'regressor:sgd:eta0': 0.04176593491323235, 'regressor:sgd:fit_intercept': 'True', 'regressor:sgd:learning_rate': 'optimal', 'regressor:sgd:loss': 'epsilon_insensitive', 'regressor:sgd:penalty': 'l2', 'regressor:sgd:tol': 0.0004365306050503068, 'regressor:sgd:epsilon': 0.001071581085629227},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'most_frequent', 'preprocessor:__choice__': 'polynomial', 'regressor:__choice__': 'sgd', 'rescaling:__choice__': 'standardize', 'preprocessor:polynomial:degree': 2, 'preprocessor:polynomial:include_bias': 'True', 'preprocessor:polynomial:interaction_only': 'False', 'regressor:sgd:alpha': 1.5025776551036395e-06, 'regressor:sgd:average': 'True', 'regressor:sgd:eta0': 0.022630446984875433, 'regressor:sgd:fit_intercept': 'True', 'regressor:sgd:learning_rate': 'optimal', 'regressor:sgd:loss': 'epsilon_insensitive', 'regressor:sgd:penalty': 'l1', 'regressor:sgd:tol': 0.007934174887458428, 'regressor:sgd:epsilon': 9.983381963419018e-05},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+]
+Training time:  295.768235206604
+Test run 8 
+
+Test number, auto-sklearn model:  8 
+
+[WARNING] [2018-02-12 10:09:49,356:AutoMLSMBO(1)::147b5e90cb62b15b905dbe1d3b44f0f1] Could not find meta-data directory /home/fredde/anaconda3/lib/python3.6/site-packages/autosklearn/metalearning/files/r2_regression_dense
+MSE:  0.000673584060866
+MSE %:  0.000248665092323
+R2 score: 0.995571538662
+[(0.520000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:random_forest:bootstrap': 'True', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 1.0, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 1, 'regressor:random_forest:min_samples_split': 2, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.01},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.380000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'most_frequent', 'preprocessor:__choice__': 'feature_agglomeration', 'regressor:__choice__': 'adaboost', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'preprocessor:feature_agglomeration:affinity': 'euclidean', 'preprocessor:feature_agglomeration:linkage': 'ward', 'preprocessor:feature_agglomeration:n_clusters': 301, 'preprocessor:feature_agglomeration:pooling_func': 'mean', 'regressor:adaboost:learning_rate': 0.17896052593243858, 'regressor:adaboost:loss': 'linear', 'regressor:adaboost:max_depth': 10, 'regressor:adaboost:n_estimators': 102},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.060000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'polynomial', 'regressor:__choice__': 'sgd', 'rescaling:__choice__': 'minmax', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'preprocessor:polynomial:degree': 3, 'preprocessor:polynomial:include_bias': 'True', 'preprocessor:polynomial:interaction_only': 'False', 'regressor:sgd:alpha': 0.00043532382653683143, 'regressor:sgd:average': 'False', 'regressor:sgd:eta0': 0.0899338029719263, 'regressor:sgd:fit_intercept': 'True', 'regressor:sgd:learning_rate': 'constant', 'regressor:sgd:loss': 'epsilon_insensitive', 'regressor:sgd:penalty': 'l1', 'regressor:sgd:tol': 0.0005147000659508045, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.23279722220120833, 'regressor:sgd:epsilon': 0.06797785145230034},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'most_frequent', 'preprocessor:__choice__': 'polynomial', 'regressor:__choice__': 'sgd', 'rescaling:__choice__': 'standardize', 'preprocessor:polynomial:degree': 2, 'preprocessor:polynomial:include_bias': 'True', 'preprocessor:polynomial:interaction_only': 'False', 'regressor:sgd:alpha': 1.5025776551036395e-06, 'regressor:sgd:average': 'True', 'regressor:sgd:eta0': 0.022630446984875433, 'regressor:sgd:fit_intercept': 'True', 'regressor:sgd:learning_rate': 'optimal', 'regressor:sgd:loss': 'epsilon_insensitive', 'regressor:sgd:penalty': 'l1', 'regressor:sgd:tol': 0.007934174887458428, 'regressor:sgd:epsilon': 9.983381963419018e-05},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'fast_ica', 'regressor:__choice__': 'extra_trees', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'preprocessor:fast_ica:algorithm': 'parallel', 'preprocessor:fast_ica:fun': 'exp', 'preprocessor:fast_ica:whiten': 'False', 'regressor:extra_trees:bootstrap': 'True', 'regressor:extra_trees:criterion': 'friedman_mse', 'regressor:extra_trees:max_depth': 'None', 'regressor:extra_trees:max_features': 0.5766922941701957, 'regressor:extra_trees:max_leaf_nodes': 'None', 'regressor:extra_trees:min_impurity_decrease': 0.0, 'regressor:extra_trees:min_samples_leaf': 9, 'regressor:extra_trees:min_samples_split': 20, 'regressor:extra_trees:n_estimators': 100},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+]
+Training time:  299.40170431137085
+Test run 9 
+
+Test number, auto-sklearn model:  9 
+
+[WARNING] [2018-02-12 10:14:48,756:AutoMLSMBO(1)::41aa6ff59250cf95cacecba2b4c87e64] Could not find meta-data directory /home/fredde/anaconda3/lib/python3.6/site-packages/autosklearn/metalearning/files/r2_regression_dense
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+MSE:  0.00104911698481
+MSE %:  0.000387299502828
+R2 score: 0.993090343025
+[(0.800000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:random_forest:bootstrap': 'True', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 1.0, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 1, 'regressor:random_forest:min_samples_split': 2, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.01},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.160000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'most_frequent', 'preprocessor:__choice__': 'polynomial', 'regressor:__choice__': 'k_nearest_neighbors', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'preprocessor:polynomial:degree': 3, 'preprocessor:polynomial:include_bias': 'True', 'preprocessor:polynomial:interaction_only': 'True', 'regressor:k_nearest_neighbors:n_neighbors': 9, 'regressor:k_nearest_neighbors:p': 2, 'regressor:k_nearest_neighbors:weights': 'distance'},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.040000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'most_frequent', 'preprocessor:__choice__': 'polynomial', 'regressor:__choice__': 'sgd', 'rescaling:__choice__': 'standardize', 'preprocessor:polynomial:degree': 2, 'preprocessor:polynomial:include_bias': 'True', 'preprocessor:polynomial:interaction_only': 'False', 'regressor:sgd:alpha': 1.5025776551036395e-06, 'regressor:sgd:average': 'True', 'regressor:sgd:eta0': 0.022630446984875433, 'regressor:sgd:fit_intercept': 'True', 'regressor:sgd:learning_rate': 'optimal', 'regressor:sgd:loss': 'epsilon_insensitive', 'regressor:sgd:penalty': 'l1', 'regressor:sgd:tol': 0.007934174887458428, 'regressor:sgd:epsilon': 9.983381963419018e-05},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+]
+Training time:  301.9356701374054
+Test run 10 
+
+Test number, auto-sklearn model:  10 
+
+[WARNING] [2018-02-12 10:19:50,703:AutoMLSMBO(1)::d22598735e66dc911a3b71f535322953] Could not find meta-data directory /home/fredde/anaconda3/lib/python3.6/site-packages/autosklearn/metalearning/files/r2_regression_dense
+MSE:  0.000684647412856
+MSE %:  0.000252749318189
+R2 score: 0.995468705927
+[(0.440000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'adaboost', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'regressor:adaboost:learning_rate': 0.19151071599995925, 'regressor:adaboost:loss': 'square', 'regressor:adaboost:max_depth': 9, 'regressor:adaboost:n_estimators': 305},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.340000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:random_forest:bootstrap': 'True', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 1.0, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 1, 'regressor:random_forest:min_samples_split': 2, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.01},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.160000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'most_frequent', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'extra_trees', 'rescaling:__choice__': 'none', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'regressor:extra_trees:bootstrap': 'False', 'regressor:extra_trees:criterion': 'mse', 'regressor:extra_trees:max_depth': 'None', 'regressor:extra_trees:max_features': 0.9715470561568367, 'regressor:extra_trees:max_leaf_nodes': 'None', 'regressor:extra_trees:min_impurity_decrease': 0.0, 'regressor:extra_trees:min_samples_leaf': 6, 'regressor:extra_trees:min_samples_split': 10, 'regressor:extra_trees:n_estimators': 100},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.060000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'random_trees_embedding', 'regressor:__choice__': 'ridge_regression', 'rescaling:__choice__': 'none', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'preprocessor:random_trees_embedding:bootstrap': 'True', 'preprocessor:random_trees_embedding:max_depth': 8, 'preprocessor:random_trees_embedding:max_leaf_nodes': 'None', 'preprocessor:random_trees_embedding:min_samples_leaf': 20, 'preprocessor:random_trees_embedding:min_samples_split': 17, 'preprocessor:random_trees_embedding:min_weight_fraction_leaf': 1.0, 'preprocessor:random_trees_embedding:n_estimators': 30, 'regressor:ridge_regression:alpha': 1.8757604381760207, 'regressor:ridge_regression:fit_intercept': 'True', 'regressor:ridge_regression:tol': 0.00013242927017211964},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+]
+Training time:  304.56458950042725
+Test run 11 
+
+Test number, auto-sklearn model:  11 
+
+[WARNING] [2018-02-12 10:24:55,324:AutoMLSMBO(1)::2f4832f7b617084ff0376abbba95d6c0] Could not find meta-data directory /home/fredde/anaconda3/lib/python3.6/site-packages/autosklearn/metalearning/files/r2_regression_dense
+MSE:  0.000764322766801
+MSE %:  0.000282162839671
+R2 score: 0.994995446748
+[(0.780000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:random_forest:bootstrap': 'True', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 1.0, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 1, 'regressor:random_forest:min_samples_split': 2, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.01},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.120000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'feature_agglomeration', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'normalize', 'preprocessor:feature_agglomeration:affinity': 'manhattan', 'preprocessor:feature_agglomeration:linkage': 'complete', 'preprocessor:feature_agglomeration:n_clusters': 121, 'preprocessor:feature_agglomeration:pooling_func': 'max', 'regressor:random_forest:bootstrap': 'True', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 0.6917724263824307, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 19, 'regressor:random_forest:min_samples_split': 15, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.040000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'random_trees_embedding', 'regressor:__choice__': 'decision_tree', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'preprocessor:random_trees_embedding:bootstrap': 'False', 'preprocessor:random_trees_embedding:max_depth': 7, 'preprocessor:random_trees_embedding:max_leaf_nodes': 'None', 'preprocessor:random_trees_embedding:min_samples_leaf': 19, 'preprocessor:random_trees_embedding:min_samples_split': 9, 'preprocessor:random_trees_embedding:min_weight_fraction_leaf': 1.0, 'preprocessor:random_trees_embedding:n_estimators': 31, 'regressor:decision_tree:criterion': 'friedman_mse', 'regressor:decision_tree:max_depth': 1.5177436207127752, 'regressor:decision_tree:max_features': 1.0, 'regressor:decision_tree:max_leaf_nodes': 'None', 'regressor:decision_tree:min_impurity_decrease': 0.0, 'regressor:decision_tree:min_samples_leaf': 1, 'regressor:decision_tree:min_samples_split': 17, 'regressor:decision_tree:min_weight_fraction_leaf': 0.0, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.4424594954322107},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.040000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'most_frequent', 'preprocessor:__choice__': 'random_trees_embedding', 'regressor:__choice__': 'sgd', 'rescaling:__choice__': 'standardize', 'preprocessor:random_trees_embedding:bootstrap': 'True', 'preprocessor:random_trees_embedding:max_depth': 10, 'preprocessor:random_trees_embedding:max_leaf_nodes': 'None', 'preprocessor:random_trees_embedding:min_samples_leaf': 12, 'preprocessor:random_trees_embedding:min_samples_split': 10, 'preprocessor:random_trees_embedding:min_weight_fraction_leaf': 1.0, 'preprocessor:random_trees_embedding:n_estimators': 60, 'regressor:sgd:alpha': 0.026088391154610296, 'regressor:sgd:average': 'True', 'regressor:sgd:eta0': 0.03596940112880305, 'regressor:sgd:fit_intercept': 'True', 'regressor:sgd:learning_rate': 'invscaling', 'regressor:sgd:loss': 'epsilon_insensitive', 'regressor:sgd:penalty': 'elasticnet', 'regressor:sgd:tol': 0.0008077397947095565, 'regressor:sgd:epsilon': 0.04365022685265578, 'regressor:sgd:l1_ratio': 3.4511202081505258e-09, 'regressor:sgd:power_t': 0.5562216320573317},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'most_frequent', 'preprocessor:__choice__': 'polynomial', 'regressor:__choice__': 'sgd', 'rescaling:__choice__': 'standardize', 'preprocessor:polynomial:degree': 2, 'preprocessor:polynomial:include_bias': 'True', 'preprocessor:polynomial:interaction_only': 'False', 'regressor:sgd:alpha': 1.5025776551036395e-06, 'regressor:sgd:average': 'True', 'regressor:sgd:eta0': 0.022630446984875433, 'regressor:sgd:fit_intercept': 'True', 'regressor:sgd:learning_rate': 'optimal', 'regressor:sgd:loss': 'epsilon_insensitive', 'regressor:sgd:penalty': 'l1', 'regressor:sgd:tol': 0.007934174887458428, 'regressor:sgd:epsilon': 9.983381963419018e-05},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+]
+Training time:  298.1765298843384
+Test run 12 
+
+Test number, auto-sklearn model:  12 
+
+[WARNING] [2018-02-12 10:29:53,500:AutoMLSMBO(1)::76a4c417a4490e9fb32b34da3c79c175] Could not find meta-data directory /home/fredde/anaconda3/lib/python3.6/site-packages/autosklearn/metalearning/files/r2_regression_dense
+MSE:  0.00100183885728
+MSE %:  0.000369845972334
+R2 score: 0.993390227268
+[(0.860000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:random_forest:bootstrap': 'True', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 1.0, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 1, 'regressor:random_forest:min_samples_split': 2, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.01},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.080000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'fast_ica', 'regressor:__choice__': 'extra_trees', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'preprocessor:fast_ica:algorithm': 'parallel', 'preprocessor:fast_ica:fun': 'exp', 'preprocessor:fast_ica:whiten': 'False', 'regressor:extra_trees:bootstrap': 'True', 'regressor:extra_trees:criterion': 'friedman_mse', 'regressor:extra_trees:max_depth': 'None', 'regressor:extra_trees:max_features': 0.5766922941701957, 'regressor:extra_trees:max_leaf_nodes': 'None', 'regressor:extra_trees:min_impurity_decrease': 0.0, 'regressor:extra_trees:min_samples_leaf': 9, 'regressor:extra_trees:min_samples_split': 20, 'regressor:extra_trees:n_estimators': 100},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.040000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'most_frequent', 'preprocessor:__choice__': 'polynomial', 'regressor:__choice__': 'ridge_regression', 'rescaling:__choice__': 'quantile_transformer', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'preprocessor:polynomial:degree': 2, 'preprocessor:polynomial:include_bias': 'False', 'preprocessor:polynomial:interaction_only': 'True', 'regressor:ridge_regression:alpha': 3.465242408103979e-05, 'regressor:ridge_regression:fit_intercept': 'True', 'regressor:ridge_regression:tol': 0.000248034891481208, 'rescaling:quantile_transformer:n_quantiles': 82850, 'rescaling:quantile_transformer:output_distribution': 'normal', 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.03185610055265116},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'ridge_regression', 'rescaling:__choice__': 'minmax', 'regressor:ridge_regression:alpha': 8.326500321887319e-05, 'regressor:ridge_regression:fit_intercept': 'True', 'regressor:ridge_regression:tol': 0.00032452570258667963},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+]
+Training time:  300.05564403533936
+Test run 13 
+
+Test number, auto-sklearn model:  13 
+
+[WARNING] [2018-02-12 10:34:53,547:AutoMLSMBO(1)::d4db2ba34aa882ee0deb3db1f860e1c5] Could not find meta-data directory /home/fredde/anaconda3/lib/python3.6/site-packages/autosklearn/metalearning/files/r2_regression_dense
+MSE:  0.000742823684158
+MSE %:  0.000274226085106
+R2 score: 0.995124899748
+[(0.900000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:random_forest:bootstrap': 'True', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 1.0, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 1, 'regressor:random_forest:min_samples_split': 2, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.01},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.060000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'fast_ica', 'regressor:__choice__': 'extra_trees', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'preprocessor:fast_ica:algorithm': 'parallel', 'preprocessor:fast_ica:fun': 'exp', 'preprocessor:fast_ica:whiten': 'False', 'regressor:extra_trees:bootstrap': 'True', 'regressor:extra_trees:criterion': 'friedman_mse', 'regressor:extra_trees:max_depth': 'None', 'regressor:extra_trees:max_features': 0.5766922941701957, 'regressor:extra_trees:max_leaf_nodes': 'None', 'regressor:extra_trees:min_impurity_decrease': 0.0, 'regressor:extra_trees:min_samples_leaf': 9, 'regressor:extra_trees:min_samples_split': 20, 'regressor:extra_trees:n_estimators': 100},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'gradient_boosting', 'rescaling:__choice__': 'none', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:gradient_boosting:learning_rate': 0.06684704391104165, 'regressor:gradient_boosting:loss': 'lad', 'regressor:gradient_boosting:max_depth': 4, 'regressor:gradient_boosting:max_features': 0.2902072147543602, 'regressor:gradient_boosting:max_leaf_nodes': 'None', 'regressor:gradient_boosting:min_impurity_decrease': 0.0, 'regressor:gradient_boosting:min_samples_leaf': 10, 'regressor:gradient_boosting:min_samples_split': 10, 'regressor:gradient_boosting:min_weight_fraction_leaf': 0.0, 'regressor:gradient_boosting:n_estimators': 163, 'regressor:gradient_boosting:subsample': 0.9736534486114433, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.0032270306944820644},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'most_frequent', 'preprocessor:__choice__': 'fast_ica', 'regressor:__choice__': 'sgd', 'rescaling:__choice__': 'minmax', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'preprocessor:fast_ica:algorithm': 'deflation', 'preprocessor:fast_ica:fun': 'cube', 'preprocessor:fast_ica:whiten': 'False', 'regressor:sgd:alpha': 1.2531478494221815e-05, 'regressor:sgd:average': 'False', 'regressor:sgd:eta0': 0.028142995064405534, 'regressor:sgd:fit_intercept': 'True', 'regressor:sgd:learning_rate': 'optimal', 'regressor:sgd:loss': 'squared_loss', 'regressor:sgd:penalty': 'elasticnet', 'regressor:sgd:tol': 0.0008972969770974626, 'regressor:sgd:l1_ratio': 0.0023362430630915476},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+]
+Training time:  299.0180666446686
+Test run 14 
+
+Test number, auto-sklearn model:  14 
+
+[WARNING] [2018-02-12 10:39:52,526:AutoMLSMBO(1)::87b9ad3c0feeea6cdd153efb2f28a59a] Could not find meta-data directory /home/fredde/anaconda3/lib/python3.6/site-packages/autosklearn/metalearning/files/r2_regression_dense
+MSE:  0.000519082787538
+MSE %:  0.000191628301181
+R2 score: 0.996609622079
+[(0.360000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:random_forest:bootstrap': 'True', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 1.0, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 1, 'regressor:random_forest:min_samples_split': 2, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.01},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.260000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'most_frequent', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'k_nearest_neighbors', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'regressor:k_nearest_neighbors:n_neighbors': 1, 'regressor:k_nearest_neighbors:p': 1, 'regressor:k_nearest_neighbors:weights': 'uniform'},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.260000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'most_frequent', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'k_nearest_neighbors', 'rescaling:__choice__': 'standardize', 'regressor:k_nearest_neighbors:n_neighbors': 6, 'regressor:k_nearest_neighbors:p': 1, 'regressor:k_nearest_neighbors:weights': 'uniform'},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.120000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'most_frequent', 'preprocessor:__choice__': 'random_trees_embedding', 'regressor:__choice__': 'ridge_regression', 'rescaling:__choice__': 'quantile_transformer', 'preprocessor:random_trees_embedding:bootstrap': 'False', 'preprocessor:random_trees_embedding:max_depth': 7, 'preprocessor:random_trees_embedding:max_leaf_nodes': 'None', 'preprocessor:random_trees_embedding:min_samples_leaf': 5, 'preprocessor:random_trees_embedding:min_samples_split': 12, 'preprocessor:random_trees_embedding:min_weight_fraction_leaf': 1.0, 'preprocessor:random_trees_embedding:n_estimators': 68, 'regressor:ridge_regression:alpha': 0.09643917407422989, 'regressor:ridge_regression:fit_intercept': 'True', 'regressor:ridge_regression:tol': 0.0005074390726102645, 'rescaling:quantile_transformer:n_quantiles': 21607, 'rescaling:quantile_transformer:output_distribution': 'uniform'},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+]
+Training time:  309.90604615211487
+Test run 15 
+
+Test number, auto-sklearn model:  15 
+
+[WARNING] [2018-02-12 10:45:02,474:AutoMLSMBO(1)::b9f086445577103676888a2f545a2cea] Could not find meta-data directory /home/fredde/anaconda3/lib/python3.6/site-packages/autosklearn/metalearning/files/r2_regression_dense
+MSE:  0.00364653560523
+MSE %:  0.00134187838016
+R2 score: 0.977009143003
+[(0.280000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'feature_agglomeration', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'none', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'preprocessor:feature_agglomeration:affinity': 'euclidean', 'preprocessor:feature_agglomeration:linkage': 'ward', 'preprocessor:feature_agglomeration:n_clusters': 25, 'preprocessor:feature_agglomeration:pooling_func': 'mean', 'regressor:random_forest:bootstrap': 'True', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 0.814787525348397, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 1, 'regressor:random_forest:min_samples_split': 2, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.08379657656204062},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.180000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'gradient_boosting', 'rescaling:__choice__': 'none', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:gradient_boosting:learning_rate': 0.06684704391104165, 'regressor:gradient_boosting:loss': 'lad', 'regressor:gradient_boosting:max_depth': 4, 'regressor:gradient_boosting:max_features': 0.2902072147543602, 'regressor:gradient_boosting:max_leaf_nodes': 'None', 'regressor:gradient_boosting:min_impurity_decrease': 0.0, 'regressor:gradient_boosting:min_samples_leaf': 10, 'regressor:gradient_boosting:min_samples_split': 10, 'regressor:gradient_boosting:min_weight_fraction_leaf': 0.0, 'regressor:gradient_boosting:n_estimators': 163, 'regressor:gradient_boosting:subsample': 0.9736534486114433, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.0032270306944820644},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.180000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'gradient_boosting', 'rescaling:__choice__': 'none', 'regressor:gradient_boosting:learning_rate': 0.03248980014219447, 'regressor:gradient_boosting:loss': 'ls', 'regressor:gradient_boosting:max_depth': 3, 'regressor:gradient_boosting:max_features': 0.679705042812125, 'regressor:gradient_boosting:max_leaf_nodes': 'None', 'regressor:gradient_boosting:min_impurity_decrease': 0.0, 'regressor:gradient_boosting:min_samples_leaf': 5, 'regressor:gradient_boosting:min_samples_split': 2, 'regressor:gradient_boosting:min_weight_fraction_leaf': 0.0, 'regressor:gradient_boosting:n_estimators': 306, 'regressor:gradient_boosting:subsample': 0.08321696609398128},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.120000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'regressor:random_forest:bootstrap': 'False', 'regressor:random_forest:criterion': 'friedman_mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 0.7779536174723597, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 6, 'regressor:random_forest:min_samples_split': 16, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.120000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'polynomial', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'standardize', 'preprocessor:polynomial:degree': 2, 'preprocessor:polynomial:include_bias': 'False', 'preprocessor:polynomial:interaction_only': 'False', 'regressor:random_forest:bootstrap': 'True', 'regressor:random_forest:criterion': 'friedman_mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 0.32336249342178813, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 11, 'regressor:random_forest:min_samples_split': 3, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.120000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'most_frequent', 'preprocessor:__choice__': 'polynomial', 'regressor:__choice__': 'extra_trees', 'rescaling:__choice__': 'minmax', 'preprocessor:polynomial:degree': 2, 'preprocessor:polynomial:include_bias': 'True', 'preprocessor:polynomial:interaction_only': 'False', 'regressor:extra_trees:bootstrap': 'True', 'regressor:extra_trees:criterion': 'friedman_mse', 'regressor:extra_trees:max_depth': 'None', 'regressor:extra_trees:max_features': 0.5094792745433555, 'regressor:extra_trees:max_leaf_nodes': 'None', 'regressor:extra_trees:min_impurity_decrease': 0.0, 'regressor:extra_trees:min_samples_leaf': 10, 'regressor:extra_trees:min_samples_split': 3, 'regressor:extra_trees:n_estimators': 100},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+]
+Training time:  305.4312126636505
+Test run 16 
+
+Test number, auto-sklearn model:  16 
+
+[WARNING] [2018-02-12 10:50:07,871:AutoMLSMBO(1)::5460e60a71241cd923486eb9d2be9e51] Could not find meta-data directory /home/fredde/anaconda3/lib/python3.6/site-packages/autosklearn/metalearning/files/r2_regression_dense
+MSE:  0.00101272235793
+MSE %:  0.000372668851844
+R2 score: 0.993792548987
+[(0.820000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:random_forest:bootstrap': 'True', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 1.0, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 1, 'regressor:random_forest:min_samples_split': 2, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.01},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.100000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'most_frequent', 'preprocessor:__choice__': 'polynomial', 'regressor:__choice__': 'sgd', 'rescaling:__choice__': 'standardize', 'preprocessor:polynomial:degree': 2, 'preprocessor:polynomial:include_bias': 'True', 'preprocessor:polynomial:interaction_only': 'False', 'regressor:sgd:alpha': 1.5025776551036395e-06, 'regressor:sgd:average': 'True', 'regressor:sgd:eta0': 0.022630446984875433, 'regressor:sgd:fit_intercept': 'True', 'regressor:sgd:learning_rate': 'optimal', 'regressor:sgd:loss': 'epsilon_insensitive', 'regressor:sgd:penalty': 'l1', 'regressor:sgd:tol': 0.007934174887458428, 'regressor:sgd:epsilon': 9.983381963419018e-05},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.040000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'feature_agglomeration', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'quantile_transformer', 'preprocessor:feature_agglomeration:affinity': 'euclidean', 'preprocessor:feature_agglomeration:linkage': 'average', 'preprocessor:feature_agglomeration:n_clusters': 304, 'preprocessor:feature_agglomeration:pooling_func': 'median', 'regressor:random_forest:bootstrap': 'False', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 0.6621830950014135, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 10, 'regressor:random_forest:min_samples_split': 8, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'rescaling:quantile_transformer:n_quantiles': 19807, 'rescaling:quantile_transformer:output_distribution': 'normal'},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'pca', 'regressor:__choice__': 'gradient_boosting', 'rescaling:__choice__': 'quantile_transformer', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'preprocessor:pca:keep_variance': 0.8823326538360896, 'preprocessor:pca:whiten': 'False', 'regressor:gradient_boosting:learning_rate': 0.24371165283548288, 'regressor:gradient_boosting:loss': 'ls', 'regressor:gradient_boosting:max_depth': 1, 'regressor:gradient_boosting:max_features': 0.9467168503465123, 'regressor:gradient_boosting:max_leaf_nodes': 'None', 'regressor:gradient_boosting:min_impurity_decrease': 0.0, 'regressor:gradient_boosting:min_samples_leaf': 15, 'regressor:gradient_boosting:min_samples_split': 8, 'regressor:gradient_boosting:min_weight_fraction_leaf': 0.0, 'regressor:gradient_boosting:n_estimators': 456, 'regressor:gradient_boosting:subsample': 0.6259484229756397, 'rescaling:quantile_transformer:n_quantiles': 13251, 'rescaling:quantile_transformer:output_distribution': 'uniform'},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'gradient_boosting', 'rescaling:__choice__': 'none', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:gradient_boosting:learning_rate': 0.06684704391104165, 'regressor:gradient_boosting:loss': 'lad', 'regressor:gradient_boosting:max_depth': 4, 'regressor:gradient_boosting:max_features': 0.2902072147543602, 'regressor:gradient_boosting:max_leaf_nodes': 'None', 'regressor:gradient_boosting:min_impurity_decrease': 0.0, 'regressor:gradient_boosting:min_samples_leaf': 10, 'regressor:gradient_boosting:min_samples_split': 10, 'regressor:gradient_boosting:min_weight_fraction_leaf': 0.0, 'regressor:gradient_boosting:n_estimators': 163, 'regressor:gradient_boosting:subsample': 0.9736534486114433, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.0032270306944820644},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+]
+Training time:  298.68562936782837
+Test run 17 
+
+Test number, auto-sklearn model:  17 
+
+[WARNING] [2018-02-12 10:55:06,549:AutoMLSMBO(1)::a3c6dda5dff52b2ff650e7ed3d1c9287] Could not find meta-data directory /home/fredde/anaconda3/lib/python3.6/site-packages/autosklearn/metalearning/files/r2_regression_dense
+MSE:  0.00444967513882
+MSE %:  0.001637423438
+R2 score: 0.971315414333
+[(0.380000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'none', 'regressor:random_forest:bootstrap': 'False', 'regressor:random_forest:criterion': 'friedman_mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 0.3860556529649466, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 2, 'regressor:random_forest:min_samples_split': 3, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.340000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'gradient_boosting', 'rescaling:__choice__': 'quantile_transformer', 'regressor:gradient_boosting:learning_rate': 0.04274445245570991, 'regressor:gradient_boosting:loss': 'ls', 'regressor:gradient_boosting:max_depth': 9, 'regressor:gradient_boosting:max_features': 0.15110990048737696, 'regressor:gradient_boosting:max_leaf_nodes': 'None', 'regressor:gradient_boosting:min_impurity_decrease': 0.0, 'regressor:gradient_boosting:min_samples_leaf': 6, 'regressor:gradient_boosting:min_samples_split': 20, 'regressor:gradient_boosting:min_weight_fraction_leaf': 0.0, 'regressor:gradient_boosting:n_estimators': 185, 'regressor:gradient_boosting:subsample': 0.5548100644761044, 'rescaling:quantile_transformer:n_quantiles': 14089, 'rescaling:quantile_transformer:output_distribution': 'uniform'},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.260000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:random_forest:bootstrap': 'True', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 1.0, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 1, 'regressor:random_forest:min_samples_split': 2, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.01},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'pca', 'regressor:__choice__': 'adaboost', 'rescaling:__choice__': 'none', 'preprocessor:pca:keep_variance': 0.6058535913431333, 'preprocessor:pca:whiten': 'False', 'regressor:adaboost:learning_rate': 0.02652709184191886, 'regressor:adaboost:loss': 'exponential', 'regressor:adaboost:max_depth': 10, 'regressor:adaboost:n_estimators': 147},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+]
+Training time:  300.82931303977966
+Test run 18 
+
+Test number, auto-sklearn model:  18 
+
+[WARNING] [2018-02-12 11:00:07,374:AutoMLSMBO(1)::ffd284b46fac74564e9c39cf71535601] Could not find meta-data directory /home/fredde/anaconda3/lib/python3.6/site-packages/autosklearn/metalearning/files/r2_regression_dense
+MSE:  0.000582704471796
+MSE %:  0.000214427779508
+R2 score: 0.996417173621
+[(0.400000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:random_forest:bootstrap': 'True', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 1.0, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 1, 'regressor:random_forest:min_samples_split': 2, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.01},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.120000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'polynomial', 'regressor:__choice__': 'k_nearest_neighbors', 'rescaling:__choice__': 'robust_scaler', 'preprocessor:polynomial:degree': 3, 'preprocessor:polynomial:include_bias': 'False', 'preprocessor:polynomial:interaction_only': 'False', 'regressor:k_nearest_neighbors:n_neighbors': 4, 'regressor:k_nearest_neighbors:p': 1, 'regressor:k_nearest_neighbors:weights': 'uniform', 'rescaling:robust_scaler:q_max': 0.9134437014432116, 'rescaling:robust_scaler:q_min': 0.20287442311939174},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.100000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'most_frequent', 'preprocessor:__choice__': 'feature_agglomeration', 'regressor:__choice__': 'k_nearest_neighbors', 'rescaling:__choice__': 'minmax', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'preprocessor:feature_agglomeration:affinity': 'euclidean', 'preprocessor:feature_agglomeration:linkage': 'complete', 'preprocessor:feature_agglomeration:n_clusters': 293, 'preprocessor:feature_agglomeration:pooling_func': 'max', 'regressor:k_nearest_neighbors:n_neighbors': 1, 'regressor:k_nearest_neighbors:p': 2, 'regressor:k_nearest_neighbors:weights': 'distance', 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.0016439194652182224},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.080000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'most_frequent', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'gradient_boosting', 'rescaling:__choice__': 'quantile_transformer', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'regressor:gradient_boosting:learning_rate': 0.06173675162691205, 'regressor:gradient_boosting:loss': 'quantile', 'regressor:gradient_boosting:max_depth': 9, 'regressor:gradient_boosting:max_features': 0.32828501808199145, 'regressor:gradient_boosting:max_leaf_nodes': 'None', 'regressor:gradient_boosting:min_impurity_decrease': 0.0, 'regressor:gradient_boosting:min_samples_leaf': 10, 'regressor:gradient_boosting:min_samples_split': 19, 'regressor:gradient_boosting:min_weight_fraction_leaf': 0.0, 'regressor:gradient_boosting:n_estimators': 418, 'regressor:gradient_boosting:subsample': 0.1391495491974387, 'rescaling:quantile_transformer:n_quantiles': 90086, 'rescaling:quantile_transformer:output_distribution': 'uniform', 'regressor:gradient_boosting:alpha': 0.9123244134336939},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.060000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'most_frequent', 'preprocessor:__choice__': 'polynomial', 'regressor:__choice__': 'sgd', 'rescaling:__choice__': 'standardize', 'preprocessor:polynomial:degree': 2, 'preprocessor:polynomial:include_bias': 'True', 'preprocessor:polynomial:interaction_only': 'False', 'regressor:sgd:alpha': 1.5025776551036395e-06, 'regressor:sgd:average': 'True', 'regressor:sgd:eta0': 0.022630446984875433, 'regressor:sgd:fit_intercept': 'True', 'regressor:sgd:learning_rate': 'optimal', 'regressor:sgd:loss': 'epsilon_insensitive', 'regressor:sgd:penalty': 'l1', 'regressor:sgd:tol': 0.007934174887458428, 'regressor:sgd:epsilon': 9.983381963419018e-05},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.060000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'polynomial', 'regressor:__choice__': 'gradient_boosting', 'rescaling:__choice__': 'none', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'preprocessor:polynomial:degree': 3, 'preprocessor:polynomial:include_bias': 'True', 'preprocessor:polynomial:interaction_only': 'True', 'regressor:gradient_boosting:learning_rate': 0.09197449377944646, 'regressor:gradient_boosting:loss': 'huber', 'regressor:gradient_boosting:max_depth': 2, 'regressor:gradient_boosting:max_features': 0.4096831495852101, 'regressor:gradient_boosting:max_leaf_nodes': 'None', 'regressor:gradient_boosting:min_impurity_decrease': 0.0, 'regressor:gradient_boosting:min_samples_leaf': 13, 'regressor:gradient_boosting:min_samples_split': 18, 'regressor:gradient_boosting:min_weight_fraction_leaf': 0.0, 'regressor:gradient_boosting:n_estimators': 188, 'regressor:gradient_boosting:subsample': 0.618489636695233, 'regressor:gradient_boosting:alpha': 0.9708121881435275},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.060000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'feature_agglomeration', 'regressor:__choice__': 'adaboost', 'rescaling:__choice__': 'minmax', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'preprocessor:feature_agglomeration:affinity': 'cosine', 'preprocessor:feature_agglomeration:linkage': 'average', 'preprocessor:feature_agglomeration:n_clusters': 372, 'preprocessor:feature_agglomeration:pooling_func': 'mean', 'regressor:adaboost:learning_rate': 0.0732866856054224, 'regressor:adaboost:loss': 'square', 'regressor:adaboost:max_depth': 10, 'regressor:adaboost:n_estimators': 295, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.005415404617071811},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.060000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'fast_ica', 'regressor:__choice__': 'k_nearest_neighbors', 'rescaling:__choice__': 'standardize', 'preprocessor:fast_ica:algorithm': 'deflation', 'preprocessor:fast_ica:fun': 'logcosh', 'preprocessor:fast_ica:whiten': 'False', 'regressor:k_nearest_neighbors:n_neighbors': 50, 'regressor:k_nearest_neighbors:p': 1, 'regressor:k_nearest_neighbors:weights': 'distance'},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.040000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'pca', 'regressor:__choice__': 'k_nearest_neighbors', 'rescaling:__choice__': 'standardize', 'preprocessor:pca:keep_variance': 0.8483822938928948, 'preprocessor:pca:whiten': 'True', 'regressor:k_nearest_neighbors:n_neighbors': 51, 'regressor:k_nearest_neighbors:p': 2, 'regressor:k_nearest_neighbors:weights': 'uniform'},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'fast_ica', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'none', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'preprocessor:fast_ica:algorithm': 'parallel', 'preprocessor:fast_ica:fun': 'exp', 'preprocessor:fast_ica:whiten': 'False', 'regressor:random_forest:bootstrap': 'False', 'regressor:random_forest:criterion': 'friedman_mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 0.9327354340631668, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 9, 'regressor:random_forest:min_samples_split': 5, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.13783714285256335},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+]
+Training time:  309.8970458507538
+Test run 19 
+
+Test number, auto-sklearn model:  19 
+
+[WARNING] [2018-02-12 11:05:17,308:AutoMLSMBO(1)::1b065a028b731b8ba072fc5ec2151a3c] Could not find meta-data directory /home/fredde/anaconda3/lib/python3.6/site-packages/autosklearn/metalearning/files/r2_regression_dense
+MSE:  0.000465030758494
+MSE %:  0.00017112536075
+R2 score: 0.997140211818
+[(0.640000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'extra_trees', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:extra_trees:bootstrap': 'False', 'regressor:extra_trees:criterion': 'friedman_mse', 'regressor:extra_trees:max_depth': 'None', 'regressor:extra_trees:max_features': 0.6963624063700738, 'regressor:extra_trees:max_leaf_nodes': 'None', 'regressor:extra_trees:min_impurity_decrease': 0.0, 'regressor:extra_trees:min_samples_leaf': 1, 'regressor:extra_trees:min_samples_split': 10, 'regressor:extra_trees:n_estimators': 100, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.000893561260904416},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.120000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'polynomial', 'regressor:__choice__': 'gradient_boosting', 'rescaling:__choice__': 'quantile_transformer', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'preprocessor:polynomial:degree': 2, 'preprocessor:polynomial:include_bias': 'False', 'preprocessor:polynomial:interaction_only': 'False', 'regressor:gradient_boosting:learning_rate': 0.19346749440355768, 'regressor:gradient_boosting:loss': 'lad', 'regressor:gradient_boosting:max_depth': 4, 'regressor:gradient_boosting:max_features': 0.44657614139405455, 'regressor:gradient_boosting:max_leaf_nodes': 'None', 'regressor:gradient_boosting:min_impurity_decrease': 0.0, 'regressor:gradient_boosting:min_samples_leaf': 12, 'regressor:gradient_boosting:min_samples_split': 14, 'regressor:gradient_boosting:min_weight_fraction_leaf': 0.0, 'regressor:gradient_boosting:n_estimators': 391, 'regressor:gradient_boosting:subsample': 0.8131921653846553, 'rescaling:quantile_transformer:n_quantiles': 12349, 'rescaling:quantile_transformer:output_distribution': 'normal'},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.060000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'gradient_boosting', 'rescaling:__choice__': 'none', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'regressor:gradient_boosting:learning_rate': 0.4578232015587102, 'regressor:gradient_boosting:loss': 'lad', 'regressor:gradient_boosting:max_depth': 6, 'regressor:gradient_boosting:max_features': 0.6365260250073089, 'regressor:gradient_boosting:max_leaf_nodes': 'None', 'regressor:gradient_boosting:min_impurity_decrease': 0.0, 'regressor:gradient_boosting:min_samples_leaf': 4, 'regressor:gradient_boosting:min_samples_split': 9, 'regressor:gradient_boosting:min_weight_fraction_leaf': 0.0, 'regressor:gradient_boosting:n_estimators': 149, 'regressor:gradient_boosting:subsample': 0.9283036480663133},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.040000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'most_frequent', 'preprocessor:__choice__': 'polynomial', 'regressor:__choice__': 'sgd', 'rescaling:__choice__': 'standardize', 'preprocessor:polynomial:degree': 2, 'preprocessor:polynomial:include_bias': 'True', 'preprocessor:polynomial:interaction_only': 'False', 'regressor:sgd:alpha': 1.5025776551036395e-06, 'regressor:sgd:average': 'True', 'regressor:sgd:eta0': 0.022630446984875433, 'regressor:sgd:fit_intercept': 'True', 'regressor:sgd:learning_rate': 'optimal', 'regressor:sgd:loss': 'epsilon_insensitive', 'regressor:sgd:penalty': 'l1', 'regressor:sgd:tol': 0.007934174887458428, 'regressor:sgd:epsilon': 9.983381963419018e-05},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.040000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'polynomial', 'regressor:__choice__': 'gradient_boosting', 'rescaling:__choice__': 'robust_scaler', 'preprocessor:polynomial:degree': 3, 'preprocessor:polynomial:include_bias': 'True', 'preprocessor:polynomial:interaction_only': 'False', 'regressor:gradient_boosting:learning_rate': 0.327314060295575, 'regressor:gradient_boosting:loss': 'lad', 'regressor:gradient_boosting:max_depth': 8, 'regressor:gradient_boosting:max_features': 0.7409264248929697, 'regressor:gradient_boosting:max_leaf_nodes': 'None', 'regressor:gradient_boosting:min_impurity_decrease': 0.0, 'regressor:gradient_boosting:min_samples_leaf': 12, 'regressor:gradient_boosting:min_samples_split': 9, 'regressor:gradient_boosting:min_weight_fraction_leaf': 0.0, 'regressor:gradient_boosting:n_estimators': 142, 'regressor:gradient_boosting:subsample': 0.058519097782244, 'rescaling:robust_scaler:q_max': 0.7787362509977899, 'rescaling:robust_scaler:q_min': 0.06954944181779998},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.040000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'gradient_boosting', 'rescaling:__choice__': 'quantile_transformer', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'regressor:gradient_boosting:learning_rate': 0.1782851721737905, 'regressor:gradient_boosting:loss': 'lad', 'regressor:gradient_boosting:max_depth': 3, 'regressor:gradient_boosting:max_features': 0.2573857357649048, 'regressor:gradient_boosting:max_leaf_nodes': 'None', 'regressor:gradient_boosting:min_impurity_decrease': 0.0, 'regressor:gradient_boosting:min_samples_leaf': 6, 'regressor:gradient_boosting:min_samples_split': 19, 'regressor:gradient_boosting:min_weight_fraction_leaf': 0.0, 'regressor:gradient_boosting:n_estimators': 410, 'regressor:gradient_boosting:subsample': 0.8333501552569833, 'rescaling:quantile_transformer:n_quantiles': 51548, 'rescaling:quantile_transformer:output_distribution': 'uniform'},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.040000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'ridge_regression', 'rescaling:__choice__': 'minmax', 'regressor:ridge_regression:alpha': 8.326500321887319e-05, 'regressor:ridge_regression:fit_intercept': 'True', 'regressor:ridge_regression:tol': 0.00032452570258667963},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'polynomial', 'regressor:__choice__': 'ridge_regression', 'rescaling:__choice__': 'quantile_transformer', 'preprocessor:polynomial:degree': 3, 'preprocessor:polynomial:include_bias': 'False', 'preprocessor:polynomial:interaction_only': 'False', 'regressor:ridge_regression:alpha': 8.500331071637527, 'regressor:ridge_regression:fit_intercept': 'True', 'regressor:ridge_regression:tol': 0.006157035964938317, 'rescaling:quantile_transformer:n_quantiles': 70360, 'rescaling:quantile_transformer:output_distribution': 'normal'},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+]
+Training time:  305.0397615432739
+Test run 20 
+
+Test number, auto-sklearn model:  20 
+
+[WARNING] [2018-02-12 11:10:22,313:AutoMLSMBO(1)::bee5a192038f92426b62a55ad8b6d303] Could not find meta-data directory /home/fredde/anaconda3/lib/python3.6/site-packages/autosklearn/metalearning/files/r2_regression_dense
+MSE:  0.000838440044005
+MSE %:  0.000308535193376
+R2 score: 0.994798194561
+[(0.480000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:random_forest:bootstrap': 'True', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 1.0, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 1, 'regressor:random_forest:min_samples_split': 2, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.01},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.320000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'most_frequent', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'k_nearest_neighbors', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'regressor:k_nearest_neighbors:n_neighbors': 8, 'regressor:k_nearest_neighbors:p': 1, 'regressor:k_nearest_neighbors:weights': 'uniform'},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.160000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'gradient_boosting', 'rescaling:__choice__': 'none', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:gradient_boosting:learning_rate': 0.06684704391104165, 'regressor:gradient_boosting:loss': 'lad', 'regressor:gradient_boosting:max_depth': 4, 'regressor:gradient_boosting:max_features': 0.2902072147543602, 'regressor:gradient_boosting:max_leaf_nodes': 'None', 'regressor:gradient_boosting:min_impurity_decrease': 0.0, 'regressor:gradient_boosting:min_samples_leaf': 10, 'regressor:gradient_boosting:min_samples_split': 10, 'regressor:gradient_boosting:min_weight_fraction_leaf': 0.0, 'regressor:gradient_boosting:n_estimators': 163, 'regressor:gradient_boosting:subsample': 0.9736534486114433, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.0032270306944820644},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'most_frequent', 'preprocessor:__choice__': 'polynomial', 'regressor:__choice__': 'sgd', 'rescaling:__choice__': 'standardize', 'preprocessor:polynomial:degree': 2, 'preprocessor:polynomial:include_bias': 'True', 'preprocessor:polynomial:interaction_only': 'False', 'regressor:sgd:alpha': 1.5025776551036395e-06, 'regressor:sgd:average': 'True', 'regressor:sgd:eta0': 0.022630446984875433, 'regressor:sgd:fit_intercept': 'True', 'regressor:sgd:learning_rate': 'optimal', 'regressor:sgd:loss': 'epsilon_insensitive', 'regressor:sgd:penalty': 'l1', 'regressor:sgd:tol': 0.007934174887458428, 'regressor:sgd:epsilon': 9.983381963419018e-05},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'feature_agglomeration', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'quantile_transformer', 'preprocessor:feature_agglomeration:affinity': 'euclidean', 'preprocessor:feature_agglomeration:linkage': 'average', 'preprocessor:feature_agglomeration:n_clusters': 304, 'preprocessor:feature_agglomeration:pooling_func': 'median', 'regressor:random_forest:bootstrap': 'False', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 0.6621830950014135, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 10, 'regressor:random_forest:min_samples_split': 8, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'rescaling:quantile_transformer:n_quantiles': 19807, 'rescaling:quantile_transformer:output_distribution': 'normal'},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+]
+Training time:  309.21020221710205
+Test run 21 
+
+Test number, auto-sklearn model:  21 
+
+[WARNING] [2018-02-12 11:15:31,583:AutoMLSMBO(1)::f6ad8bf39551c592807013d962bb2240] Could not find meta-data directory /home/fredde/anaconda3/lib/python3.6/site-packages/autosklearn/metalearning/files/r2_regression_dense
+MSE:  0.000486662541978
+MSE %:  0.000179085579907
+R2 score: 0.997002294165
+[(0.420000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'most_frequent', 'preprocessor:__choice__': 'feature_agglomeration', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'preprocessor:feature_agglomeration:affinity': 'manhattan', 'preprocessor:feature_agglomeration:linkage': 'average', 'preprocessor:feature_agglomeration:n_clusters': 393, 'preprocessor:feature_agglomeration:pooling_func': 'mean', 'regressor:random_forest:bootstrap': 'False', 'regressor:random_forest:criterion': 'friedman_mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 0.4924931269389655, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 1, 'regressor:random_forest:min_samples_split': 10, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.09627826425457368},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.240000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'feature_agglomeration', 'regressor:__choice__': 'k_nearest_neighbors', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'preprocessor:feature_agglomeration:affinity': 'euclidean', 'preprocessor:feature_agglomeration:linkage': 'average', 'preprocessor:feature_agglomeration:n_clusters': 379, 'preprocessor:feature_agglomeration:pooling_func': 'mean', 'regressor:k_nearest_neighbors:n_neighbors': 20, 'regressor:k_nearest_neighbors:p': 2, 'regressor:k_nearest_neighbors:weights': 'distance'},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.120000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:random_forest:bootstrap': 'True', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 1.0, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 1, 'regressor:random_forest:min_samples_split': 2, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.01},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.060000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'kitchen_sinks', 'regressor:__choice__': 'ridge_regression', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'preprocessor:kitchen_sinks:gamma': 0.3502601384584606, 'preprocessor:kitchen_sinks:n_components': 179, 'regressor:ridge_regression:alpha': 0.22414046364571857, 'regressor:ridge_regression:fit_intercept': 'True', 'regressor:ridge_regression:tol': 0.007086132300221238, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.05357609899557542},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.060000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'most_frequent', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'gradient_boosting', 'rescaling:__choice__': 'quantile_transformer', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'regressor:gradient_boosting:learning_rate': 0.06173675162691205, 'regressor:gradient_boosting:loss': 'quantile', 'regressor:gradient_boosting:max_depth': 9, 'regressor:gradient_boosting:max_features': 0.32828501808199145, 'regressor:gradient_boosting:max_leaf_nodes': 'None', 'regressor:gradient_boosting:min_impurity_decrease': 0.0, 'regressor:gradient_boosting:min_samples_leaf': 10, 'regressor:gradient_boosting:min_samples_split': 19, 'regressor:gradient_boosting:min_weight_fraction_leaf': 0.0, 'regressor:gradient_boosting:n_estimators': 418, 'regressor:gradient_boosting:subsample': 0.1391495491974387, 'rescaling:quantile_transformer:n_quantiles': 90086, 'rescaling:quantile_transformer:output_distribution': 'uniform', 'regressor:gradient_boosting:alpha': 0.9123244134336939},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'most_frequent', 'preprocessor:__choice__': 'polynomial', 'regressor:__choice__': 'sgd', 'rescaling:__choice__': 'standardize', 'preprocessor:polynomial:degree': 2, 'preprocessor:polynomial:include_bias': 'True', 'preprocessor:polynomial:interaction_only': 'False', 'regressor:sgd:alpha': 1.5025776551036395e-06, 'regressor:sgd:average': 'True', 'regressor:sgd:eta0': 0.022630446984875433, 'regressor:sgd:fit_intercept': 'True', 'regressor:sgd:learning_rate': 'optimal', 'regressor:sgd:loss': 'epsilon_insensitive', 'regressor:sgd:penalty': 'l1', 'regressor:sgd:tol': 0.007934174887458428, 'regressor:sgd:epsilon': 9.983381963419018e-05},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'ridge_regression', 'rescaling:__choice__': 'minmax', 'regressor:ridge_regression:alpha': 8.326500321887319e-05, 'regressor:ridge_regression:fit_intercept': 'True', 'regressor:ridge_regression:tol': 0.00032452570258667963},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'feature_agglomeration', 'regressor:__choice__': 'k_nearest_neighbors', 'rescaling:__choice__': 'standardize', 'preprocessor:feature_agglomeration:affinity': 'manhattan', 'preprocessor:feature_agglomeration:linkage': 'complete', 'preprocessor:feature_agglomeration:n_clusters': 209, 'preprocessor:feature_agglomeration:pooling_func': 'max', 'regressor:k_nearest_neighbors:n_neighbors': 6, 'regressor:k_nearest_neighbors:p': 2, 'regressor:k_nearest_neighbors:weights': 'uniform'},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'most_frequent', 'preprocessor:__choice__': 'polynomial', 'regressor:__choice__': 'ridge_regression', 'rescaling:__choice__': 'quantile_transformer', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'preprocessor:polynomial:degree': 2, 'preprocessor:polynomial:include_bias': 'False', 'preprocessor:polynomial:interaction_only': 'True', 'regressor:ridge_regression:alpha': 3.465242408103979e-05, 'regressor:ridge_regression:fit_intercept': 'True', 'regressor:ridge_regression:tol': 0.000248034891481208, 'rescaling:quantile_transformer:n_quantiles': 82850, 'rescaling:quantile_transformer:output_distribution': 'normal', 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.03185610055265116},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'most_frequent', 'preprocessor:__choice__': 'feature_agglomeration', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'normalize', 'preprocessor:feature_agglomeration:affinity': 'manhattan', 'preprocessor:feature_agglomeration:linkage': 'complete', 'preprocessor:feature_agglomeration:n_clusters': 15, 'preprocessor:feature_agglomeration:pooling_func': 'median', 'regressor:random_forest:bootstrap': 'False', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 0.6538181304226098, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 19, 'regressor:random_forest:min_samples_split': 10, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+]
+Training time:  308.32980012893677
+Test run 22 
+
+Test number, auto-sklearn model:  22 
+
+[WARNING] [2018-02-12 11:20:39,860:AutoMLSMBO(1)::2acc682a86c7e214e86f848f603499a8] Could not find meta-data directory /home/fredde/anaconda3/lib/python3.6/site-packages/autosklearn/metalearning/files/r2_regression_dense
+MSE:  0.000396681438432
+MSE %:  0.000145973686718
+R2 score: 0.997571844434
+[(0.460000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'k_nearest_neighbors', 'rescaling:__choice__': 'minmax', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'regressor:k_nearest_neighbors:n_neighbors': 5, 'regressor:k_nearest_neighbors:p': 1, 'regressor:k_nearest_neighbors:weights': 'distance'},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.360000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:random_forest:bootstrap': 'True', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 1.0, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 1, 'regressor:random_forest:min_samples_split': 2, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.01},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.060000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'ridge_regression', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:ridge_regression:alpha': 2.7419956463524877e-05, 'regressor:ridge_regression:fit_intercept': 'True', 'regressor:ridge_regression:tol': 0.015469815875106646, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.0033253234013469165},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.040000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'k_nearest_neighbors', 'rescaling:__choice__': 'minmax', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'regressor:k_nearest_neighbors:n_neighbors': 2, 'regressor:k_nearest_neighbors:p': 2, 'regressor:k_nearest_neighbors:weights': 'distance'},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'most_frequent', 'preprocessor:__choice__': 'polynomial', 'regressor:__choice__': 'sgd', 'rescaling:__choice__': 'standardize', 'preprocessor:polynomial:degree': 2, 'preprocessor:polynomial:include_bias': 'True', 'preprocessor:polynomial:interaction_only': 'False', 'regressor:sgd:alpha': 1.5025776551036395e-06, 'regressor:sgd:average': 'True', 'regressor:sgd:eta0': 0.022630446984875433, 'regressor:sgd:fit_intercept': 'True', 'regressor:sgd:learning_rate': 'optimal', 'regressor:sgd:loss': 'epsilon_insensitive', 'regressor:sgd:penalty': 'l1', 'regressor:sgd:tol': 0.007934174887458428, 'regressor:sgd:epsilon': 9.983381963419018e-05},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'ridge_regression', 'rescaling:__choice__': 'minmax', 'regressor:ridge_regression:alpha': 8.326500321887319e-05, 'regressor:ridge_regression:fit_intercept': 'True', 'regressor:ridge_regression:tol': 0.00032452570258667963},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'most_frequent', 'preprocessor:__choice__': 'feature_agglomeration', 'regressor:__choice__': 'k_nearest_neighbors', 'rescaling:__choice__': 'minmax', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'preprocessor:feature_agglomeration:affinity': 'manhattan', 'preprocessor:feature_agglomeration:linkage': 'average', 'preprocessor:feature_agglomeration:n_clusters': 270, 'preprocessor:feature_agglomeration:pooling_func': 'mean', 'regressor:k_nearest_neighbors:n_neighbors': 49, 'regressor:k_nearest_neighbors:p': 1, 'regressor:k_nearest_neighbors:weights': 'distance'},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'sgd', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:sgd:alpha': 0.00010000000000000026, 'regressor:sgd:average': 'False', 'regressor:sgd:eta0': 0.01, 'regressor:sgd:fit_intercept': 'True', 'regressor:sgd:learning_rate': 'optimal', 'regressor:sgd:loss': 'squared_loss', 'regressor:sgd:penalty': 'l2', 'regressor:sgd:tol': 0.0010000000000000002, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.010000000000000004},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+]
+Training time:  316.7006893157959
+Test run 23 
+
+Test number, auto-sklearn model:  23 
+
+[WARNING] [2018-02-12 11:25:56,588:AutoMLSMBO(1)::7ff6574df68a4eb694e2957c4fe0a8f3] Could not find meta-data directory /home/fredde/anaconda3/lib/python3.6/site-packages/autosklearn/metalearning/files/r2_regression_dense
+MSE:  0.000437759803115
+MSE %:  0.00016108999859
+R2 score: 0.997309386192
+[(0.540000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:random_forest:bootstrap': 'True', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 1.0, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 1, 'regressor:random_forest:min_samples_split': 2, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.01},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.180000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'feature_agglomeration', 'regressor:__choice__': 'ridge_regression', 'rescaling:__choice__': 'none', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'preprocessor:feature_agglomeration:affinity': 'manhattan', 'preprocessor:feature_agglomeration:linkage': 'average', 'preprocessor:feature_agglomeration:n_clusters': 245, 'preprocessor:feature_agglomeration:pooling_func': 'mean', 'regressor:ridge_regression:alpha': 0.3330497929001211, 'regressor:ridge_regression:fit_intercept': 'True', 'regressor:ridge_regression:tol': 1.2630410873007795e-05},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.120000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'feature_agglomeration', 'regressor:__choice__': 'k_nearest_neighbors', 'rescaling:__choice__': 'none', 'preprocessor:feature_agglomeration:affinity': 'euclidean', 'preprocessor:feature_agglomeration:linkage': 'average', 'preprocessor:feature_agglomeration:n_clusters': 6, 'preprocessor:feature_agglomeration:pooling_func': 'median', 'regressor:k_nearest_neighbors:n_neighbors': 1, 'regressor:k_nearest_neighbors:p': 1, 'regressor:k_nearest_neighbors:weights': 'distance'},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.100000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'k_nearest_neighbors', 'rescaling:__choice__': 'quantile_transformer', 'regressor:k_nearest_neighbors:n_neighbors': 2, 'regressor:k_nearest_neighbors:p': 2, 'regressor:k_nearest_neighbors:weights': 'uniform', 'rescaling:quantile_transformer:n_quantiles': 38134, 'rescaling:quantile_transformer:output_distribution': 'normal'},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.040000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'ridge_regression', 'rescaling:__choice__': 'minmax', 'regressor:ridge_regression:alpha': 8.326500321887319e-05, 'regressor:ridge_regression:fit_intercept': 'True', 'regressor:ridge_regression:tol': 0.00032452570258667963},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'pca', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'preprocessor:pca:keep_variance': 0.9062654599165643, 'preprocessor:pca:whiten': 'True', 'regressor:random_forest:bootstrap': 'True', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 0.4991990944916249, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 2, 'regressor:random_forest:min_samples_split': 9, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+]
+Training time:  302.91488242149353
+Test run 24 
+
+Test number, auto-sklearn model:  24 
+
+[WARNING] [2018-02-12 11:30:59,476:AutoMLSMBO(1)::a8eedf7b78a690caeeeb68caa57236c5] Could not find meta-data directory /home/fredde/anaconda3/lib/python3.6/site-packages/autosklearn/metalearning/files/r2_regression_dense
+MSE:  0.000632113880475
+MSE %:  0.000232609808826
+R2 score: 0.996110837076
+[(0.660000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:random_forest:bootstrap': 'True', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 1.0, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 1, 'regressor:random_forest:min_samples_split': 2, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.01},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.140000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'gradient_boosting', 'rescaling:__choice__': 'quantile_transformer', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:gradient_boosting:learning_rate': 0.04537467226248091, 'regressor:gradient_boosting:loss': 'lad', 'regressor:gradient_boosting:max_depth': 10, 'regressor:gradient_boosting:max_features': 0.13063001664958154, 'regressor:gradient_boosting:max_leaf_nodes': 'None', 'regressor:gradient_boosting:min_impurity_decrease': 0.0, 'regressor:gradient_boosting:min_samples_leaf': 19, 'regressor:gradient_boosting:min_samples_split': 12, 'regressor:gradient_boosting:min_weight_fraction_leaf': 0.0, 'regressor:gradient_boosting:n_estimators': 463, 'regressor:gradient_boosting:subsample': 0.532262064346744, 'rescaling:quantile_transformer:n_quantiles': 28181, 'rescaling:quantile_transformer:output_distribution': 'uniform', 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.00010538637408824563},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.080000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'most_frequent', 'preprocessor:__choice__': 'polynomial', 'regressor:__choice__': 'sgd', 'rescaling:__choice__': 'standardize', 'preprocessor:polynomial:degree': 2, 'preprocessor:polynomial:include_bias': 'True', 'preprocessor:polynomial:interaction_only': 'False', 'regressor:sgd:alpha': 1.5025776551036395e-06, 'regressor:sgd:average': 'True', 'regressor:sgd:eta0': 0.022630446984875433, 'regressor:sgd:fit_intercept': 'True', 'regressor:sgd:learning_rate': 'optimal', 'regressor:sgd:loss': 'epsilon_insensitive', 'regressor:sgd:penalty': 'l1', 'regressor:sgd:tol': 0.007934174887458428, 'regressor:sgd:epsilon': 9.983381963419018e-05},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.060000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'most_frequent', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'ridge_regression', 'rescaling:__choice__': 'standardize', 'regressor:ridge_regression:alpha': 1.106388476244762e-05, 'regressor:ridge_regression:fit_intercept': 'True', 'regressor:ridge_regression:tol': 0.0005727980823313769},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.040000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'liblinear_svr', 'rescaling:__choice__': 'standardize', 'regressor:liblinear_svr:C': 8.763902797239984, 'regressor:liblinear_svr:dual': 'False', 'regressor:liblinear_svr:epsilon': 0.023296391624700655, 'regressor:liblinear_svr:fit_intercept': 'True', 'regressor:liblinear_svr:intercept_scaling': 1, 'regressor:liblinear_svr:loss': 'squared_epsilon_insensitive', 'regressor:liblinear_svr:tol': 0.013819389237533295},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'fast_ica', 'regressor:__choice__': 'extra_trees', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'preprocessor:fast_ica:algorithm': 'parallel', 'preprocessor:fast_ica:fun': 'exp', 'preprocessor:fast_ica:whiten': 'False', 'regressor:extra_trees:bootstrap': 'True', 'regressor:extra_trees:criterion': 'friedman_mse', 'regressor:extra_trees:max_depth': 'None', 'regressor:extra_trees:max_features': 0.5766922941701957, 'regressor:extra_trees:max_leaf_nodes': 'None', 'regressor:extra_trees:min_impurity_decrease': 0.0, 'regressor:extra_trees:min_samples_leaf': 9, 'regressor:extra_trees:min_samples_split': 20, 'regressor:extra_trees:n_estimators': 100},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+]
+Training time:  299.237606048584
+Test run 25 
+
+Test number, auto-sklearn model:  25 
+
+[WARNING] [2018-02-12 11:35:58,698:AutoMLSMBO(1)::3c619c8ff0f96d2e2c6b927321143380] Could not find meta-data directory /home/fredde/anaconda3/lib/python3.6/site-packages/autosklearn/metalearning/files/r2_regression_dense
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+/home/fredde/anaconda3/lib/python3.6/site-packages/sklearn/metrics/regression.py:538: RuntimeWarning: overflow encountered in square
+  numerator = (weight * (y_true - y_pred) ** 2).sum(axis=0,
+MSE:  0.000473573764866
+MSE %:  0.000174269077635
+R2 score: 0.997083331168
+[(0.580000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'polynomial', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'none', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'preprocessor:polynomial:degree': 2, 'preprocessor:polynomial:include_bias': 'True', 'preprocessor:polynomial:interaction_only': 'True', 'regressor:random_forest:bootstrap': 'True', 'regressor:random_forest:criterion': 'friedman_mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 0.6955342581244113, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 2, 'regressor:random_forest:min_samples_split': 12, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.300000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'kitchen_sinks', 'regressor:__choice__': 'sgd', 'rescaling:__choice__': 'minmax', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'preprocessor:kitchen_sinks:gamma': 0.08775031415819537, 'preprocessor:kitchen_sinks:n_components': 182, 'regressor:sgd:alpha': 2.17724363107298e-05, 'regressor:sgd:average': 'True', 'regressor:sgd:eta0': 0.0031169623515802268, 'regressor:sgd:fit_intercept': 'True', 'regressor:sgd:learning_rate': 'constant', 'regressor:sgd:loss': 'squared_epsilon_insensitive', 'regressor:sgd:penalty': 'l1', 'regressor:sgd:tol': 0.000658893802037051, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.0001827693141154062, 'regressor:sgd:epsilon': 0.02336145963621324},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.120000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:random_forest:bootstrap': 'True', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 1.0, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 1, 'regressor:random_forest:min_samples_split': 2, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.01},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+]
+Training time:  300.07771348953247
+Test run 26 
+
+Test number, auto-sklearn model:  26 
+
+[WARNING] [2018-02-12 11:40:58,779:AutoMLSMBO(1)::9816c96812a70b09694845d9ef08f461] Could not find meta-data directory /home/fredde/anaconda3/lib/python3.6/site-packages/autosklearn/metalearning/files/r2_regression_dense
+MSE:  0.000395140663586
+MSE %:  0.000145406701316
+R2 score: 0.997576799019
+[(0.520000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:random_forest:bootstrap': 'True', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 1.0, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 1, 'regressor:random_forest:min_samples_split': 2, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.01},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.260000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'feature_agglomeration', 'regressor:__choice__': 'ridge_regression', 'rescaling:__choice__': 'minmax', 'preprocessor:feature_agglomeration:affinity': 'manhattan', 'preprocessor:feature_agglomeration:linkage': 'complete', 'preprocessor:feature_agglomeration:n_clusters': 213, 'preprocessor:feature_agglomeration:pooling_func': 'median', 'regressor:ridge_regression:alpha': 3.0350305508451513e-05, 'regressor:ridge_regression:fit_intercept': 'True', 'regressor:ridge_regression:tol': 2.8796838180177534e-05},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.160000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'random_trees_embedding', 'regressor:__choice__': 'ridge_regression', 'rescaling:__choice__': 'standardize', 'preprocessor:random_trees_embedding:bootstrap': 'False', 'preprocessor:random_trees_embedding:max_depth': 8, 'preprocessor:random_trees_embedding:max_leaf_nodes': 'None', 'preprocessor:random_trees_embedding:min_samples_leaf': 13, 'preprocessor:random_trees_embedding:min_samples_split': 5, 'preprocessor:random_trees_embedding:min_weight_fraction_leaf': 1.0, 'preprocessor:random_trees_embedding:n_estimators': 19, 'regressor:ridge_regression:alpha': 3.2337842550668947, 'regressor:ridge_regression:fit_intercept': 'True', 'regressor:ridge_regression:tol': 1.5394515512853253e-05},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.040000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'feature_agglomeration', 'regressor:__choice__': 'gradient_boosting', 'rescaling:__choice__': 'robust_scaler', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'preprocessor:feature_agglomeration:affinity': 'cosine', 'preprocessor:feature_agglomeration:linkage': 'average', 'preprocessor:feature_agglomeration:n_clusters': 70, 'preprocessor:feature_agglomeration:pooling_func': 'mean', 'regressor:gradient_boosting:learning_rate': 0.8059567750372516, 'regressor:gradient_boosting:loss': 'huber', 'regressor:gradient_boosting:max_depth': 1, 'regressor:gradient_boosting:max_features': 0.47207190732941173, 'regressor:gradient_boosting:max_leaf_nodes': 'None', 'regressor:gradient_boosting:min_impurity_decrease': 0.0, 'regressor:gradient_boosting:min_samples_leaf': 2, 'regressor:gradient_boosting:min_samples_split': 9, 'regressor:gradient_boosting:min_weight_fraction_leaf': 0.0, 'regressor:gradient_boosting:n_estimators': 116, 'regressor:gradient_boosting:subsample': 0.8936486894012993, 'rescaling:robust_scaler:q_max': 0.7122686498188999, 'rescaling:robust_scaler:q_min': 0.29255366175981773, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.004072184459472075, 'regressor:gradient_boosting:alpha': 0.8275367333003396},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'ridge_regression', 'rescaling:__choice__': 'minmax', 'regressor:ridge_regression:alpha': 8.326500321887319e-05, 'regressor:ridge_regression:fit_intercept': 'True', 'regressor:ridge_regression:tol': 0.00032452570258667963},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+]
+Training time:  300.68321990966797
+Test run 27 
+
+Test number, auto-sklearn model:  27 
+
+[WARNING] [2018-02-12 11:45:59,474:AutoMLSMBO(1)::a4b0228515a2fda81557d1be649beb7c] Could not find meta-data directory /home/fredde/anaconda3/lib/python3.6/site-packages/autosklearn/metalearning/files/r2_regression_dense
+MSE:  0.000400963633777
+MSE %:  0.000147549479738
+R2 score: 0.997554891746
+[(0.400000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'polynomial', 'regressor:__choice__': 'ridge_regression', 'rescaling:__choice__': 'robust_scaler', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'preprocessor:polynomial:degree': 2, 'preprocessor:polynomial:include_bias': 'True', 'preprocessor:polynomial:interaction_only': 'False', 'regressor:ridge_regression:alpha': 0.13163840226212706, 'regressor:ridge_regression:fit_intercept': 'True', 'regressor:ridge_regression:tol': 4.174867837125895e-05, 'rescaling:robust_scaler:q_max': 0.7697708694403262, 'rescaling:robust_scaler:q_min': 0.03512518910539712},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.340000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'feature_agglomeration', 'regressor:__choice__': 'gradient_boosting', 'rescaling:__choice__': 'minmax', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'preprocessor:feature_agglomeration:affinity': 'manhattan', 'preprocessor:feature_agglomeration:linkage': 'complete', 'preprocessor:feature_agglomeration:n_clusters': 314, 'preprocessor:feature_agglomeration:pooling_func': 'max', 'regressor:gradient_boosting:learning_rate': 0.2665566434726896, 'regressor:gradient_boosting:loss': 'huber', 'regressor:gradient_boosting:max_depth': 6, 'regressor:gradient_boosting:max_features': 0.6230990693842481, 'regressor:gradient_boosting:max_leaf_nodes': 'None', 'regressor:gradient_boosting:min_impurity_decrease': 0.0, 'regressor:gradient_boosting:min_samples_leaf': 12, 'regressor:gradient_boosting:min_samples_split': 5, 'regressor:gradient_boosting:min_weight_fraction_leaf': 0.0, 'regressor:gradient_boosting:n_estimators': 479, 'regressor:gradient_boosting:subsample': 0.3638936741875134, 'regressor:gradient_boosting:alpha': 0.8500475266463162},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.120000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:random_forest:bootstrap': 'True', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 1.0, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 1, 'regressor:random_forest:min_samples_split': 2, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.01},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.060000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'fast_ica', 'regressor:__choice__': 'extra_trees', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'preprocessor:fast_ica:algorithm': 'parallel', 'preprocessor:fast_ica:fun': 'exp', 'preprocessor:fast_ica:whiten': 'False', 'regressor:extra_trees:bootstrap': 'True', 'regressor:extra_trees:criterion': 'friedman_mse', 'regressor:extra_trees:max_depth': 'None', 'regressor:extra_trees:max_features': 0.5766922941701957, 'regressor:extra_trees:max_leaf_nodes': 'None', 'regressor:extra_trees:min_impurity_decrease': 0.0, 'regressor:extra_trees:min_samples_leaf': 9, 'regressor:extra_trees:min_samples_split': 20, 'regressor:extra_trees:n_estimators': 100},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.040000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'gradient_boosting', 'rescaling:__choice__': 'robust_scaler', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:gradient_boosting:learning_rate': 0.15344492801318876, 'regressor:gradient_boosting:loss': 'huber', 'regressor:gradient_boosting:max_depth': 5, 'regressor:gradient_boosting:max_features': 0.6612863337982953, 'regressor:gradient_boosting:max_leaf_nodes': 'None', 'regressor:gradient_boosting:min_impurity_decrease': 0.0, 'regressor:gradient_boosting:min_samples_leaf': 9, 'regressor:gradient_boosting:min_samples_split': 18, 'regressor:gradient_boosting:min_weight_fraction_leaf': 0.0, 'regressor:gradient_boosting:n_estimators': 108, 'regressor:gradient_boosting:subsample': 0.7266228434280582, 'rescaling:robust_scaler:q_max': 0.7802472923773188, 'rescaling:robust_scaler:q_min': 0.11827894919236964, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.0002990939560596593, 'regressor:gradient_boosting:alpha': 0.8212780385729941},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'most_frequent', 'preprocessor:__choice__': 'polynomial', 'regressor:__choice__': 'sgd', 'rescaling:__choice__': 'standardize', 'preprocessor:polynomial:degree': 2, 'preprocessor:polynomial:include_bias': 'True', 'preprocessor:polynomial:interaction_only': 'False', 'regressor:sgd:alpha': 1.5025776551036395e-06, 'regressor:sgd:average': 'True', 'regressor:sgd:eta0': 0.022630446984875433, 'regressor:sgd:fit_intercept': 'True', 'regressor:sgd:learning_rate': 'optimal', 'regressor:sgd:loss': 'epsilon_insensitive', 'regressor:sgd:penalty': 'l1', 'regressor:sgd:tol': 0.007934174887458428, 'regressor:sgd:epsilon': 9.983381963419018e-05},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'gradient_boosting', 'rescaling:__choice__': 'none', 'regressor:gradient_boosting:learning_rate': 0.03438771781151782, 'regressor:gradient_boosting:loss': 'huber', 'regressor:gradient_boosting:max_depth': 8, 'regressor:gradient_boosting:max_features': 0.3472226835796282, 'regressor:gradient_boosting:max_leaf_nodes': 'None', 'regressor:gradient_boosting:min_impurity_decrease': 0.0, 'regressor:gradient_boosting:min_samples_leaf': 16, 'regressor:gradient_boosting:min_samples_split': 11, 'regressor:gradient_boosting:min_weight_fraction_leaf': 0.0, 'regressor:gradient_boosting:n_estimators': 192, 'regressor:gradient_boosting:subsample': 0.6329737972760845, 'regressor:gradient_boosting:alpha': 0.9330528274425106},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+]
+Training time:  300.2377486228943
+Test run 28 
+
+Test number, auto-sklearn model:  28 
+
+[WARNING] [2018-02-12 11:50:59,705:AutoMLSMBO(1)::25e256f6f5561fc7a424087316a95284] Could not find meta-data directory /home/fredde/anaconda3/lib/python3.6/site-packages/autosklearn/metalearning/files/r2_regression_dense
+MSE:  0.00043364916933
+MSE %:  0.000159577338026
+R2 score: 0.997336541263
+[(0.640000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:random_forest:bootstrap': 'True', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 1.0, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 1, 'regressor:random_forest:min_samples_split': 2, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.01},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.240000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'most_frequent', 'preprocessor:__choice__': 'feature_agglomeration', 'regressor:__choice__': 'ridge_regression', 'rescaling:__choice__': 'none', 'preprocessor:feature_agglomeration:affinity': 'manhattan', 'preprocessor:feature_agglomeration:linkage': 'average', 'preprocessor:feature_agglomeration:n_clusters': 164, 'preprocessor:feature_agglomeration:pooling_func': 'max', 'regressor:ridge_regression:alpha': 0.7827666529045982, 'regressor:ridge_regression:fit_intercept': 'True', 'regressor:ridge_regression:tol': 0.04485576804611636},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.040000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'gradient_boosting', 'rescaling:__choice__': 'none', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'regressor:gradient_boosting:learning_rate': 0.40240520369975225, 'regressor:gradient_boosting:loss': 'quantile', 'regressor:gradient_boosting:max_depth': 9, 'regressor:gradient_boosting:max_features': 0.2907404543354776, 'regressor:gradient_boosting:max_leaf_nodes': 'None', 'regressor:gradient_boosting:min_impurity_decrease': 0.0, 'regressor:gradient_boosting:min_samples_leaf': 1, 'regressor:gradient_boosting:min_samples_split': 14, 'regressor:gradient_boosting:min_weight_fraction_leaf': 0.0, 'regressor:gradient_boosting:n_estimators': 147, 'regressor:gradient_boosting:subsample': 0.4861177305961185, 'regressor:gradient_boosting:alpha': 0.8889679824582796},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.040000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'ridge_regression', 'rescaling:__choice__': 'minmax', 'regressor:ridge_regression:alpha': 8.326500321887319e-05, 'regressor:ridge_regression:fit_intercept': 'True', 'regressor:ridge_regression:tol': 0.00032452570258667963},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'fast_ica', 'regressor:__choice__': 'extra_trees', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'preprocessor:fast_ica:algorithm': 'parallel', 'preprocessor:fast_ica:fun': 'exp', 'preprocessor:fast_ica:whiten': 'False', 'regressor:extra_trees:bootstrap': 'True', 'regressor:extra_trees:criterion': 'friedman_mse', 'regressor:extra_trees:max_depth': 'None', 'regressor:extra_trees:max_features': 0.5766922941701957, 'regressor:extra_trees:max_leaf_nodes': 'None', 'regressor:extra_trees:min_impurity_decrease': 0.0, 'regressor:extra_trees:min_samples_leaf': 9, 'regressor:extra_trees:min_samples_split': 20, 'regressor:extra_trees:n_estimators': 100},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'random_trees_embedding', 'regressor:__choice__': 'liblinear_svr', 'rescaling:__choice__': 'none', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'preprocessor:random_trees_embedding:bootstrap': 'True', 'preprocessor:random_trees_embedding:max_depth': 10, 'preprocessor:random_trees_embedding:max_leaf_nodes': 'None', 'preprocessor:random_trees_embedding:min_samples_leaf': 12, 'preprocessor:random_trees_embedding:min_samples_split': 4, 'preprocessor:random_trees_embedding:min_weight_fraction_leaf': 1.0, 'preprocessor:random_trees_embedding:n_estimators': 68, 'regressor:liblinear_svr:C': 0.1075178332060044, 'regressor:liblinear_svr:dual': 'False', 'regressor:liblinear_svr:epsilon': 0.09715013754002884, 'regressor:liblinear_svr:fit_intercept': 'True', 'regressor:liblinear_svr:intercept_scaling': 1, 'regressor:liblinear_svr:loss': 'squared_epsilon_insensitive', 'regressor:liblinear_svr:tol': 0.015989040967834926},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+]
+Training time:  302.8852906227112
+Test run 29 
+
+Test number, auto-sklearn model:  29 
+
+[WARNING] [2018-02-12 11:56:02,599:AutoMLSMBO(1)::3dfa35704dc8e37db14167947e4c5dcb] Could not find meta-data directory /home/fredde/anaconda3/lib/python3.6/site-packages/autosklearn/metalearning/files/r2_regression_dense
+MSE:  0.000455659041547
+MSE %:  0.000167676688992
+R2 score: 0.997194977595
+[(0.460000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'most_frequent', 'preprocessor:__choice__': 'fast_ica', 'regressor:__choice__': 'gradient_boosting', 'rescaling:__choice__': 'none', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'preprocessor:fast_ica:algorithm': 'deflation', 'preprocessor:fast_ica:fun': 'exp', 'preprocessor:fast_ica:whiten': 'False', 'regressor:gradient_boosting:learning_rate': 0.03297702631484973, 'regressor:gradient_boosting:loss': 'ls', 'regressor:gradient_boosting:max_depth': 10, 'regressor:gradient_boosting:max_features': 0.5574949274186053, 'regressor:gradient_boosting:max_leaf_nodes': 'None', 'regressor:gradient_boosting:min_impurity_decrease': 0.0, 'regressor:gradient_boosting:min_samples_leaf': 1, 'regressor:gradient_boosting:min_samples_split': 16, 'regressor:gradient_boosting:min_weight_fraction_leaf': 0.0, 'regressor:gradient_boosting:n_estimators': 192, 'regressor:gradient_boosting:subsample': 0.5237452480586202},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.260000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'no_preprocessing', 'regressor:__choice__': 'random_forest', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'True', 'regressor:random_forest:bootstrap': 'True', 'regressor:random_forest:criterion': 'mse', 'regressor:random_forest:max_depth': 'None', 'regressor:random_forest:max_features': 1.0, 'regressor:random_forest:max_leaf_nodes': 'None', 'regressor:random_forest:min_impurity_decrease': 0.0, 'regressor:random_forest:min_samples_leaf': 1, 'regressor:random_forest:min_samples_split': 2, 'regressor:random_forest:min_weight_fraction_leaf': 0.0, 'regressor:random_forest:n_estimators': 100, 'categorical_encoding:one_hot_encoding:minimum_fraction': 0.01},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.220000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'one_hot_encoding', 'imputation:strategy': 'mean', 'preprocessor:__choice__': 'fast_ica', 'regressor:__choice__': 'extra_trees', 'rescaling:__choice__': 'standardize', 'categorical_encoding:one_hot_encoding:use_minimum_fraction': 'False', 'preprocessor:fast_ica:algorithm': 'parallel', 'preprocessor:fast_ica:fun': 'exp', 'preprocessor:fast_ica:whiten': 'False', 'regressor:extra_trees:bootstrap': 'True', 'regressor:extra_trees:criterion': 'friedman_mse', 'regressor:extra_trees:max_depth': 'None', 'regressor:extra_trees:max_features': 0.5766922941701957, 'regressor:extra_trees:max_leaf_nodes': 'None', 'regressor:extra_trees:min_impurity_decrease': 0.0, 'regressor:extra_trees:min_samples_leaf': 9, 'regressor:extra_trees:min_samples_split': 20, 'regressor:extra_trees:n_estimators': 100},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'most_frequent', 'preprocessor:__choice__': 'polynomial', 'regressor:__choice__': 'sgd', 'rescaling:__choice__': 'standardize', 'preprocessor:polynomial:degree': 2, 'preprocessor:polynomial:include_bias': 'True', 'preprocessor:polynomial:interaction_only': 'False', 'regressor:sgd:alpha': 1.5025776551036395e-06, 'regressor:sgd:average': 'True', 'regressor:sgd:eta0': 0.022630446984875433, 'regressor:sgd:fit_intercept': 'True', 'regressor:sgd:learning_rate': 'optimal', 'regressor:sgd:loss': 'epsilon_insensitive', 'regressor:sgd:penalty': 'l1', 'regressor:sgd:tol': 0.007934174887458428, 'regressor:sgd:epsilon': 9.983381963419018e-05},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'pca', 'regressor:__choice__': 'ridge_regression', 'rescaling:__choice__': 'robust_scaler', 'preprocessor:pca:keep_variance': 0.9080080959468255, 'preprocessor:pca:whiten': 'True', 'regressor:ridge_regression:alpha': 0.0005725128676160658, 'regressor:ridge_regression:fit_intercept': 'True', 'regressor:ridge_regression:tol': 0.0005420288022632766, 'rescaling:robust_scaler:q_max': 0.85915299202292, 'rescaling:robust_scaler:q_min': 0.26118341704505593},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+(0.020000, SimpleRegressionPipeline({'categorical_encoding:__choice__': 'no_encoding', 'imputation:strategy': 'median', 'preprocessor:__choice__': 'polynomial', 'regressor:__choice__': 'decision_tree', 'rescaling:__choice__': 'robust_scaler', 'preprocessor:polynomial:degree': 3, 'preprocessor:polynomial:include_bias': 'True', 'preprocessor:polynomial:interaction_only': 'True', 'regressor:decision_tree:criterion': 'mse', 'regressor:decision_tree:max_depth': 1.8240207180727872, 'regressor:decision_tree:max_features': 1.0, 'regressor:decision_tree:max_leaf_nodes': 'None', 'regressor:decision_tree:min_impurity_decrease': 0.0, 'regressor:decision_tree:min_samples_leaf': 19, 'regressor:decision_tree:min_samples_split': 8, 'regressor:decision_tree:min_weight_fraction_leaf': 0.0, 'rescaling:robust_scaler:q_max': 0.8336602286916732, 'rescaling:robust_scaler:q_min': 0.20778194307431305},
+dataset_properties={
+  'task': 4,
+  'sparse': False,
+  'multilabel': False,
+  'multiclass': False,
+  'target_type': 'regression',
+  'signed': False})),
+]
+Training time:  299.04152941703796
+Total time: 9108.21338891983
+

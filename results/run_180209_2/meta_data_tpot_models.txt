@@ -1,0 +1,1104 @@
+# Train models and produce results...
+# 
+?
+from sklearn.externals import joblib
+from tpot import TPOTRegressor
+from sklearn.model_selection import train_test_split
+from sklearn import linear_model
+from sklearn.metrics import mean_squared_error
+from sklearn.metrics import r2_score
+?
+### Train a linear model just for comparison.
+?
+gen = 10
+cores = -1
+?
+results = list()
+cols = ['test_no','model','MSE','MSE_perc','R2-score']
+?
+df_out = pd.DataFrame()
+?
+df_out['y_13'] = df_train[d['fo_booster_13']]
+df_out['y_24'] = df_train[d['fo_booster_24']]
+?
+?
+seed = 42 # This is to get reproduce.
+?
+?
+for test_no in range(len(test_features)):
+    
+    # Feature selection for the test run
+    print('Test run', test_no, '\n')
+    
+    df_test = df_train[test_features[test_no]]
+    # drop the last column, which is the measured
+    X = np.array(df_test.drop(df_test.columns[len(df_test.columns)-1],axis=1))
+    # y is the measured value
+    y = np.array(df_test[df_test.columns[len(df_test.columns)-1]])
+    
+    # make a test and train split.
+    X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.75, test_size=0.25, random_state=seed)
+    
+    # 
+    
+    print('Test number, linear model: ', test_no, '\n')
+    m_linear = sk.linear_model.LinearRegression(n_jobs=cores)
+    m_linear.fit(X_train, y_train.reshape(-1,))
+    
+    df_out['linear_test_no_'+str(test_no)] = m_linear.predict(X)
+    
+    MSE = mean_squared_error(m_linear.predict(X_test),y_test)
+    MSE_perc = mean_squared_error(m_linear.predict(X_test),y_test)/max(y_test)
+    R_2 = r2_score(m_linear.predict(X_test),y_test)
+    
+    print('MSE: ',MSE )
+    print('MSE %: ',MSE_perc )
+    print('R2 score:', R_2)
+    
+    results.append([test_no,'linear',MSE,MSE_perc,R_2])
+    
+    # tpot model
+    
+    print('Test number, TPOT model: ', test_no, '\n')
+?
+    m_tpot = TPOTRegressor(generations=gen, population_size=50, verbosity=2, n_jobs=cores)
+    m_tpot.fit(X_train, y_train.reshape(-1,))
+    
+    df_out['tpot_test_no_'+str(test_no)] = m_tpot.predict(X)
+    
+    MSE = mean_squared_error(m_tpot.predict(X_test),y_test)
+    MSE_perc = mean_squared_error(m_tpot.predict(X_test),y_test)/max(y_test)
+    R_2 = r2_score(m_tpot.predict(X_test),y_test)
+    
+    print('MSE: ',MSE )
+    print('MSE %: ',MSE_perc )
+    print('R2 score:', R_2)
+    
+    results.append([test_no,'tpot',MSE,MSE_perc,R_2])
+    
+?
+results = pd.DataFrame(results, columns=cols)
+results.to_excel('results/run_180209_2/test_run.xlsx')
+df_out.to_hdf('results/run_180209_2/df_out.h5','table',complevel=9,complib='blosc')
+?
+Test run 0 
+
+Test number, linear model:  0 
+
+MSE:  0.0207519141795
+MSE %:  0.00766092453064
+R2 score: 0.844991158411
+Test number, TPOT model:  0 
+
+Optimization Progress:  18%|??        | 100/550 [01:46<34:21,  4.58s/pipeline]
+Generation 1 - Current best internal CV score: -0.00404922949533352
+Optimization Progress:  27%|???       | 150/550 [03:42<1:19:14, 11.89s/pipeline]
+Generation 2 - Current best internal CV score: -0.004048795308271662
+Optimization Progress:  36%|????      | 200/550 [04:54<1:20:41, 13.83s/pipeline]
+Generation 3 - Current best internal CV score: -0.00404519012183509
+Optimization Progress:  45%|?????     | 250/550 [06:17<1:17:25, 15.48s/pipeline]
+Generation 4 - Current best internal CV score: -0.00404519012183509
+Optimization Progress:  55%|??????    | 300/550 [08:58<1:16:21, 18.32s/pipeline]
+Generation 5 - Current best internal CV score: -0.004034095832649525
+Optimization Progress:  64%|???????   | 351/550 [14:52<3:56:28, 71.30s/pipeline] 
+Generation 6 - Current best internal CV score: -0.004034095832649525
+Optimization Progress:  73%|????????  | 401/550 [19:15<2:55:25, 70.64s/pipeline] 
+Generation 7 - Current best internal CV score: -0.004034095832649525
+Optimization Progress:  82%|????????? | 451/550 [20:42<35:26, 21.48s/pipeline]  
+Generation 8 - Current best internal CV score: -0.00401939900490318
+Optimization Progress:  91%|????????? | 501/550 [22:05<13:01, 15.95s/pipeline]
+Generation 9 - Current best internal CV score: -0.00401939900490318
+                                                                              
+Generation 10 - Current best internal CV score: -0.004017201816364564
+
+Best pipeline: XGBRegressor(input_matrix, learning_rate=0.1, max_depth=6, min_child_weight=9, n_estimators=100, nthread=1, subsample=0.8)
+MSE:  0.00404847858111
+MSE %:  0.00149456520519
+R2 score: 0.973014021207
+Test run 1 
+
+Test number, linear model:  1 
+
+MSE:  0.00884479220497
+MSE %:  0.00326520652434
+R2 score: 0.938996771759
+Test number, TPOT model:  1 
+
+Optimization Progress:  18%|??        | 100/550 [02:09<1:49:38, 14.62s/pipeline]
+Generation 1 - Current best internal CV score: -0.001889492237049302
+Optimization Progress:  27%|???       | 150/550 [03:09<1:13:31, 11.03s/pipeline]
+Generation 2 - Current best internal CV score: -0.0018392824799359545
+Optimization Progress:  37%|????      | 202/550 [14:20<7:47:27, 80.60s/pipeline]  
+Generation 3 - Current best internal CV score: -0.0018228019735589819
+Optimization Progress:  46%|?????     | 253/550 [21:30<4:00:40, 48.62s/pipeline]
+Generation 4 - Current best internal CV score: -0.0018228019735589819
+Optimization Progress:  55%|??????    | 303/550 [23:42<2:32:30, 37.04s/pipeline]
+Generation 5 - Current best internal CV score: -0.0018228019735589819
+Optimization Progress:  64%|???????   | 354/550 [31:06<2:24:50, 44.34s/pipeline]
+Generation 6 - Current best internal CV score: -0.0018228019735589819
+Optimization Progress:  74%|????????  | 406/550 [41:49<3:23:37, 84.84s/pipeline] 
+Generation 7 - Current best internal CV score: -0.0018228019735589819
+Optimization Progress:  83%|????????? | 456/550 [43:57<1:11:33, 45.68s/pipeline]
+Generation 8 - Current best internal CV score: -0.0018228019735589819
+Optimization Progress:  93%|??????????| 509/550 [50:41<58:41, 85.89s/pipeline]   
+Generation 9 - Current best internal CV score: -0.0018228019735589819
+                                                                              
+Generation 10 - Current best internal CV score: -0.0018212311670373846
+
+Best pipeline: XGBRegressor(OneHotEncoder(RobustScaler(input_matrix), minimum_fraction=0.05, sparse=False), learning_rate=0.1, max_depth=10, min_child_weight=6, n_estimators=100, nthread=1, subsample=0.9)
+MSE:  0.00203363453392
+MSE %:  0.000750751017591
+R2 score: 0.986651341274
+Test run 2 
+
+Test number, linear model:  2 
+
+MSE:  0.0250505626526
+MSE %:  0.00924784423603
+R2 score: 0.806785846597
+Test number, TPOT model:  2 
+
+Optimization Progress:  18%|??        | 100/550 [02:29<40:31,  5.40s/pipeline] 
+Generation 1 - Current best internal CV score: -0.005329641328166315
+Optimization Progress:  27%|???       | 150/550 [04:19<1:56:52, 17.53s/pipeline]
+Generation 2 - Current best internal CV score: -0.005329641328166315
+Optimization Progress:  37%|????      | 201/550 [10:19<6:37:12, 68.29s/pipeline] 
+Generation 3 - Current best internal CV score: -0.005239642182647953
+Optimization Progress:  46%|?????     | 252/550 [17:43<6:44:43, 81.49s/pipeline]  
+Generation 4 - Current best internal CV score: -0.005239642182647953
+Optimization Progress:  55%|??????    | 302/550 [20:13<2:10:25, 31.55s/pipeline]
+Generation 5 - Current best internal CV score: -0.005229161336686756
+Optimization Progress:  64%|???????   | 353/550 [27:19<5:01:43, 91.90s/pipeline] 
+Generation 6 - Current best internal CV score: -0.005112775976866803
+Optimization Progress:  73%|????????  | 403/550 [29:55<1:23:37, 34.14s/pipeline]
+Generation 7 - Current best internal CV score: -0.005112775976866803
+Optimization Progress:  82%|????????? | 453/550 [32:48<53:29, 33.09s/pipeline]  
+Generation 8 - Current best internal CV score: -0.005112775976866803
+Optimization Progress:  91%|??????????| 503/550 [36:22<21:44, 27.75s/pipeline]  
+Generation 9 - Current best internal CV score: -0.0050875664557328126
+                                                                              
+Generation 10 - Current best internal CV score: -0.005065031237288728
+
+Best pipeline: RandomForestRegressor(LinearSVR(CombineDFs(input_matrix, input_matrix), C=0.5, dual=True, epsilon=1.0, loss=epsilon_insensitive, tol=1e-05), bootstrap=False, max_features=0.1, min_samples_leaf=1, min_samples_split=6, n_estimators=100)
+MSE:  0.00483362353428
+MSE %:  0.00178441491157
+R2 score: 0.967044475585
+Test run 3 
+
+Test number, linear model:  3 
+
+MSE:  0.00529993099851
+MSE %:  0.00195656029829
+R2 score: 0.964493994772
+Test number, TPOT model:  3 
+
+Optimization Progress:  18%|??        | 100/550 [05:20<3:56:05, 31.48s/pipeline]
+Generation 1 - Current best internal CV score: -0.0017231372355500864
+Optimization Progress:  27%|???       | 150/550 [06:15<1:25:31, 12.83s/pipeline]
+Generation 2 - Current best internal CV score: -0.0017231372355500864
+Optimization Progress:  36%|????      | 200/550 [09:21<2:06:14, 21.64s/pipeline]
+Generation 3 - Current best internal CV score: -0.0017231372355500864
+Optimization Progress:  45%|?????     | 250/550 [10:22<1:11:34, 14.32s/pipeline]
+Generation 4 - Current best internal CV score: -0.0017231372355500864
+Optimization Progress:  55%|??????    | 300/550 [11:57<48:18, 11.59s/pipeline]  
+Generation 5 - Current best internal CV score: -0.001624703139048126
+Optimization Progress:  64%|???????   | 350/550 [14:39<50:04, 15.02s/pipeline]  
+Generation 6 - Current best internal CV score: -0.001624703139048126
+Optimization Progress:  73%|????????  | 400/550 [16:46<1:02:38, 25.06s/pipeline]
+Generation 7 - Current best internal CV score: -0.001624703139048126
+Optimization Progress:  82%|????????? | 450/550 [18:23<33:33, 20.14s/pipeline]  
+Generation 8 - Current best internal CV score: -0.001624703139048126
+Optimization Progress:  91%|????????? | 500/550 [19:59<15:22, 18.45s/pipeline]
+Generation 9 - Current best internal CV score: -0.001624703139048126
+                                                                              
+Generation 10 - Current best internal CV score: -0.001624703139048126
+
+Best pipeline: ExtraTreesRegressor(input_matrix, bootstrap=False, max_features=0.9, min_samples_leaf=1, min_samples_split=12, n_estimators=100)
+MSE:  0.00172079197329
+MSE %:  0.000635259828382
+R2 score: 0.988668164267
+Test run 4 
+
+Test number, linear model:  4 
+
+MSE:  0.00476137473095
+MSE %:  0.00175774302844
+R2 score: 0.968068637779
+Test number, TPOT model:  4 
+
+Optimization Progress:  18%|??        | 100/550 [06:39<4:03:30, 32.47s/pipeline]
+Generation 1 - Current best internal CV score: -0.0013966136015196116
+Optimization Progress:  27%|???       | 150/550 [09:19<1:43:29, 15.52s/pipeline]
+Generation 2 - Current best internal CV score: -0.001365283029353034
+Optimization Progress:  37%|????      | 201/550 [16:51<1:58:24, 20.36s/pipeline]
+Generation 3 - Current best internal CV score: -0.0013010882100720485
+Optimization Progress:  46%|?????     | 251/550 [19:28<1:24:34, 16.97s/pipeline]
+Generation 4 - Current best internal CV score: -0.0013010882100720485
+Optimization Progress:  55%|??????    | 301/550 [26:11<4:48:16, 69.46s/pipeline]
+Generation 5 - Current best internal CV score: -0.0011237267312723994
+Optimization Progress:  64%|???????   | 352/550 [32:28<4:49:21, 87.69s/pipeline] 
+Generation 6 - Current best internal CV score: -0.0011237267312723994
+Optimization Progress:  73%|????????  | 403/550 [40:21<4:13:26, 103.44s/pipeline]
+Generation 7 - Current best internal CV score: -0.0011237267312723994
+Optimization Progress:  82%|????????? | 453/550 [44:40<1:30:59, 56.29s/pipeline] 
+Generation 8 - Current best internal CV score: -0.0011237267312723994
+Optimization Progress:  92%|??????????| 504/550 [54:07<1:25:03, 110.95s/pipeline]
+Generation 9 - Current best internal CV score: -0.0011237267312723994
+                                                                                 
+Generation 10 - Current best internal CV score: -0.0011237267312723994
+
+Best pipeline: RandomForestRegressor(ExtraTreesRegressor(input_matrix, bootstrap=True, max_features=0.75, min_samples_leaf=1, min_samples_split=2, n_estimators=100), bootstrap=True, max_features=0.95, min_samples_leaf=9, min_samples_split=14, n_estimators=100)
+MSE:  0.00139220131039
+MSE %:  0.000513954957507
+R2 score: 0.990925702531
+Test run 5 
+
+Test number, linear model:  5 
+
+MSE:  0.0134967261232
+MSE %:  0.00498254760241
+R2 score: 0.902868758874
+Test number, TPOT model:  5 
+
+Optimization Progress:  18%|??        | 100/550 [03:49<1:23:54, 11.19s/pipeline]
+Generation 1 - Current best internal CV score: -0.0011422708416258778
+Optimization Progress:  27%|???       | 150/550 [06:01<1:58:02, 17.71s/pipeline]
+Generation 2 - Current best internal CV score: -0.0011422708416258778
+Optimization Progress:  36%|????      | 200/550 [08:10<2:12:22, 22.69s/pipeline]
+Generation 3 - Current best internal CV score: -0.0010976066802975103
+Optimization Progress:  45%|?????     | 250/550 [12:03<3:37:40, 43.54s/pipeline]
+Generation 4 - Current best internal CV score: -0.0010976066802975103
+Optimization Progress:  55%|??????    | 300/550 [15:47<2:03:40, 29.68s/pipeline]
+Generation 5 - Current best internal CV score: -0.0010705108295451658
+Optimization Progress:  64%|???????   | 350/550 [19:55<3:04:02, 55.21s/pipeline]
+Generation 6 - Current best internal CV score: -0.00106261053382608
+Optimization Progress:  73%|????????  | 400/550 [22:56<1:23:32, 33.42s/pipeline]
+Generation 7 - Current best internal CV score: -0.0009981583115491461
+Optimization Progress:  82%|????????? | 451/550 [32:10<2:02:41, 74.36s/pipeline] 
+Generation 8 - Current best internal CV score: -0.000987228851177473
+Optimization Progress:  91%|????????? | 501/550 [37:33<35:30, 43.49s/pipeline]  
+Generation 9 - Current best internal CV score: -0.000987228851177473
+                                                                              
+Generation 10 - Current best internal CV score: -0.000982950750872043
+
+Best pipeline: ExtraTreesRegressor(OneHotEncoder(ExtraTreesRegressor(input_matrix, bootstrap=True, max_features=0.8, min_samples_leaf=2, min_samples_split=2, n_estimators=100), minimum_fraction=0.25, sparse=False), bootstrap=False, max_features=0.6, min_samples_leaf=2, min_samples_split=13, n_estimators=100)
+MSE:  0.000917566742938
+MSE %:  0.000338735478022
+R2 score: 0.994003989301
+Test run 6 
+
+Test number, linear model:  6 
+
+MSE:  0.00419235055838
+MSE %:  0.00154767800965
+R2 score: 0.972149762809
+Test number, TPOT model:  6 
+
+Optimization Progress:  19%|??        | 103/550 [15:49<9:48:58, 79.06s/pipeline] 
+Generation 1 - Current best internal CV score: -0.0012743493632408388
+Optimization Progress:  28%|???       | 154/550 [21:51<5:34:43, 50.72s/pipeline]
+Generation 2 - Current best internal CV score: -0.0012743493632408388
+Optimization Progress:  37%|????      | 205/550 [28:00<4:48:07, 50.11s/pipeline]
+Generation 3 - Current best internal CV score: -0.0012743493632408388
+Optimization Progress:  47%|?????     | 256/550 [34:51<4:00:12, 49.02s/pipeline]
+Generation 4 - Current best internal CV score: -0.0012743493632408388
+Optimization Progress:  56%|??????    | 308/550 [45:41<5:52:24, 87.38s/pipeline] 
+Generation 5 - Current best internal CV score: -0.0012743493632408388
+Optimization Progress:  65%|???????   | 358/550 [50:59<2:56:56, 55.29s/pipeline]
+Generation 6 - Current best internal CV score: -0.0012743493632408388
+Optimization Progress:  74%|????????  | 409/550 [57:27<3:03:40, 78.16s/pipeline] 
+Generation 7 - Current best internal CV score: -0.0012743493632408388
+Optimization Progress:  84%|????????? | 460/550 [1:05:15<2:41:21, 107.57s/pipeline]
+Generation 8 - Current best internal CV score: -0.0012743493632408388
+Optimization Progress:  93%|??????????| 511/550 [1:12:28<1:02:09, 95.64s/pipeline] 
+Generation 9 - Current best internal CV score: -0.0012743493632408388
+                                                                                  
+Generation 10 - Current best internal CV score: -0.0012567070138322011
+
+Best pipeline: ExtraTreesRegressor(input_matrix, bootstrap=False, max_features=0.95, min_samples_leaf=1, min_samples_split=3, n_estimators=100)
+MSE:  0.00131116058143
+MSE %:  0.000484037384454
+R2 score: 0.991407527189
+Test run 7 
+
+Test number, linear model:  7 
+
+MSE:  0.00427851520927
+MSE %:  0.00157948716624
+R2 score: 0.971383717864
+Test number, TPOT model:  7 
+
+Optimization Progress:  18%|??        | 101/550 [08:26<2:59:52, 24.04s/pipeline]
+Generation 1 - Current best internal CV score: -0.0004596179599742208
+Optimization Progress:  27%|???       | 151/550 [11:28<2:04:25, 18.71s/pipeline]
+Generation 2 - Current best internal CV score: -0.00045133504639310613
+Optimization Progress:  37%|????      | 201/550 [17:09<5:44:51, 59.29s/pipeline]
+Generation 3 - Current best internal CV score: -0.00045133504639310613
+Optimization Progress:  46%|?????     | 251/550 [22:26<2:47:54, 33.69s/pipeline]
+Generation 4 - Current best internal CV score: -0.00045133504639310613
+Optimization Progress:  55%|??????    | 303/550 [34:01<6:19:57, 92.30s/pipeline]  
+Generation 5 - Current best internal CV score: -0.00045133504639310613
+Optimization Progress:  65%|???????   | 355/550 [44:04<4:20:49, 80.26s/pipeline]  
+Generation 6 - Current best internal CV score: -0.00044963361778623293
+Optimization Progress:  74%|????????  | 406/550 [54:03<2:32:52, 63.70s/pipeline]
+Generation 7 - Current best internal CV score: -0.00044963361778623293
+Optimization Progress:  83%|????????? | 457/550 [1:01:16<1:22:11, 53.02s/pipeline]
+Generation 8 - Current best internal CV score: -0.00044963361778623293
+Optimization Progress:  92%|??????????| 507/550 [1:06:00<26:43, 37.29s/pipeline]  
+Generation 9 - Current best internal CV score: -0.00044963361778623293
+                                                                                
+Generation 10 - Current best internal CV score: -0.00044963361778623293
+
+Best pipeline: ExtraTreesRegressor(input_matrix, bootstrap=False, max_features=1.0, min_samples_leaf=1, min_samples_split=4, n_estimators=100)
+MSE:  0.00044476382501
+MSE %:  0.000164192183328
+R2 score: 0.997099232384
+Test run 8 
+
+Test number, linear model:  8 
+
+MSE:  0.00294087746127
+MSE %:  0.00108567528228
+R2 score: 0.98055449725
+Test number, TPOT model:  8 
+
+Optimization Progress:  18%|??        | 100/550 [03:13<51:21,  6.85s/pipeline]  
+Generation 1 - Current best internal CV score: -0.000601949847676273
+Optimization Progress:  27%|???       | 150/550 [05:04<42:48,  6.42s/pipeline]  
+Generation 2 - Current best internal CV score: -0.000601949847676273
+Optimization Progress:  36%|????      | 200/550 [07:01<1:40:18, 17.19s/pipeline]
+Generation 3 - Current best internal CV score: -0.0004277226093861446
+Optimization Progress:  45%|?????     | 250/550 [09:57<1:23:26, 16.69s/pipeline]
+Generation 4 - Current best internal CV score: -0.0004277226093861446
+Optimization Progress:  55%|??????    | 301/550 [17:22<2:37:12, 37.88s/pipeline]
+Generation 5 - Current best internal CV score: -0.00042049755733980987
+Optimization Progress:  64%|???????   | 351/550 [19:52<1:20:21, 24.23s/pipeline]
+Generation 6 - Current best internal CV score: -0.00041838122821629385
+Optimization Progress:  73%|????????  | 401/550 [24:18<1:13:32, 29.61s/pipeline]
+Generation 7 - Current best internal CV score: -0.0004113552853211057
+Optimization Progress:  82%|????????? | 451/550 [28:55<1:23:08, 50.38s/pipeline]
+Generation 8 - Current best internal CV score: -0.0004113552853211057
+Optimization Progress:  91%|????????? | 501/550 [31:46<27:38, 33.85s/pipeline]  
+Generation 9 - Current best internal CV score: -0.0004113552853211057
+                                                                              
+Generation 10 - Current best internal CV score: -0.00040962260435086997
+
+Best pipeline: XGBRegressor(ExtraTreesRegressor(VarianceThreshold(input_matrix, threshold=0.65), bootstrap=True, max_features=0.25, min_samples_leaf=1, min_samples_split=7, n_estimators=100), learning_rate=0.5, max_depth=9, min_child_weight=13, n_estimators=100, nthread=1, subsample=1.0)
+MSE:  0.000425763770085
+MSE %:  0.000157177987644
+R2 score: 0.997228555627
+Test run 9 
+
+Test number, linear model:  9 
+
+MSE:  0.00384651489584
+MSE %:  0.00142000685181
+R2 score: 0.974508862902
+Test number, TPOT model:  9 
+
+Optimization Progress:  18%|??        | 100/550 [06:06<1:52:17, 14.97s/pipeline]
+Generation 1 - Current best internal CV score: -0.0007895852167778692
+Optimization Progress:  27%|???       | 150/550 [08:41<2:37:03, 23.56s/pipeline]
+Generation 2 - Current best internal CV score: -0.0007895852167778692
+Optimization Progress:  36%|????      | 200/550 [14:02<4:23:37, 45.19s/pipeline] 
+Generation 3 - Current best internal CV score: -0.0007895852167778692
+Optimization Progress:  45%|?????     | 250/550 [17:53<3:13:31, 38.71s/pipeline]
+Generation 4 - Current best internal CV score: -0.0007638946353137108
+Optimization Progress:  55%|??????    | 300/550 [22:34<2:27:06, 35.31s/pipeline]
+Generation 5 - Current best internal CV score: -0.0007187205826505053
+Optimization Progress:  64%|???????   | 350/550 [26:48<2:55:04, 52.52s/pipeline]
+Generation 6 - Current best internal CV score: -0.0007187205826505053
+Optimization Progress:  73%|????????  | 400/550 [28:50<47:38, 19.05s/pipeline]  
+Generation 7 - Current best internal CV score: -0.0006784222938693524
+Optimization Progress:  82%|????????? | 450/550 [33:17<35:53, 21.54s/pipeline]  
+Generation 8 - Current best internal CV score: -0.0006543593536028607
+Optimization Progress:  91%|????????? | 500/550 [35:41<15:49, 19.00s/pipeline]
+Generation 9 - Current best internal CV score: -0.0006543593536028607
+                                                                              
+Generation 10 - Current best internal CV score: -0.0006543593536028607
+
+Best pipeline: XGBRegressor(ExtraTreesRegressor(input_matrix, bootstrap=True, max_features=0.95, min_samples_leaf=2, min_samples_split=10, n_estimators=100), learning_rate=0.5, max_depth=5, min_child_weight=15, n_estimators=100, nthread=1, subsample=0.75)
+MSE:  0.0006651220348
+MSE %:  0.000245541190475
+R2 score: 0.995664515569
+Test run 10 
+
+Test number, linear model:  10 
+
+MSE:  0.00412015707041
+MSE %:  0.00152102654713
+R2 score: 0.97243497882
+Test number, TPOT model:  10 
+
+Optimization Progress:  18%|??        | 100/550 [03:56<1:18:14, 10.43s/pipeline]
+Generation 1 - Current best internal CV score: -0.0005870323248203113
+Optimization Progress:  27%|???       | 150/550 [06:23<59:42,  8.96s/pipeline]  
+Generation 2 - Current best internal CV score: -0.0005159610764516361
+Optimization Progress:  36%|????      | 200/550 [10:44<1:06:04, 11.33s/pipeline]
+Generation 3 - Current best internal CV score: -0.0005142053733491138
+Optimization Progress:  46%|?????     | 252/550 [19:03<7:08:47, 86.33s/pipeline]  
+Generation 4 - Current best internal CV score: -0.0005127991710735813
+Optimization Progress:  55%|??????    | 302/550 [24:57<4:40:48, 67.94s/pipeline]
+Generation 5 - Current best internal CV score: -0.00048806481879815457
+Optimization Progress:  64%|???????   | 352/550 [30:39<2:21:32, 42.89s/pipeline]
+Generation 6 - Current best internal CV score: -0.00048531287204077976
+Optimization Progress:  73%|????????  | 402/550 [37:55<2:49:07, 68.57s/pipeline]
+Generation 7 - Current best internal CV score: -0.00048531287204077976
+Optimization Progress:  82%|????????? | 452/550 [44:38<1:51:05, 68.01s/pipeline]
+Generation 8 - Current best internal CV score: -0.0004815290281154555
+Optimization Progress:  91%|??????????| 503/550 [52:18<44:47, 57.19s/pipeline]   
+Generation 9 - Current best internal CV score: -0.00046580356915908205
+                                                                                 
+Generation 10 - Current best internal CV score: -0.00046574175759071817
+
+Best pipeline: XGBRegressor(MaxAbsScaler(ExtraTreesRegressor(RidgeCV(input_matrix), bootstrap=False, max_features=1.0, min_samples_leaf=12, min_samples_split=13, n_estimators=100)), learning_rate=0.1, max_depth=6, min_child_weight=11, n_estimators=100, nthread=1, subsample=0.95)
+MSE:  0.000491017512102
+MSE %:  0.000181267524089
+R2 score: 0.996800392292
+Test run 11 
+
+Test number, linear model:  11 
+
+MSE:  0.00246514504526
+MSE %:  0.000910050513193
+R2 score: 0.983763223509
+Test number, TPOT model:  11 
+
+Optimization Progress:  18%|??        | 100/550 [03:47<1:42:54, 13.72s/pipeline]
+Generation 1 - Current best internal CV score: -0.0006442371331878816
+Optimization Progress:  27%|???       | 150/550 [06:05<1:16:45, 11.51s/pipeline]
+Generation 2 - Current best internal CV score: -0.0006442371331878816
+Optimization Progress:  36%|????      | 200/550 [09:19<2:59:34, 30.79s/pipeline]
+Generation 3 - Current best internal CV score: -0.0006293138857232238
+Optimization Progress:  45%|?????     | 250/550 [13:53<3:27:16, 41.46s/pipeline]
+Generation 4 - Current best internal CV score: -0.0005409489714715107
+Optimization Progress:  55%|??????    | 301/550 [23:31<6:32:13, 94.51s/pipeline]  
+Generation 5 - Current best internal CV score: -0.0005409489714715107
+Optimization Progress:  64%|???????   | 353/550 [30:35<3:26:13, 62.81s/pipeline]
+Generation 6 - Current best internal CV score: -0.000487492771081578
+Optimization Progress:  73%|????????  | 403/550 [33:53<1:42:05, 41.67s/pipeline]
+Generation 7 - Current best internal CV score: -0.000487492771081578
+Optimization Progress:  82%|????????? | 453/550 [41:29<1:10:22, 43.54s/pipeline]
+Generation 8 - Current best internal CV score: -0.0004823824378737525
+Optimization Progress:  91%|??????????| 503/550 [46:38<41:47, 53.36s/pipeline]  
+Generation 9 - Current best internal CV score: -0.0004480399921442873
+                                                                                 
+Generation 10 - Current best internal CV score: -0.0003645478247823816
+
+Best pipeline: XGBRegressor(ElasticNetCV(PCA(input_matrix, iterated_power=10, svd_solver=randomized), l1_ratio=0.5, tol=0.01), learning_rate=0.1, max_depth=7, min_child_weight=14, n_estimators=100, nthread=1, subsample=0.55)
+MSE:  0.000385313008932
+MSE %:  0.000142244896378
+R2 score: 0.997495304854
+Test run 12 
+
+Test number, linear model:  12 
+
+MSE:  0.00309868590704
+MSE %:  0.00114393297277
+R2 score: 0.9795025007
+Test number, TPOT model:  12 
+
+Optimization Progress:  18%|??        | 100/550 [06:27<2:28:03, 19.74s/pipeline]
+Generation 1 - Current best internal CV score: -0.000848117443421971
+Optimization Progress:  27%|???       | 150/550 [09:19<1:20:53, 12.13s/pipeline]
+Generation 2 - Current best internal CV score: -0.0007436731492202298
+Optimization Progress:  37%|????      | 201/550 [17:04<3:51:44, 39.84s/pipeline]
+Generation 3 - Current best internal CV score: -0.0007132552738424479
+Optimization Progress:  46%|?????     | 251/550 [25:09<4:05:40, 49.30s/pipeline]
+Generation 4 - Current best internal CV score: -0.0006978923098729014
+Optimization Progress:  55%|??????    | 301/550 [32:56<3:46:21, 54.54s/pipeline]
+Generation 5 - Current best internal CV score: -0.0006011668949043096
+Optimization Progress:  64%|???????   | 351/550 [40:12<4:10:47, 75.62s/pipeline] 
+Generation 6 - Current best internal CV score: -0.0006011668949043096
+Optimization Progress:  73%|????????  | 401/550 [46:33<2:12:41, 53.43s/pipeline]
+Generation 7 - Current best internal CV score: -0.0006011668949043096
+Optimization Progress:  82%|????????? | 451/550 [55:15<1:08:12, 41.34s/pipeline]
+Generation 8 - Current best internal CV score: -0.0006011668949043096
+Optimization Progress:  91%|????????? | 501/550 [1:01:16<29:38, 36.30s/pipeline]
+Generation 9 - Current best internal CV score: -0.0006011668949043096
+                                                                                   
+Generation 10 - Current best internal CV score: -0.0006011668949043096
+
+Best pipeline: XGBRegressor(ExtraTreesRegressor(input_matrix, bootstrap=False, max_features=0.85, min_samples_leaf=3, min_samples_split=5, n_estimators=100), learning_rate=0.5, max_depth=10, min_child_weight=11, n_estimators=100, nthread=1, subsample=0.8)
+MSE:  0.000570836578976
+MSE %:  0.000210734099661
+R2 score: 0.996285427908
+Test run 13 
+
+Test number, linear model:  13 
+
+MSE:  0.00247790364551
+MSE %:  0.000914760568987
+R2 score: 0.983694339075
+Test number, TPOT model:  13 
+
+Optimization Progress:  18%|??        | 100/550 [04:27<1:38:45, 13.17s/pipeline]
+Generation 1 - Current best internal CV score: -0.0006401887694602851
+Optimization Progress:  27%|???       | 150/550 [07:49<3:45:09, 33.77s/pipeline]
+Generation 2 - Current best internal CV score: -0.0004732562564566655
+Optimization Progress:  37%|????      | 201/550 [15:30<4:57:14, 51.10s/pipeline]
+Generation 3 - Current best internal CV score: -0.0004732562564566655
+Optimization Progress:  46%|?????     | 252/550 [22:58<4:10:29, 50.43s/pipeline]
+Generation 4 - Current best internal CV score: -0.00039357684699002133
+Optimization Progress:  55%|??????    | 302/550 [30:51<5:20:58, 77.65s/pipeline] 
+Generation 5 - Current best internal CV score: -0.00039357684699002133
+Optimization Progress:  64%|???????   | 353/550 [43:09<5:34:44, 101.95s/pipeline]
+Generation 6 - Current best internal CV score: -0.00039357684699002133
+Optimization Progress:  74%|????????  | 407/550 [57:24<5:40:47, 142.99s/pipeline] 
+Generation 7 - Current best internal CV score: -0.00039357684699002133
+Optimization Progress:  83%|????????? | 459/550 [1:09:38<4:03:02, 160.25s/pipeline]
+Generation 8 - Current best internal CV score: -0.00039357684699002133
+Optimization Progress:  93%|??????????| 510/550 [1:19:54<50:51, 76.28s/pipeline]   
+Generation 9 - Current best internal CV score: -0.00039357684699002133
+                                                                                  
+Generation 10 - Current best internal CV score: -0.00039357684699002133
+
+Best pipeline: XGBRegressor(ExtraTreesRegressor(input_matrix, bootstrap=False, max_features=0.5, min_samples_leaf=1, min_samples_split=3, n_estimators=100), learning_rate=0.5, max_depth=6, min_child_weight=16, n_estimators=100, nthread=1, subsample=1.0)
+MSE:  0.000394648934261
+MSE %:  0.000145691413106
+R2 score: 0.997426247282
+Test run 14 
+
+Test number, linear model:  14 
+
+MSE:  0.0023109893513
+MSE %:  0.000853141298593
+R2 score: 0.98478950194
+Test number, TPOT model:  14 
+
+Optimization Progress:  18%|??        | 100/550 [05:46<4:24:24, 35.25s/pipeline]
+Generation 1 - Current best internal CV score: -0.0005338766744832571
+Optimization Progress:  27%|???       | 150/550 [09:28<1:56:51, 17.53s/pipeline]
+Generation 2 - Current best internal CV score: -0.0005305165467247864
+Optimization Progress:  36%|????      | 200/550 [12:44<3:33:59, 36.68s/pipeline]
+Generation 3 - Current best internal CV score: -0.0004938828171682388
+Optimization Progress:  45%|?????     | 250/550 [18:53<4:57:40, 59.53s/pipeline]
+Generation 4 - Current best internal CV score: -0.0004938828171682388
+Optimization Progress:  55%|??????    | 300/550 [22:16<2:25:24, 34.90s/pipeline]
+Generation 5 - Current best internal CV score: -0.0004938828171682388
+Optimization Progress:  64%|???????   | 350/550 [29:16<4:08:56, 74.68s/pipeline] 
+Generation 6 - Current best internal CV score: -0.00041688312388704575
+Optimization Progress:  73%|????????  | 400/550 [35:31<3:02:37, 73.05s/pipeline] 
+Generation 7 - Current best internal CV score: -0.00041630267848674965
+Optimization Progress:  82%|????????? | 450/550 [42:01<2:12:02, 79.22s/pipeline] 
+Generation 8 - Current best internal CV score: -0.00041630267848674965
+Optimization Progress:  91%|????????? | 500/550 [48:37<1:05:48, 78.96s/pipeline] 
+Generation 9 - Current best internal CV score: -0.00041630267848674965
+                                                                                
+Generation 10 - Current best internal CV score: -0.00041630267848674965
+
+Best pipeline: GradientBoostingRegressor(ElasticNetCV(PCA(input_matrix, iterated_power=3, svd_solver=randomized), l1_ratio=0.75, tol=0.0001), alpha=0.75, learning_rate=0.1, loss=ls, max_depth=8, max_features=0.9, min_samples_leaf=18, min_samples_split=11, n_estimators=100, subsample=0.35)
+MSE:  0.000434579651254
+MSE %:  0.000160432521165
+R2 score: 0.997168091118
+Test run 15 
+
+Test number, linear model:  15 
+
+MSE:  0.021935940856
+MSE %:  0.00807214517281
+R2 score: 0.847918077442
+Test number, TPOT model:  15 
+
+Optimization Progress:  18%|??        | 100/550 [03:08<50:21,  6.71s/pipeline] 
+Generation 1 - Current best internal CV score: -0.003807196617944714
+Optimization Progress:  28%|???       | 153/550 [13:18<7:27:10, 67.58s/pipeline] 
+Generation 2 - Current best internal CV score: -0.003807196617944714
+Optimization Progress:  37%|????      | 203/550 [15:47<3:18:08, 34.26s/pipeline]
+Generation 3 - Current best internal CV score: -0.003807196617944714
+Optimization Progress:  46%|?????     | 253/550 [17:09<1:50:31, 22.33s/pipeline]
+Generation 4 - Current best internal CV score: -0.003801472732216761
+Optimization Progress:  55%|??????    | 303/550 [19:10<1:34:48, 23.03s/pipeline]
+Generation 5 - Current best internal CV score: -0.0037875591528465694
+Optimization Progress:  64%|???????   | 353/550 [20:59<1:12:05, 21.95s/pipeline]
+Generation 6 - Current best internal CV score: -0.0037875591528465694
+Optimization Progress:  73%|????????  | 404/550 [27:54<3:20:29, 82.40s/pipeline] 
+Generation 7 - Current best internal CV score: -0.00378525294556909
+Optimization Progress:  83%|????????? | 454/550 [30:23<1:05:32, 40.97s/pipeline]
+Generation 8 - Current best internal CV score: -0.0037517881251590813
+Optimization Progress:  92%|??????????| 504/550 [36:36<23:34, 30.76s/pipeline]  
+Generation 9 - Current best internal CV score: -0.0037517881251590813
+                                                                              
+Generation 10 - Current best internal CV score: -0.0037517881251590813
+
+Best pipeline: GradientBoostingRegressor(LassoLarsCV(input_matrix, normalize=False), alpha=0.99, learning_rate=0.1, loss=huber, max_depth=9, max_features=0.7, min_samples_leaf=14, min_samples_split=14, n_estimators=100, subsample=0.8)
+MSE:  0.0034491997737
+MSE %:  0.0012692613226
+R2 score: 0.978651469256
+Test run 16 
+
+Test number, linear model:  16 
+
+MSE:  0.00402351523142
+MSE %:  0.00148060205241
+R2 score: 0.974851206178
+Test number, TPOT model:  16 
+
+Optimization Progress:  18%|??        | 100/550 [01:31<1:04:53,  8.65s/pipeline]
+Generation 1 - Current best internal CV score: -0.0010174562698860368
+Optimization Progress:  27%|???       | 151/550 [06:58<7:16:27, 65.63s/pipeline] 
+Generation 2 - Current best internal CV score: -0.0010174562698860368
+Optimization Progress:  37%|????      | 201/550 [08:29<2:10:45, 22.48s/pipeline]
+Generation 3 - Current best internal CV score: -0.0010174562698860368
+Optimization Progress:  46%|?????     | 251/550 [10:17<54:41, 10.97s/pipeline]  
+Generation 4 - Current best internal CV score: -0.0010174562698860368
+Optimization Progress:  55%|??????    | 301/550 [12:04<1:08:11, 16.43s/pipeline]
+Generation 5 - Current best internal CV score: -0.0010016976503095366
+Optimization Progress:  64%|???????   | 351/550 [14:32<1:01:40, 18.60s/pipeline]
+Generation 6 - Current best internal CV score: -0.0009925452441072145
+Optimization Progress:  73%|????????  | 401/550 [16:04<31:12, 12.57s/pipeline]  
+Generation 7 - Current best internal CV score: -0.0009925452441072145
+Optimization Progress:  82%|????????? | 451/550 [18:50<17:48, 10.79s/pipeline]
+Generation 8 - Current best internal CV score: -0.0009925452441072145
+Optimization Progress:  91%|????????? | 501/550 [21:11<14:14, 17.43s/pipeline]
+Generation 9 - Current best internal CV score: -0.0009925452441072145
+                                                                              
+Generation 10 - Current best internal CV score: -0.0009925452441072145
+
+Best pipeline: XGBRegressor(input_matrix, learning_rate=0.1, max_depth=8, min_child_weight=1, n_estimators=100, nthread=1, subsample=0.45)
+MSE:  0.000822497101352
+MSE %:  0.000302668394755
+R2 score: 0.994983318066
+Test run 17 
+
+Test number, linear model:  17 
+
+MSE:  0.024263503489
+MSE %:  0.00892865839898
+R2 score: 0.830045101083
+Test number, TPOT model:  17 
+
+Optimization Progress:  18%|??        | 100/550 [02:50<49:03,  6.54s/pipeline] 
+Generation 1 - Current best internal CV score: -0.0051037341290809555
+Optimization Progress:  27%|???       | 150/550 [05:52<3:12:38, 28.90s/pipeline]
+Generation 2 - Current best internal CV score: -0.004864932383513068
+Optimization Progress:  36%|????      | 200/550 [07:35<2:23:14, 24.56s/pipeline]
+Generation 3 - Current best internal CV score: -0.004864932383513068
+Optimization Progress:  45%|?????     | 250/550 [09:56<1:18:52, 15.78s/pipeline]
+Generation 4 - Current best internal CV score: -0.004864932383513068
+Optimization Progress:  55%|??????    | 300/550 [15:28<4:13:27, 60.83s/pipeline]
+Generation 5 - Current best internal CV score: -0.004767148907692066
+Optimization Progress:  64%|???????   | 350/550 [17:56<1:24:43, 25.42s/pipeline]
+Generation 6 - Current best internal CV score: -0.004767148907692066
+Optimization Progress:  73%|????????  | 401/550 [26:39<2:06:36, 50.99s/pipeline]
+Generation 7 - Current best internal CV score: -0.0047129530578879615
+Optimization Progress:  82%|????????? | 451/550 [32:55<1:09:58, 42.41s/pipeline]
+Generation 8 - Current best internal CV score: -0.004678252925056277
+Optimization Progress:  91%|????????? | 501/550 [36:47<28:51, 35.33s/pipeline]  
+Generation 9 - Current best internal CV score: -0.004534537936261169
+                                                                                
+Generation 10 - Current best internal CV score: -0.004493187633357318
+
+Best pipeline: ExtraTreesRegressor(RandomForestRegressor(LinearSVR(input_matrix, C=20.0, dual=False, epsilon=0.0001, loss=squared_epsilon_insensitive, tol=1e-05), bootstrap=False, max_features=0.25, min_samples_leaf=1, min_samples_split=11, n_estimators=100), bootstrap=False, max_features=1.0, min_samples_leaf=5, min_samples_split=2, n_estimators=100)
+MSE:  0.00384254964173
+MSE %:  0.00141400903409
+R2 score: 0.975941112744
+Test run 18 
+
+Test number, linear model:  18 
+
+MSE:  0.00369320292024
+MSE %:  0.00135905135414
+R2 score: 0.977282781786
+Test number, TPOT model:  18 
+
+Optimization Progress:  18%|??        | 100/550 [01:14<28:49,  3.84s/pipeline]
+Generation 1 - Current best internal CV score: -0.0009208899798800584
+Optimization Progress:  27%|???       | 150/550 [02:18<1:06:24,  9.96s/pipeline]
+Generation 2 - Current best internal CV score: -0.0005127952259920176
+Optimization Progress:  36%|????      | 200/550 [04:03<1:41:51, 17.46s/pipeline]
+Generation 3 - Current best internal CV score: -0.0005127952259920176
+Optimization Progress:  45%|?????     | 250/550 [06:10<1:51:54, 22.38s/pipeline]
+Generation 4 - Current best internal CV score: -0.0005127952259920176
+Optimization Progress:  55%|??????    | 300/550 [09:17<2:42:20, 38.96s/pipeline]
+Generation 5 - Current best internal CV score: -0.0005127952259920176
+Optimization Progress:  64%|???????   | 350/550 [12:06<1:04:55, 19.48s/pipeline]
+Generation 6 - Current best internal CV score: -0.0005120550896822808
+Optimization Progress:  73%|????????  | 401/550 [19:15<3:16:57, 79.31s/pipeline] 
+Generation 7 - Current best internal CV score: -0.0005099916159350611
+Optimization Progress:  82%|????????? | 452/550 [26:21<56:22, 34.52s/pipeline]  
+Generation 8 - Current best internal CV score: -0.0005099916159350611
+Optimization Progress:  91%|??????????| 502/550 [29:44<29:59, 37.48s/pipeline]  
+Generation 9 - Current best internal CV score: -0.0005027711219306067
+                                                                              
+Generation 10 - Current best internal CV score: -0.0005018790092106178
+
+Best pipeline: RandomForestRegressor(LassoLarsCV(RobustScaler(input_matrix), normalize=False), bootstrap=False, max_features=0.75, min_samples_leaf=4, min_samples_split=15, n_estimators=100)
+MSE:  0.000451023126322
+MSE %:  0.000165970731589
+R2 score: 0.997249035159
+Test run 19 
+
+Test number, linear model:  19 
+
+MSE:  0.00190829930548
+MSE %:  0.000702229693638
+R2 score: 0.988271053863
+Test number, TPOT model:  19 
+
+Optimization Progress:  18%|??        | 100/550 [02:20<55:37,  7.42s/pipeline] 
+Generation 1 - Current best internal CV score: -0.0006241309061175025
+Optimization Progress:  27%|???       | 150/550 [03:42<57:21,  8.60s/pipeline]  
+Generation 2 - Current best internal CV score: -0.0006191511739578155
+Optimization Progress:  36%|????      | 200/550 [05:55<1:50:04, 18.87s/pipeline]
+Generation 3 - Current best internal CV score: -0.0005773289208645845
+Optimization Progress:  45%|?????     | 250/550 [09:55<3:31:05, 42.22s/pipeline]
+Generation 4 - Current best internal CV score: -0.0005773289208645845
+Optimization Progress:  55%|??????    | 300/550 [14:33<3:42:45, 53.46s/pipeline]
+Generation 5 - Current best internal CV score: -0.0005773289208645845
+Optimization Progress:  64%|???????   | 351/550 [21:02<2:31:35, 45.70s/pipeline]
+Generation 6 - Current best internal CV score: -0.0005773289208645845
+Optimization Progress:  73%|????????  | 401/550 [24:21<1:35:01, 38.27s/pipeline]
+Generation 7 - Current best internal CV score: -0.000505659908599517
+Optimization Progress:  82%|????????? | 451/550 [28:04<54:47, 33.21s/pipeline]  
+Generation 8 - Current best internal CV score: -0.000505659908599517
+Optimization Progress:  91%|????????? | 501/550 [33:53<40:41, 49.83s/pipeline]  
+Generation 9 - Current best internal CV score: -0.0004875616556557595
+                                                                              
+Generation 10 - Current best internal CV score: -0.0004875616556557595
+
+Best pipeline: ExtraTreesRegressor(RidgeCV(RBFSampler(MinMaxScaler(input_matrix), gamma=0.6)), bootstrap=False, max_features=0.85, min_samples_leaf=1, min_samples_split=7, n_estimators=100)
+MSE:  0.000460684767976
+MSE %:  0.000169526091924
+R2 score: 0.997193697123
+Test run 20 
+
+Test number, linear model:  20 
+
+MSE:  0.00994712024544
+MSE %:  0.00366041279923
+R2 score: 0.935832464579
+Test number, TPOT model:  20 
+
+Optimization Progress:  18%|??        | 100/550 [02:42<1:46:07, 14.15s/pipeline]
+Generation 1 - Current best internal CV score: -0.0007420658157745637
+Optimization Progress:  27%|???       | 150/550 [07:54<6:21:00, 57.15s/pipeline] 
+Generation 2 - Current best internal CV score: -0.0007382540517007555
+Optimization Progress:  36%|????      | 200/550 [10:21<2:21:05, 24.19s/pipeline]
+Generation 3 - Current best internal CV score: -0.0007382540517007555
+Optimization Progress:  45%|?????     | 250/550 [14:39<2:10:07, 26.03s/pipeline]
+Generation 4 - Current best internal CV score: -0.0007111563337014787
+Optimization Progress:  55%|??????    | 300/550 [17:18<1:23:43, 20.09s/pipeline]
+Generation 5 - Current best internal CV score: -0.0007111563337014787
+Optimization Progress:  64%|???????   | 350/550 [20:23<1:26:54, 26.07s/pipeline]
+Generation 6 - Current best internal CV score: -0.0007111563337014787
+Optimization Progress:  73%|????????  | 400/550 [22:53<55:58, 22.39s/pipeline]  
+Generation 7 - Current best internal CV score: -0.0007108908801434401
+Optimization Progress:  82%|????????? | 450/550 [28:26<1:36:37, 57.97s/pipeline]
+Generation 8 - Current best internal CV score: -0.000709249683927293
+Optimization Progress:  91%|????????? | 500/550 [32:41<39:12, 47.05s/pipeline]  
+Generation 9 - Current best internal CV score: -0.000704850848816388
+                                                                                
+Generation 10 - Current best internal CV score: -0.0006970289654154472
+
+Best pipeline: ExtraTreesRegressor(ExtraTreesRegressor(input_matrix, bootstrap=True, max_features=0.9, min_samples_leaf=1, min_samples_split=6, n_estimators=100), bootstrap=False, max_features=0.85, min_samples_leaf=1, min_samples_split=10, n_estimators=100)
+MSE:  0.000580062413566
+MSE %:  0.000213455535932
+R2 score: 0.996464272768
+Test run 21 
+
+Test number, linear model:  21 
+
+MSE:  0.00265217018889
+MSE %:  0.000975964647617
+R2 score: 0.983754807484
+Test number, TPOT model:  21 
+
+Optimization Progress:  18%|??        | 100/550 [04:20<55:42,  7.43s/pipeline] 
+Generation 1 - Current best internal CV score: -0.0005538166118511515
+Optimization Progress:  27%|???       | 150/550 [06:59<1:36:41, 14.50s/pipeline]
+Generation 2 - Current best internal CV score: -0.00041518372120260855
+Optimization Progress:  36%|????      | 200/550 [11:41<2:35:22, 26.64s/pipeline]
+Generation 3 - Current best internal CV score: -0.00041518372120260855
+Optimization Progress:  45%|?????     | 250/550 [14:27<2:24:21, 28.87s/pipeline]
+Generation 4 - Current best internal CV score: -0.00041518372120260855
+Optimization Progress:  55%|??????    | 300/550 [21:34<5:28:20, 78.80s/pipeline] 
+Generation 5 - Current best internal CV score: -0.00041518372120260855
+Optimization Progress:  64%|???????   | 350/550 [28:22<5:22:31, 96.76s/pipeline] 
+Generation 6 - Current best internal CV score: -0.00041518372120260855
+Optimization Progress:  73%|????????  | 401/550 [37:43<3:17:55, 79.70s/pipeline] 
+Generation 7 - Current best internal CV score: -0.00041518372120260855
+Optimization Progress:  82%|????????? | 452/550 [48:27<3:03:23, 112.28s/pipeline]
+Generation 8 - Current best internal CV score: -0.00041518372120260855
+Optimization Progress:  92%|??????????| 505/550 [57:36<1:02:17, 83.07s/pipeline] 
+Generation 9 - Current best internal CV score: -0.0004111316601107484
+                                                                                   
+Generation 10 - Current best internal CV score: -0.0004111316601107484
+
+Best pipeline: GradientBoostingRegressor(StandardScaler(CombineDFs(input_matrix, RidgeCV(input_matrix))), alpha=0.75, learning_rate=0.1, loss=huber, max_depth=8, max_features=0.5, min_samples_leaf=1, min_samples_split=12, n_estimators=100, subsample=0.85)
+MSE:  0.000343779174093
+MSE %:  0.000126506331271
+R2 score: 0.997902952774
+Test run 22 
+
+Test number, linear model:  22 
+
+MSE:  0.00159972511814
+MSE %:  0.000588678346417
+R2 score: 0.990191710823
+Test number, TPOT model:  22 
+
+Optimization Progress:  18%|??        | 100/550 [02:52<1:23:31, 11.14s/pipeline]
+Generation 1 - Current best internal CV score: -0.000758145941376295
+Optimization Progress:  27%|???       | 150/550 [05:06<2:31:55, 22.79s/pipeline]
+Generation 2 - Current best internal CV score: -0.0004946363332582793
+Optimization Progress:  36%|????      | 200/550 [07:51<2:58:08, 30.54s/pipeline]
+Generation 3 - Current best internal CV score: -0.0004946363332582793
+Optimization Progress:  45%|?????     | 250/550 [12:24<2:01:47, 24.36s/pipeline]
+Generation 4 - Current best internal CV score: -0.00047157559683562575
+Optimization Progress:  55%|??????    | 300/550 [17:19<2:36:41, 37.61s/pipeline]
+Generation 5 - Current best internal CV score: -0.0004471216542418476
+Optimization Progress:  64%|???????   | 351/550 [26:09<3:17:40, 59.60s/pipeline]
+Generation 6 - Current best internal CV score: -0.0004471216542418476
+Optimization Progress:  73%|????????  | 401/550 [30:31<1:23:51, 33.77s/pipeline]
+Generation 7 - Current best internal CV score: -0.0004193878609563208
+Optimization Progress:  82%|????????? | 451/550 [36:07<1:38:32, 59.72s/pipeline]
+Generation 8 - Current best internal CV score: -0.0004193878609563208
+Optimization Progress:  91%|??????????| 502/550 [42:52<1:08:29, 85.62s/pipeline] 
+Generation 9 - Current best internal CV score: -0.0004161964028142788
+                                                                                 
+Generation 10 - Current best internal CV score: -0.0004161964028142788
+
+Best pipeline: XGBRegressor(ExtraTreesRegressor(input_matrix, bootstrap=False, max_features=0.8, min_samples_leaf=2, min_samples_split=7, n_estimators=100), learning_rate=0.5, max_depth=8, min_child_weight=20, n_estimators=100, nthread=1, subsample=0.75)
+MSE:  0.000307470920672
+MSE %:  0.000113145359224
+R2 score: 0.998126394185
+Test run 23 
+
+Test number, linear model:  23 
+
+MSE:  0.000884536912364
+MSE %:  0.000325498250299
+R2 score: 0.994610730871
+Test number, TPOT model:  23 
+
+Optimization Progress:  18%|??        | 100/550 [03:53<1:03:13,  8.43s/pipeline]
+Generation 1 - Current best internal CV score: -0.00048233809333546806
+Optimization Progress:  28%|???       | 152/550 [10:25<2:17:22, 20.71s/pipeline]
+Generation 2 - Current best internal CV score: -0.0004319356324169698
+Optimization Progress:  37%|????      | 203/550 [17:28<1:59:28, 20.66s/pipeline]
+Generation 3 - Current best internal CV score: -0.0003961395221046396
+Optimization Progress:  46%|?????     | 255/550 [25:41<7:22:02, 89.91s/pipeline]  
+Generation 4 - Current best internal CV score: -0.0003913500080316135
+Optimization Progress:  55%|??????    | 305/550 [31:07<5:31:16, 81.13s/pipeline] 
+Generation 5 - Current best internal CV score: -0.0003816063958672086
+Optimization Progress:  65%|???????   | 355/550 [36:47<2:08:46, 39.62s/pipeline]
+Generation 6 - Current best internal CV score: -0.0003780473873285871
+Optimization Progress:  74%|????????  | 405/550 [41:16<1:10:33, 29.20s/pipeline]
+Generation 7 - Current best internal CV score: -0.00037043615163564504
+Optimization Progress:  83%|????????? | 455/550 [46:29<56:59, 35.99s/pipeline]  
+Generation 8 - Current best internal CV score: -0.00037043615163564504
+Optimization Progress:  92%|??????????| 506/550 [52:59<29:45, 40.58s/pipeline]  
+Generation 9 - Current best internal CV score: -0.00036821699573633197
+                                                                                 
+Generation 10 - Current best internal CV score: -0.00034922582333009815
+
+Best pipeline: RandomForestRegressor(LinearSVR(LassoLarsCV(ExtraTreesRegressor(input_matrix, bootstrap=True, max_features=0.5, min_samples_leaf=14, min_samples_split=9, n_estimators=100), normalize=False), C=25.0, dual=True, epsilon=0.1, loss=epsilon_insensitive, tol=0.01), bootstrap=False, max_features=0.35, min_samples_leaf=1, min_samples_split=20, n_estimators=100)
+MSE:  0.000294817815422
+MSE %:  0.000108489178615
+R2 score: 0.99820012278
+Test run 24 
+
+Test number, linear model:  24 
+
+MSE:  0.00221353848832
+MSE %:  0.000814553801935
+R2 score: 0.986457304065
+Test number, TPOT model:  24 
+
+Optimization Progress:  18%|??        | 100/550 [04:44<1:24:47, 11.30s/pipeline]
+Generation 1 - Current best internal CV score: -0.0007737694083889794
+Optimization Progress:  27%|???       | 150/550 [08:32<2:13:03, 19.96s/pipeline]
+Generation 2 - Current best internal CV score: -0.0007666788658803047
+Optimization Progress:  36%|????      | 200/550 [13:10<2:08:27, 22.02s/pipeline]
+Generation 3 - Current best internal CV score: -0.0006895696429061758
+Optimization Progress:  46%|?????     | 251/550 [21:59<7:34:21, 91.18s/pipeline]  
+Generation 4 - Current best internal CV score: -0.0005739927469331099
+Optimization Progress:  55%|??????    | 302/550 [33:38<4:12:22, 61.06s/pipeline]
+Generation 5 - Current best internal CV score: -0.00045299601498444413
+Optimization Progress:  64%|???????   | 353/550 [43:23<6:18:11, 115.18s/pipeline] 
+Generation 6 - Current best internal CV score: -0.00045299601498444413
+Optimization Progress:  73%|????????  | 404/550 [54:02<5:10:34, 127.63s/pipeline]
+Generation 7 - Current best internal CV score: -0.0004451976734010139
+Optimization Progress:  83%|????????? | 456/550 [1:04:37<2:33:03, 97.69s/pipeline] 
+Generation 8 - Current best internal CV score: -0.0004451976734010139
+Optimization Progress:  92%|??????????| 506/550 [1:11:52<1:05:56, 89.93s/pipeline] 
+Generation 9 - Current best internal CV score: -0.0004365043410731387
+                                                                                  
+Generation 10 - Current best internal CV score: -0.0004365043410731387
+
+Best pipeline: RandomForestRegressor(RidgeCV(ElasticNetCV(input_matrix, l1_ratio=0.9, tol=0.01)), bootstrap=False, max_features=0.45, min_samples_leaf=3, min_samples_split=7, n_estimators=100)
+MSE:  0.000365236264017
+MSE %:  0.000134402265436
+R2 score: 0.997771955176
+Test run 25 
+
+Test number, linear model:  25 
+
+MSE:  0.00106323925173
+MSE %:  0.000391258421497
+R2 score: 0.993499112755
+Test number, TPOT model:  25 
+
+Optimization Progress:  18%|??        | 100/550 [04:47<3:25:13, 27.36s/pipeline]
+Generation 1 - Current best internal CV score: -0.0005414472515318378
+Optimization Progress:  27%|???       | 150/550 [07:38<3:54:13, 35.13s/pipeline]
+Generation 2 - Current best internal CV score: -0.0004899584032442414
+Optimization Progress:  36%|????      | 200/550 [12:02<5:09:02, 52.98s/pipeline]
+Generation 3 - Current best internal CV score: -0.00044715173889920795
+Optimization Progress:  46%|?????     | 251/550 [21:07<4:06:11, 49.40s/pipeline]
+Generation 4 - Current best internal CV score: -0.00041427635852756803
+Optimization Progress:  55%|??????    | 301/550 [27:17<2:24:23, 34.79s/pipeline]
+Generation 5 - Current best internal CV score: -0.00041427635852756803
+Optimization Progress:  64%|???????   | 352/550 [33:43<2:57:46, 53.87s/pipeline]
+Generation 6 - Current best internal CV score: -0.00041427635852756803
+Optimization Progress:  73%|????????  | 402/550 [36:28<59:17, 24.04s/pipeline]  
+Generation 7 - Current best internal CV score: -0.00041427635852756803
+Optimization Progress:  82%|????????? | 452/550 [40:49<50:35, 30.97s/pipeline]  
+Generation 8 - Current best internal CV score: -0.0004140899242719209
+Optimization Progress:  91%|??????????| 502/550 [45:00<21:49, 27.29s/pipeline]  
+Generation 9 - Current best internal CV score: -0.000403898065525002
+                                                                              
+Generation 10 - Current best internal CV score: -0.00039755474100093454
+
+Best pipeline: ExtraTreesRegressor(LinearSVR(input_matrix, C=0.5, dual=True, epsilon=0.001, loss=epsilon_insensitive, tol=0.1), bootstrap=False, max_features=0.5, min_samples_leaf=1, min_samples_split=4, n_estimators=100)
+MSE:  0.00029294505217
+MSE %:  0.000107800025734
+R2 score: 0.998213995219
+Test run 26 
+
+Test number, linear model:  26 
+
+MSE:  0.000606016006374
+MSE %:  0.000223006125545
+R2 score: 0.996312620931
+Test number, TPOT model:  26 
+
+Optimization Progress:  18%|??        | 100/550 [05:09<59:33,  7.94s/pipeline] 
+Generation 1 - Current best internal CV score: -0.0004523110409004942
+Optimization Progress:  27%|???       | 150/550 [06:55<1:11:46, 10.77s/pipeline]
+Generation 2 - Current best internal CV score: -0.00040142235550003015
+Optimization Progress:  36%|????      | 200/550 [09:17<2:37:56, 27.08s/pipeline]
+Generation 3 - Current best internal CV score: -0.0003665535580329446
+Optimization Progress:  45%|?????     | 250/550 [12:07<2:44:20, 32.87s/pipeline]
+Generation 4 - Current best internal CV score: -0.0003665535580329446
+Optimization Progress:  55%|??????    | 300/550 [14:56<1:04:15, 15.42s/pipeline]
+Generation 5 - Current best internal CV score: -0.0003560048085770985
+Optimization Progress:  64%|???????   | 350/550 [18:09<1:51:42, 33.51s/pipeline]
+Generation 6 - Current best internal CV score: -0.00031523656164874383
+Optimization Progress:  73%|????????  | 400/550 [22:01<55:49, 22.33s/pipeline]  
+Generation 7 - Current best internal CV score: -0.00031523656164874383
+Optimization Progress:  82%|????????? | 450/550 [25:42<35:06, 21.06s/pipeline]  
+Generation 8 - Current best internal CV score: -0.00029929797432278106
+Optimization Progress:  91%|????????? | 500/550 [31:19<45:04, 54.09s/pipeline]  
+Generation 9 - Current best internal CV score: -0.00029929797432278106
+                                                                              
+Generation 10 - Current best internal CV score: -0.00029929797432278106
+
+Best pipeline: XGBRegressor(MinMaxScaler(LassoLarsCV(FastICA(input_matrix, tol=0.15), normalize=True)), learning_rate=0.1, max_depth=7, min_child_weight=19, n_estimators=100, nthread=1, subsample=0.6)
+MSE:  0.000236834395564
+MSE %:  8.71520230408e-05
+R2 score: 0.998558854605
+Test run 27 
+
+Test number, linear model:  27 
+
+MSE:  0.00146087730165
+MSE %:  0.000537584128985
+R2 score: 0.991071472355
+Test number, TPOT model:  27 
+
+Optimization Progress:  18%|??        | 100/550 [02:28<44:21,  5.92s/pipeline] 
+Generation 1 - Current best internal CV score: -0.0005123141637818328
+Optimization Progress:  27%|???       | 150/550 [04:34<2:10:02, 19.51s/pipeline]
+Generation 2 - Current best internal CV score: -0.0005123141637818328
+Optimization Progress:  36%|????      | 200/550 [07:55<1:42:13, 17.52s/pipeline]
+Generation 3 - Current best internal CV score: -0.0004471508819964917
+Optimization Progress:  45%|?????     | 250/550 [12:31<2:40:51, 32.17s/pipeline]
+Generation 4 - Current best internal CV score: -0.0004163706341060171
+Optimization Progress:  55%|??????    | 300/550 [15:24<2:12:01, 31.68s/pipeline]
+Generation 5 - Current best internal CV score: -0.0004163706341060171
+Optimization Progress:  64%|???????   | 350/550 [20:16<2:41:26, 48.43s/pipeline]
+Generation 6 - Current best internal CV score: -0.0004163706341060171
+Optimization Progress:  73%|????????  | 400/550 [24:17<1:56:55, 46.77s/pipeline]
+Generation 7 - Current best internal CV score: -0.0004002836296122541
+Optimization Progress:  82%|????????? | 450/550 [28:24<1:18:46, 47.27s/pipeline]
+Generation 8 - Current best internal CV score: -0.00039783394834601077
+Optimization Progress:  91%|????????? | 500/550 [33:22<43:30, 52.20s/pipeline]  
+Generation 9 - Current best internal CV score: -0.0003924040193418669
+                                                                                
+Generation 10 - Current best internal CV score: -0.00038616138788302257
+
+Best pipeline: RandomForestRegressor(XGBRegressor(ElasticNetCV(ElasticNetCV(input_matrix, l1_ratio=0.1, tol=1e-05), l1_ratio=0.4, tol=0.001), learning_rate=0.5, max_depth=4, min_child_weight=18, n_estimators=100, nthread=1, subsample=0.25), bootstrap=False, max_features=0.2, min_samples_leaf=3, min_samples_split=3, n_estimators=100)
+MSE:  0.000295098320127
+MSE %:  0.000108592400752
+R2 score: 0.998199143003
+Test run 28 
+
+Test number, linear model:  28 
+
+MSE:  0.000666455638156
+MSE %:  0.000245247135636
+R2 score: 0.99594457537
+Test number, TPOT model:  28 
+
+Optimization Progress:  18%|??        | 100/550 [05:03<1:44:35, 13.95s/pipeline]
+Generation 1 - Current best internal CV score: -0.0004980422942661828
+Optimization Progress:  27%|???       | 150/550 [06:56<1:15:11, 11.28s/pipeline]
+Generation 2 - Current best internal CV score: -0.0004980422942661828
+Optimization Progress:  36%|????      | 200/550 [09:11<59:12, 10.15s/pipeline]  
+Generation 3 - Current best internal CV score: -0.00037966751140889297
+Optimization Progress:  45%|?????     | 250/550 [12:17<2:10:20, 26.07s/pipeline]
+Generation 4 - Current best internal CV score: -0.00037966751140889297
+Optimization Progress:  55%|??????    | 300/550 [16:31<2:02:26, 29.38s/pipeline]
+Generation 5 - Current best internal CV score: -0.00037789143829631015
+Optimization Progress:  64%|???????   | 352/550 [25:34<2:12:31, 40.16s/pipeline]
+Generation 6 - Current best internal CV score: -0.0003731992480538963
+Optimization Progress:  73%|????????  | 404/550 [34:27<2:26:55, 60.38s/pipeline]
+Generation 7 - Current best internal CV score: -0.0003716245380939497
+Optimization Progress:  83%|????????? | 455/550 [44:48<2:28:52, 94.02s/pipeline] 
+Generation 8 - Current best internal CV score: -0.0003644897303750214
+Optimization Progress:  92%|??????????| 505/550 [54:34<56:49, 75.77s/pipeline]   
+Generation 9 - Current best internal CV score: -0.0003414602412520885
+                                                                                
+Generation 10 - Current best internal CV score: -0.0003193154601697272
+
+Best pipeline: RandomForestRegressor(SelectFwe(ExtraTreesRegressor(RobustScaler(LassoLarsCV(input_matrix, normalize=True)), bootstrap=False, max_features=0.25, min_samples_leaf=2, min_samples_split=11, n_estimators=100), alpha=0.046), bootstrap=False, max_features=0.5, min_samples_leaf=1, min_samples_split=7, n_estimators=100)
+MSE:  0.00026631537815
+MSE %:  9.80006468965e-05
+R2 score: 0.998378027215
+Test run 29 
+
+Test number, linear model:  29 
+
+MSE:  0.000603348889354
+MSE %:  0.000222024660655
+R2 score: 0.99632820105
+Test number, TPOT model:  29 
+
+Optimization Progress:  18%|??        | 100/550 [08:34<9:08:49, 73.18s/pipeline] 
+Generation 1 - Current best internal CV score: -0.00032523729886293345
+Optimization Progress:  27%|???       | 150/550 [13:58<4:19:02, 38.86s/pipeline]
+Generation 2 - Current best internal CV score: -0.00032523729886293345
+Optimization Progress:  37%|????      | 203/550 [24:17<3:59:41, 41.45s/pipeline]
+Generation 3 - Current best internal CV score: -0.00032523729886293345
+Optimization Progress:  46%|?????     | 254/550 [32:58<6:35:40, 80.21s/pipeline]  
+Generation 4 - Current best internal CV score: -0.00032523729886293345
+Optimization Progress:  55%|??????    | 305/550 [41:39<4:33:32, 66.99s/pipeline]
+Generation 5 - Current best internal CV score: -0.00032467297266571617
+Optimization Progress:  65%|???????   | 356/550 [51:39<6:22:27, 118.29s/pipeline] 
+Generation 6 - Current best internal CV score: -0.00032467297266571617
+Optimization Progress:  74%|????????  | 406/550 [58:47<3:39:57, 91.65s/pipeline] 
+Generation 7 - Current best internal CV score: -0.00032467297266571617
+Optimization Progress:  83%|????????? | 456/550 [1:05:55<2:05:28, 80.10s/pipeline] 
+Generation 8 - Current best internal CV score: -0.00031799443867146476
+Optimization Progress:  92%|??????????| 506/550 [1:13:44<1:05:51, 89.81s/pipeline] 
+Generation 9 - Current best internal CV score: -0.00031799443867146476
+                                                                                   
+Generation 10 - Current best internal CV score: -0.00030469203717393886
+
+Best pipeline: RandomForestRegressor(RidgeCV(ElasticNetCV(input_matrix, l1_ratio=0.6, tol=0.001)), bootstrap=False, max_features=0.45, min_samples_leaf=1, min_samples_split=3, n_estimators=100)
+MSE:  0.000230790222016
+MSE %:  8.49278446183e-05
+R2 score: 0.998594041268
+
